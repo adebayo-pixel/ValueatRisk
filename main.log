@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  16 APR 2021 18:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  20 APR 2021 21:53
 entering extended mode
 **./main.tex
 (main.tex
@@ -995,7 +995,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 453.
  ) 
 Here is how much of TeX's memory you used:
  18867 strings out of 480898
- 349082 string characters out of 2908343
+ 349150 string characters out of 2908343
  603120 words of memory out of 3000000
  34245 multiletter control sequences out of 15000+200000
  544358 words of font info for 68 fonts, out of 3000000 for 9000
@@ -1022,7 +1022,7 @@ sfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (18 pages, 304004 bytes).
+Output written on main.pdf (18 pages, 303823 bytes).
 PDF statistics:
  392 PDF objects out of 1000 (max. 8388607)
  63 named destinations out of 1000 (max. 500000)
