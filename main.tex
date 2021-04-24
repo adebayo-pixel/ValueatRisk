@@ -88,10 +88,22 @@ unsatisfactory by them. However, attention needs to be
 drawn to one difference in the samples, on which the
 study was conducted, i.e. the first one comes from a
 developed country (USA, S\&P500), and the second one
-from a developing country (Iran, TSEM).
+from a developing country (Iran, TSEM). Taylor(2020) evaluate Value at Risk using quantile skill score and the conditional autoregressive model outperformed others.
 \newline\newline
 
-The above indicates that there is no full approval in the evaluation of which models should be used during
+Attempts have been made to predicts VaR with ANN. VaR estimation on the exchange rate market in the context of ANNs is dealt with in
+Locarek-Junge and Prinzler (1999), who illustrate how VaR estimates can be obtained
+by using a USD-portfolio. The empirical outcomes demonstrate an evident superiority
+of the neural network to other VaR models. Hamid and Iqbal(2004) compared volatility forecasts from neural networks with forecasts of implied volatility from S\&P500 index futures options, using the Barone-Adesi and Whaley (BAW) American futures options pricing model. Forecasts from NN outperformed implied volatility forecasts. Similar results are put forth by He et al.
+(2018), who propose an innovative EMD-DBN type of ANN to estimate VaR on the
+USD against the AUD, CAD, CHF and the EUR. The authors find positive
+performance improvement in the risk estimates, and argue that the utilization of an
+EMD-DBN network can identify more optimal ensemble weights and is less sensitive
+to noise disruption compared to a FNN. Nevertheless, it is worthwhile to mention that although
+foreign exchange volatility forecasting through ANNs have gained some attention in
+the academic field, it still remains a fairly undeveloped area.
+\newline\newline
+All in all, there is no full approval in the evaluation of which models should be used during
 periods of calm (low volatility), and which ones during crisis (High volatility).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -153,6 +165,110 @@ Hence, a VaR model involves the specification of $F(r)$ or $G(r)$. There are sev
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+\section{Value at Risk methods}
+The estimation of these functions can be carried out using the
+following methods: (1) non-parametric methods; (2) parametric
+methods and (3) semi-parametric methods. Below we will describe
+the methodologies, which have been developed in each of these
+three cases to estimate VaR
+\subsection{Non-parametric methods}
+The Non-parametric approaches seek to measure a portfolio VaR
+without making strong assumptions about returns distribution. The
+essence of these approaches is to let data speak for themselves as
+much as possible and to use recent returns empirical distribution
+– not some assumed theoretical distribution – to estimate VaR.
+All Non-parametric approaches are based on the underlying
+assumption that the near future will be sufficiently similar to the
+recent past for us to be able to use the data from the recent past to
+forecast the risk in the near future.
+The Non-parametric approaches include (a) Historical Simulation
+and (b) Delta-Gamma approximation
+\subsubsection{Historical simulation}
+
+The historical simulation involves using past data to predict future. First of all, we
+have to identify the market variables that will affect the portfolio. Then, the data
+will be collected on the movements in these market variables over a certain time
+period. This provides us the alternative scenarios for what can happen between
+today and tomorrow. For each scenario, we calculate the changes in the dollar
+value of portfolio between today and tomorrow. This defines a probability
+distribution for changes in the value of portfolio. For instance, VaR for a portfolio
+using 1-day time horizon with 99\% confidence level for 500 days data is nothing
+but an estimation of the loss when we are at the fifth-worst daily change.
+\newline\newline Basically, historical simulation is extremely different from other type of
+simulation in that estimation of a covariance matrix is avoided. Therefore, this approach has simplified the computations especially for the cases of complicated
+portfolio.\newline\newline
+The core of this approach is the time series of the aggregate portfolio return. More
+importantly, this approach can account for fat tails and is not prone to the
+accuracy of the model due to being independent of model risk. As this method is
+very powerful and intuitive, it is then become the most widely used methods to
+compute VaR.
+
+\subsubsection{Delta-Gamma Approximation
+}
+
+
+The delta-gamma approximation (DGA) method is
+similar to the delta approximation approach, but
+with a higher order of sensitivity. As portfolios in
+real life are composed of instruments that are nonlinearly related to the underlying risk factors, the
+delta approximation fares poorly due to the linear
+assumption involved (as the first order derivative is
+nothing but the slope of the curve at a given point).
+The natural remedy to this is to incorporate the
+next order derivative. The delta-gamma approximation requires the calculation of the second
+order derivative, gamma, in addition to the delta
+and the returns of each instrument are calculated
+as below (derived from the Taylor’s series):\newline\newline
+$\Delta(V) = \text{Delta} * \Delta(X) +0.5*\text{Gamma}*\Delta(X)^2$
+\begin{description}
+	
+	\item[$\bullet$] $\Delta(V)$ is the change in the value of the instrument
+	 
+	\item[$\bullet$] $\Delta(X)$ is the change in the value of the underlying
+	\item[$\bullet$] \text{Delta} is the first order derivative of the
+	instrument with respect to the underlying.
+	\item[$\bullet$] \text{Gamma} is the first order derivative of the
+	instrument with respect to the underlying.
+	
+\end{description}
+
+From the returns computed using the above
+formula, the portfolio returns are determined and
+the required quantile was chosen as the VaR. The
+delta-gamma method works reasonably well for
+the simple nonlinear instruments (such as bonds
+without put/call options) as the curvature of the
+relationship with the underlying risk factor can be
+approximated by the convexity measure.
+
+
+\subsection{Parametric methods}
+
+Parametric approaches assume that portfolio losses follow a pre-determined
+distribution, such as a Normal distribution or a Student t-distribution, whereas non-parametric
+approaches do not depend on any distributional assumption. Instead, they
+approaches focus directly on the underlying loss distribution of a portfolio,
+by relying on a sample of observed losses. As a result, these approaches are
+applicable to any instrument, while parametric approaches, such as the Normal
+distribution, might not be. For example, under normality, the probability loss
+distribution is assumed to have no excess kurtosis, however, it has been empirically
+observed that financial data indeed exhibits excess kurtosis. Thus, assuming normally
+distributed losses when using financial data may lead to incorrect VaR estimates.
+
+\subsection{Semi-parametric methods}
+The Semi-parametric methods combine the Non-parametric
+approach with the Parametric approach. The most important
+Semi-parametric methods are Volatility-weight Historical Simulation,
+Filtered Historical Simulation (FHS),the
+approach based on Extreme Value Theory and those that directly model the conditional quantile for a chosen probability level using quantile regression, such as conditional autoregressive VaR and . Directly modeling a quantile
+avoids the need for a distributional assumption, and allows
+the dynamics of the quantiles to differ for each probability
+level.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Properties}
 
 Fix $\alpha$ $\epsilon$(0,1), then the Value at Risk of a portfolio where the net payoff is modelled by X at a level $\alpha$ is given as:\newline
@@ -160,16 +276,15 @@ $\text{VaR}_{\alpha}(X)$ = inf $\{x \epsilon \mathbb{R}| P(X \leq x)=\alpha\}$ h
 \newline
 
 \begin{description}
-
+	
 	\item[$\bullet$] Monotonicity \newline if $X \leq Y$ then $\text{VaR}_{\alpha}(X) \leq \text{VaR}_{\alpha}(Y)$
-    \item[$\bullet$] Positive Homogeneity
-    \newline $\text{VaR}_{\alpha}(cX) = c\text{VaR}_{\alpha}(X)$
-    \item[$\bullet$] Translation invariance
-     \newline  $\text{VaR}_{\alpha}(X+c) = \text{VaR}_{\alpha}(X)+c$
-
-
+	\item[$\bullet$] Positive Homogeneity
+	\newline $\text{VaR}_{\alpha}(cX) = c\text{VaR}_{\alpha}(X)$
+	\item[$\bullet$] Translation invariance
+	\newline  $\text{VaR}_{\alpha}(X+c) = \text{VaR}_{\alpha}(X)+c$
+	
+	
 \end{description}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

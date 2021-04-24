@@ -4,25 +4,29 @@
 \BOOKMARK [1][-]{section.1.3}{Thesis Structure}{chapter.1}% 4
 \BOOKMARK [0][-]{chapter.2}{Value-at-Risk: Concept, fundamental properties and popular estimation methods}{}% 5
 \BOOKMARK [1][-]{section.2.1}{Concept}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.2}{Properties}{chapter.2}% 7
-\BOOKMARK [0][-]{chapter.3}{Hyperlinks and references}{}% 8
-\BOOKMARK [1][-]{section.3.1}{The package hyperref}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.2}{Hyperlinks to internet sites, email and attached files}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.3}{Literature references}{chapter.3}% 11
-\BOOKMARK [0][-]{chapter.4}{Figures, tables, enumerate and itemize}{}% 12
-\BOOKMARK [1][-]{section.4.1}{Figures}{chapter.4}% 13
-\BOOKMARK [1][-]{section.4.2}{Tables}{chapter.4}% 14
-\BOOKMARK [1][-]{section.4.3}{Enumerate and itemize}{chapter.4}% 15
-\BOOKMARK [0][-]{chapter.5}{Appendix, footnotes, todos and index}{}% 16
-\BOOKMARK [1][-]{section.5.1}{Appendix}{chapter.5}% 17
-\BOOKMARK [1][-]{section.5.2}{Footnotes}{chapter.5}% 18
-\BOOKMARK [1][-]{section.5.3}{Todos}{chapter.5}% 19
-\BOOKMARK [1][-]{section.5.4}{Index}{chapter.5}% 20
-\BOOKMARK [0][-]{appendix.A}{Just an example appendix}{}% 21
-\BOOKMARK [1][-]{section.A.1}{Bla blup}{appendix.A}% 22
-\BOOKMARK [0][-]{appendix.B}{Another example}{}% 23
-\BOOKMARK [1][-]{section.B.1}{More stuff}{appendix.B}% 24
-\BOOKMARK [0][-]{appendix*.3}{Bibliography}{}% 25
-\BOOKMARK [0][-]{appendix*.4}{List of Figures}{}% 26
-\BOOKMARK [0][-]{appendix*.5}{List of Tables}{}% 27
-\BOOKMARK [0][-]{appendix*.5}{Index}{}% 28
+\BOOKMARK [1][-]{section.2.2}{Value at Risk methods}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.1}{Non-parametric methods}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.2}{Parametric methods}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.3}{Semi-parametric methods}{section.2.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Properties}{chapter.2}% 11
+\BOOKMARK [0][-]{chapter.3}{Hyperlinks and references}{}% 12
+\BOOKMARK [1][-]{section.3.1}{The package hyperref}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.2}{Hyperlinks to internet sites, email and attached files}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.3}{Literature references}{chapter.3}% 15
+\BOOKMARK [0][-]{chapter.4}{Figures, tables, enumerate and itemize}{}% 16
+\BOOKMARK [1][-]{section.4.1}{Figures}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.2}{Tables}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.3}{Enumerate and itemize}{chapter.4}% 19
+\BOOKMARK [0][-]{chapter.5}{Appendix, footnotes, todos and index}{}% 20
+\BOOKMARK [1][-]{section.5.1}{Appendix}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.2}{Footnotes}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.3}{Todos}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.4}{Index}{chapter.5}% 24
+\BOOKMARK [0][-]{appendix.A}{Just an example appendix}{}% 25
+\BOOKMARK [1][-]{section.A.1}{Bla blup}{appendix.A}% 26
+\BOOKMARK [0][-]{appendix.B}{Another example}{}% 27
+\BOOKMARK [1][-]{section.B.1}{More stuff}{appendix.B}% 28
+\BOOKMARK [0][-]{appendix*.5}{Bibliography}{}% 29
+\BOOKMARK [0][-]{appendix*.6}{List of Figures}{}% 30
+\BOOKMARK [0][-]{appendix*.7}{List of Tables}{}% 31
+\BOOKMARK [0][-]{appendix*.7}{Index}{}% 32
