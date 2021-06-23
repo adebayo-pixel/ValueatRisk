@@ -2,17 +2,17 @@
 \BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 2
 \BOOKMARK [1][-]{section.1.2}{Literature review}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.3}{Thesis Structure}{chapter.1}% 4
-\BOOKMARK [0][-]{chapter.2}{Value-at-Risk: Concept, fundamental properties and popular estimation methods}{}% 5
+\BOOKMARK [0][-]{chapter.2}{Value-at-Risk: Concept, properties and methods}{}% 5
 \BOOKMARK [1][-]{section.2.1}{Concept}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.2}{Value at Risk methods}{chapter.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.1}{Non-parametric methods}{section.2.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.2}{Parametric methods}{section.2.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.3}{Semi-parametric methods}{section.2.2}% 10
-\BOOKMARK [1][-]{section.2.3}{Properties}{chapter.2}% 11
-\BOOKMARK [0][-]{chapter.3}{Hyperlinks and references}{}% 12
-\BOOKMARK [1][-]{section.3.1}{The package hyperref}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.2}{Hyperlinks to internet sites, email and attached files}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.3}{Literature references}{chapter.3}% 15
+\BOOKMARK [1][-]{section.2.2}{Properties}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Value at Risk methods}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.3.1}{Historical simulation}{section.2.3}% 9
+\BOOKMARK [2][-]{subsection.2.3.2}{GARCH Model}{section.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.3.3}{HAR Method}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.4}{CaViaR Method}{section.2.3}% 12
+\BOOKMARK [0][-]{chapter.3}{Estimating VaR using Neural Networks }{}% 13
+\BOOKMARK [1][-]{section.3.1}{}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{}{chapter.3}% 15
 \BOOKMARK [0][-]{chapter.4}{Figures, tables, enumerate and itemize}{}% 16
 \BOOKMARK [1][-]{section.4.1}{Figures}{chapter.4}% 17
 \BOOKMARK [1][-]{section.4.2}{Tables}{chapter.4}% 18
@@ -26,7 +26,7 @@
 \BOOKMARK [1][-]{section.A.1}{Bla blup}{appendix.A}% 26
 \BOOKMARK [0][-]{appendix.B}{Another example}{}% 27
 \BOOKMARK [1][-]{section.B.1}{More stuff}{appendix.B}% 28
-\BOOKMARK [0][-]{appendix*.5}{Bibliography}{}% 29
-\BOOKMARK [0][-]{appendix*.6}{List of Figures}{}% 30
-\BOOKMARK [0][-]{appendix*.7}{List of Tables}{}% 31
-\BOOKMARK [0][-]{appendix*.7}{Index}{}% 32
+\BOOKMARK [0][-]{appendix*.3}{Bibliography}{}% 29
+\BOOKMARK [0][-]{appendix*.4}{List of Figures}{}% 30
+\BOOKMARK [0][-]{appendix*.5}{List of Tables}{}% 31
+\BOOKMARK [0][-]{appendix*.5}{Index}{}% 32

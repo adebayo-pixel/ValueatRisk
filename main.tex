@@ -131,8 +131,7 @@ The next chapter of discusses the properties and basic methods to estimate VaR. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Value-at-Risk: Concept, fundamental properties and popular estimation
-	methods}
+\chapter{Value-at-Risk: Concept,  properties and methods}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -153,7 +152,7 @@ $F(r) = Pr(r_{t} < r|\Omega_{t-1})$ conditional on the information set $\Omega_{
 
 \begin{equation}
 \begin{aligned}
-r_t &= \mu_t + \varepsilon_t =\mu_t \sigma_t + z_t
+r_t &= \mu_t + \varepsilon_t
 \\
 \varepsilon_t &= \sigma_t  z_t \qquad   z_i \sim (0,1)
 \label{1}
@@ -178,27 +177,30 @@ Hence, a VaR model involves the specification of $F(r)$ or $G(r)$. There are sev
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Properties}
+
+Fix $\alpha$ $\epsilon$(0,1), then the Value at Risk of a portfolio where the net payoff is modelled by X at a level $\alpha$ is given as:\newline
+$\text{VaR}_{\alpha}(X)$ = inf $\{x \epsilon \mathbb{R}| P(X \leq x)=\alpha\}$ has the following properties
+\newline
+
+\begin{description}
+	
+	\item[$\bullet$] Monotonicity \newline if $X \leq Y$ then $\text{VaR}_{\alpha}(X) \leq \text{VaR}_{\alpha}(Y)$
+	\item[$\bullet$] Positive Homogeneity
+	\newline $\text{VaR}_{\alpha}(cX) = c\text{VaR}_{\alpha}(X)$
+	\item[$\bullet$] Translation invariance
+	\newline  $\text{VaR}_{\alpha}(X+c) = \text{VaR}_{\alpha}(X)+c$
+		\item[$\bullet$] VaR is not subadditive: VaR of a combined portfolio can be larger than the sum of the VaRs of its components. This however not a desirable property of value at risk
+	
+	
+\end{description}
 
 
 \section{Value at Risk methods}
 The estimation of these functions can be carried out using the
-following methods: (1) non-parametric methods; (2) parametric
-methods and (3) semi-parametric methods. Below we will describe
-the methodologies, which have been developed in each of these
-three cases to estimate VaR
-\subsection{Non-parametric methods}
-The Non-parametric approaches seek to measure a portfolio VaR
-without making strong assumptions about returns distribution. The
-essence of these approaches is to let data speak for themselves as
-much as possible and to use recent returns empirical distribution
-– not some assumed theoretical distribution – to estimate VaR.
-All Non-parametric approaches are based on the underlying
-assumption that the near future will be sufficiently similar to the
-recent past for us to be able to use the data from the recent past to
-forecast the risk in the near future.
-The Non-parametric approaches include (a) Historical Simulation
-and (b) Delta-Gamma approximation
-\subsubsection{Historical simulation}
+following methods:
+
+\subsection{Historical simulation}
 
 The historical simulation involves using past data to predict future. First of all, we
 have to identify the market variables that will affect the portfolio. Then, the data
@@ -217,93 +219,122 @@ importantly, this approach can account for fat tails and is not prone to the
 accuracy of the model due to being independent of model risk. As this method is
 very powerful and intuitive, it is then become the most widely used methods to
 compute VaR.
+\subsection{GARCH Model}
+The Generalized Autoregressive Conditional Heteroskedasticity(GARCH) model, proposed by Bollerslev
+(1986) is a generalization of the ARCH process created by
+Engle (1982), in which the conditional variance is not only
+the function of lagged random errors, but also of lagged
+conditional variances. The standard GARCH model ($p,q$)
+can be written as:
+\begin{equation}
+\begin{aligned}
+r_t &= \mu_t + \varepsilon_t
+\\
+\varepsilon_t &= \sigma_t \xi_t 
+\label{6}
+\end{aligned}
+\end{equation}
+where $r_t$ = rate of return of the asset in the period $t$,\newline
+$\mu_t$ =conditional mean \newline
 
-\subsubsection{Delta-Gamma Approximation
-}
-
-
-The delta-gamma approximation (DGA) method is
-similar to the delta approximation approach, but
-with a higher order of sensitivity. As portfolios in
-real life are composed of instruments that are nonlinearly related to the underlying risk factors, the
-delta approximation fares poorly due to the linear
-assumption involved (as the first order derivative is
-nothing but the slope of the curve at a given point).
-The natural remedy to this is to incorporate the
-next order derivative. The delta-gamma approximation requires the calculation of the second
-order derivative, gamma, in addition to the delta
-and the returns of each instrument are calculated
-as below (derived from the Taylor’s series):\newline\newline
-$\Delta(V) = \text{Delta} * \Delta(X) +0.5*\text{Gamma}*\Delta(X)^2$
-\begin{description}
-	
-	\item[$\bullet$] $\Delta(V)$ is the change in the value of the instrument
-	 
-	\item[$\bullet$] $\Delta(X)$ is the change in the value of the underlying
-	\item[$\bullet$] \text{Delta} is the first order derivative of the
-	instrument with respect to the underlying.
-	\item[$\bullet$] \text{Gamma} is the first order derivative of the
-	instrument with respect to the underlying.
-	
-\end{description}
-
-From the returns computed using the above
-formula, the portfolio returns are determined and
-the required quantile was chosen as the VaR. The
-delta-gamma method works reasonably well for
-the simple nonlinear instruments (such as bonds
-without put/call options) as the curvature of the
-relationship with the underlying risk factor can be
-approximated by the convexity measure.
+$\varepsilon_t$ = random error in the period $t$, which equals to the
+product of conditional standard deviation $\sigma_t$ and  the
+standardized random error $\xi_t$ in the period $t$ ($\xi_t$ $\sim$ iid(0,1))
+\newline\newline
+In turn, the equation of conditional variance, in the GARCH($p$,$q$) model can be written as:
 
 
-\subsection{Parametric methods}
+\begin{equation}
+\begin{aligned}
+\sigma^2_t = \omega + \sum_{i=1}^{q}\alpha_{i}\varepsilon^{2}_{t-i} + \sum_{i=1}^{p}\beta_{i} \sigma^2_{t-i}
+\label{7}
+\end{aligned}
+\end{equation}
+where $\sigma$ =conditional variance in the period $t$,\newline
+$\omega$ = constant ($\omega$>0)\newline
+$\alpha_{i}$ = weight of the random squared error in the period $t-1$,\newline
+$\beta_{i}$ = weight of the conditional variance in the period $t-1$,\newline
+$\varepsilon^{2}_{t-i}$= squared random error in the period $t-1$,\newline
+$\sigma^2_{t-i}$ =variance in the period $t-1$,\newline
+$q$ = number of random error squares periods used in the functional form of conditional variance,\newline
+$p$ = number of lagged conditional variances used in the
+functional form of conditional variance.\newline\newline The GJR-Garch(1,1) is an asymmetric Garch model with $p=q$=1
 
-Parametric approaches assume that portfolio losses follow a pre-determined
-distribution, such as a Normal distribution or a Student t-distribution, whereas non-parametric
-approaches do not depend on any distributional assumption. Instead, they
-approaches focus directly on the underlying loss distribution of a portfolio,
-by relying on a sample of observed losses. As a result, these approaches are
-applicable to any instrument, while parametric approaches, such as the Normal
-distribution, might not be. For example, under normality, the probability loss
-distribution is assumed to have no excess kurtosis, however, it has been empirically
-observed that financial data indeed exhibits excess kurtosis. Thus, assuming normally
-distributed losses when using financial data may lead to incorrect VaR estimates.
+\subsection{HAR Method}
 
-\subsection{Semi-parametric methods}
-The Semi-parametric methods combine the Non-parametric
-approach with the Parametric approach. The most important
-Semi-parametric methods are Volatility-weight Historical Simulation,
-Filtered Historical Simulation (FHS),the
-approach based on Extreme Value Theory and those that directly model the conditional quantile for a chosen probability level using quantile regression, such as conditional autoregressive VaR and . Directly modeling a quantile
-avoids the need for a distributional assumption, and allows
-the dynamics of the quantiles to differ for each probability
-level.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Properties}
-
-Fix $\alpha$ $\epsilon$(0,1), then the Value at Risk of a portfolio where the net payoff is modelled by X at a level $\alpha$ is given as:\newline
-$\text{VaR}_{\alpha}(X)$ = inf $\{x \epsilon \mathbb{R}| P(X \leq x)=\alpha\}$ has the following properties
+High frequency data are those measured in small time intervals. This kind of data is important
+to study the micro structure of financial markets and also because their use is becoming feasible
+due to the increase of computational power and data storage. The HARCH(n) model was
+introduced by Müller et al. (1997) to try to solve this problem. In fact, this model incorporates
+heterogeneous characteristics of high frequency financial time series and it is given by 
+\begin{equation}
+\begin{aligned}
+r_t &= \sigma_t\varepsilon_t
+\\
+\\
+\sigma^2 &= c_0 + \sum_{j=1}^{n}c_j\left(\sum_{i=1}^{j}r_{t-i}\right)^2
+\label{3}
+\end{aligned}
+\end{equation}
+where $c_0>0, c_n > 0, c_j \ge 0$ $\forall j = 1,...,n-1$ and $\varepsilon_t$ are identically and independent distributed (i.i.d.) random variables with zero expectation and unit variance and the $c_j$ are parameters estimated using least squares.
 \newline
+\newline
+Intraday data have been found to be useful in estimating features of the distribution of daily returns. For
+example, the realized volatility has been used widely
+as a basis for forecasting the daily volatility. The heterogeneous autoregressive (HAR) model of the realized
+volatility is a simple and pragmatic approach, where a
+volatility forecast is constructed from the realized volatility over different time horizons (Corsi, 2009). However,
+intraday data can be expensive, and resources are required for pre-processing. Given the ready availability
+of the daily high and low prices, an alternative way of
+capturing the intraday volatility is to use the intraday range.
 
-\begin{description}
-	
-	\item[$\bullet$] Monotonicity \newline if $X \leq Y$ then $\text{VaR}_{\alpha}(X) \leq \text{VaR}_{\alpha}(Y)$
-	\item[$\bullet$] Positive Homogeneity
-	\newline $\text{VaR}_{\alpha}(cX) = c\text{VaR}_{\alpha}(X)$
-	\item[$\bullet$] Translation invariance
-	\newline  $\text{VaR}_{\alpha}(X+c) = \text{VaR}_{\alpha}(X)+c$
-	
-	
-\end{description}
+\begin{equation}
+\begin{aligned}
+\text{Range}_{t}&=\beta_1+\beta_{2}\text{Range}_{t-1} + \beta_{3}\text{Range}^{w}_{t-1} + \beta_{4}\text{Range}^{m}_{t-1} + \varepsilon_t
+\\
+\\
+\text{Range}^{w}_{t-1}&=\frac{1}{5}\sum_{i=1}^{5}\text{Range}_{t-1}
+\\
+\\
+\text{Range}^{m}_{t-1}&=\frac{1}{22}\sum_{i=1}^{22}\text{Range}_{t-1}
+\label{4}
+\end{aligned}
+\end{equation}
 
+where $\text{Range}_{t}$
+is the difference between the highest and
+lowest log prices on day $t$; $\text{Range}^{w}_{t-1}$
+and $\text{Range}^{m}_{t-1}$ are
+averages of $\text{Range}_{t}$ over a week and month, respectively;
+$\varepsilon_t$
+is an i.i.d. error term with zero mean; and the $\beta_{i}$
+are parameters that are estimated using least squares.
+The conditional variance is then expressed as a linear
+function of the square of $\text{Range}_{t}$
+, where the intercept and
+the coefficient are estimated using maximum likelihoods
+based on a Student t distribution.
+
+
+\subsection{CaViaR Method}
+Engle and Manganelli (2004) propose a conditional autoregressive quantile specification (CAViaR) quantile estimation. Instead of modeling the whole distribution, the quantile is modelled directly. The empirical fact that volatilities of stock market turns cluster over time may be translated in statistical words by saying that their distribution is autocorrelated. Consequently, the VaR, which is tightly linked to the standard deviation of distribution, must behave in similar way. A natural way to formalize this characteristic is to use some type of autoregressive specification
+\newline\newline
+let $\{y_t\}^T_{t-1}$ and $\theta$ be the probability associated with VaR. Let $x_t$ be a vector of time t observable variables, and ${\beta}_\theta$ be a $p$-vector of unknown parameters. Finally, let $f_t(\beta) $ $\equiv$ $ f_t(x_{t-1},{\beta}_\theta)$ denote the time $t$ $\theta$-quantile of the distribution of the portfolio returns formed at $t-1$, The $\theta$ subscript is however suppressed from $\beta_\theta$ for convenience in notation: The general specification of CaViar would be:
+\begin{equation}
+\begin{aligned}
+f_t(\beta)=\beta_0 + \sum_{i=1}^{q} \beta_{i}f _{t-i}(\beta) +\sum_{j=1}^{r}\beta_{j}l(x_{t-j})
+\label{5}
+\end{aligned}
+\end{equation}
+where $p=q+r+1$ is the dimension of $\beta$ and $l$ is a function of a finite number of lagged values of observables. The autoregressive terms $\beta_{i}f_{t-i}(\beta)$, $i = 1,...,q$, ensure that the quantile changes smoothly over time. The parameters of CaViaR are estimated by regression quantile. The role of $l(x_{t-j})$ is to connect $f_{t}(\beta)$ to observable variables that belong to the information set.
+\newline\newline
+The asymmetric slope is one of the four variants of CaViar model, which allows the response to positive and negative returns to be different. It is modelled as:\newline\newline
+$f_{t}(\beta)= \beta_{1} +\beta_{2}f_{t-1}(\beta)+\beta_{3}(y_{t-1})^{+} + \beta_{4}(y_{t-1})^{-}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \chapter{Estimating VaR using Neural Networks
 }
@@ -312,23 +343,21 @@ $\text{VaR}_{\alpha}(X)$ = inf $\{x \epsilon \mathbb{R}| P(X \leq x)=\alpha\}$ h
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{The package hyperref}
 
-The package \imp{hyperref} is the package for referring to labeled elements of a document and hyperlinks. Now, chapters, sections, equations, figures, tables and other elements can be labeled and referred to, e.g., \autoref{math_fe}, \autoref{math_msymb} and \autoref{href}. These are clickable links which in the pdf redirects the reader to the referred element (with ALT+LEFT you can then go back to where you were reading). Here, different alternatives can be used, e.g., \ref{href}, \autoref{href} or \hyperref[href]{Chapter \ref*{href}}. Depending on which language you have to write something, you may need language options (e.g., ngerman for German hyperlinks).
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Hyperlinks to internet sites, email and attached files}
-
-Hyperlinks can be added as, e.g., \url{http://miktex.org/} or \href{http://miktex.org/}{click me}. Sending an email to a prescribed address can be done by \href{mailto:name.lastname@address.org}{name.lastname@address.org}. If the pdf is delivered within a folder with useful files, these files can be linked in the pdf, e.g., \href{run:attachments/manipulate.nb}{manipulate} or \href{run:attachments/video.mp4}{video}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Literature references}
+\section{}
 
-Bibtex files with literature information can be created either manually or using literature manager programs like \href{http://www.mendeley.com/}{Mendeley} or \href{http://citavi.com/en/index.html}{Citavi}. The bibtex file must be included in the project with \imp{bibliography} pointing to the file, together with \imp{bibliographystyle} and a packages for citing commands. With the commands \imp{cite/p} elements of the included file are then cited, e.g., \cite{Hill1952} and \citep{Kroner1977}. Make sure that while compiling you have chosen a procedure including bibtex (see compiling options). Sometimes it may be necessary to delete all files but not the main.tex file in order to be able to compile again the project, if bibliography styles have been changed.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
