@@ -144,17 +144,17 @@ expected loss over a given horizon under normal market conditions
 at a given level of confidence. For instance, a bank might say that
 the daily VaR of its trading portfolio is \$2 million at the 99\%
 confidence level. In other words, under normal market conditions,
-only 1\% of the time, the daily loss will exceed \$2 million (99\% of the time, their loss will not be more than \$2 million).”
+only 1\% of the time, the daily loss will exceed \$2 million (99\% of the time, their loss will not be more than \$2 million)”. As represented in the mathematical representation below, it can also be stated as the least expected return of a portfolio at time $t$ and at a certain level of significance, $\alpha$.
 \newline\newline
 Mathematically,\newline\newline
-Let $r_1, r_2, ..., r_n$ be independently and identically distributed(iid) random variables representing financial returns. Use $F(r)$ to denote the cumulative distribution function,
+Let $r_1, r_2, ..., r_n$ be independently and identically distributed(iid) random variables representing financial log returns. Use $F(r)$ to denote the cumulative distribution function,
 $F(r) = Pr(r_{t} < r|\Omega_{t-1})$ conditional on the information set $\Omega_{t-1}$ available at time $t$-1. Assume that \{$r_t$\} follows the stochastic process; \newline
 
 \begin{equation}
 \begin{aligned}
 r_t &= \mu_t + \varepsilon_t
 \\
-\varepsilon_t &= \sigma_t  z_t \qquad   z_i \sim (0,1)
+\varepsilon_t &= \sigma_t  z_t \qquad   z_i \sim N(0,1)
 \label{1}
 \end{aligned}
 \end{equation}
@@ -171,7 +171,7 @@ $G(z)$ the latter, it is also necessary to estimate $\sigma^2_t$.
 \label{2}
 \end{equation}
 
-Hence, a VaR model involves the specification of $F(r)$ or $G(r)$. There are several method for these estimations.
+Hence, a VaR model involves the specification of $F(r)$ or $G(r)$. There are several method for these estimations. Having explained the concept of Value at Risk, it is however necessary to state some of its properties or attributes.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -186,18 +186,20 @@ $\text{VaR}_{\alpha}(X)$ = inf $\{x \epsilon \mathbb{R}| P(X \leq x)=\alpha\}$ h
 \begin{description}
 	
 	\item[$\bullet$] Monotonicity \newline if $X \leq Y$ then $\text{VaR}_{\alpha}(X) \leq \text{VaR}_{\alpha}(Y)$
-	\item[$\bullet$] Positive Homogeneity
-	\newline $\text{VaR}_{\alpha}(cX) = c\text{VaR}_{\alpha}(X)$
+	
 	\item[$\bullet$] Translation invariance
 	\newline  $\text{VaR}_{\alpha}(X+c) = \text{VaR}_{\alpha}(X)+c$
-		\item[$\bullet$] VaR is not subadditive: VaR of a combined portfolio can be larger than the sum of the VaRs of its components. This however not a desirable property of value at risk
+	\item[$\bullet$] Positive Homogeneity
+	\newline $\text{VaR}_{\alpha}(cX) = c\text{VaR}_{\alpha}(X)$ if $c>0$. 
+	
+		\item[$\bullet$] VaR is not subadditive: The sum of the VaRs of individual portfolio (VaR(X)+VaR(Y)) can be lesser than the VaR of the combined portfolio (VaR(X+Y)). This is however not a desirable property of value at risk
 	
 	
 \end{description}
 
 
-\section{Value at Risk methods}
-The estimation of these functions can be carried out using the
+\section{Popular methods for estimating VaR}
+The estimation of these functions ($F(r)$ or $G(r)$) can be carried out using the
 following methods:
 
 \subsection{Historical simulation}
@@ -218,7 +220,8 @@ The core of this approach is the time series of the aggregate portfolio return. 
 importantly, this approach can account for fat tails and is not prone to the
 accuracy of the model due to being independent of model risk. As this method is
 very powerful and intuitive, it is then become the most widely used methods to
-compute VaR.
+compute VaR. However, Historical simulation requires data on all risk factors to be available over a reasonably long historical period in order to give a good
+representation of what might happen in the future. As it depends on history, if we run a Historical Simulations VaR in a bull market, VaR may be underestimated. Similarly, if we run a Historical Simulations VaR just after a crash, the falling returns which the portfolio has experienced recently may distort VaR.
 \subsection{GARCH Model}
 The Generalized Autoregressive Conditional Heteroskedasticity(GARCH) model, proposed by Bollerslev
 (1986) is a generalization of the ARCH process created by
@@ -258,14 +261,17 @@ $\varepsilon^{2}_{t-i}$= squared random error in the period $t-1$,\newline
 $\sigma^2_{t-i}$ =variance in the period $t-1$,\newline
 $q$ = number of random error squares periods used in the functional form of conditional variance,\newline
 $p$ = number of lagged conditional variances used in the
-functional form of conditional variance.\newline\newline The GJR-Garch(1,1) is an asymmetric Garch model with $p=q$=1
+functional form of conditional variance.\newline\newline. When we use high frequency data in conjunction with GARCH models, these need to be modified
+to incorporate the financial market micro structure. For example, we need to incorporate heterogeneous
+characteristics that appear when there are many traders working in a financial market trading with
+different time horizons. The HARCH(n) model was introduced by Müller et al. (1997) to try to solve this problem.
 
 \subsection{HAR Method}
 
 High frequency data are those measured in small time intervals. This kind of data is important
 to study the micro structure of financial markets and also because their use is becoming feasible
 due to the increase of computational power and data storage. The HARCH(n) model was
-introduced by Müller et al. (1997) to try to solve this problem. In fact, this model incorporates
+introduced by Müller et al. (1997) to estimate the VaR for this kind of data. In fact, this model incorporates
 heterogeneous characteristics of high frequency financial time series and it is given by 
 \begin{equation}
 \begin{aligned}
@@ -286,17 +292,19 @@ volatility is a simple and pragmatic approach, where a
 volatility forecast is constructed from the realized volatility over different time horizons (Corsi, 2009). However,
 intraday data can be expensive, and resources are required for pre-processing. Given the ready availability
 of the daily high and low prices, an alternative way of
-capturing the intraday volatility is to use the intraday range.
+capturing the intraday volatility is to use the intraday range. Where $\text{Range}_{t}$
+is the difference between the highest and
+lowest log prices on day $t$, to predict tomorrow's range from past daily, weekly, monthly averages of $\text{Range}_{t}$, we set up the linear regression model;
 
 \begin{equation}
 \begin{aligned}
 \text{Range}_{t}&=\beta_1+\beta_{2}\text{Range}_{t-1} + \beta_{3}\text{Range}^{w}_{t-1} + \beta_{4}\text{Range}^{m}_{t-1} + \varepsilon_t
 \\
 \\
-\text{Range}^{w}_{t-1}&=\frac{1}{5}\sum_{i=1}^{5}\text{Range}_{t-1}
+\text{Range}^{w}_{t-1}&=\frac{1}{5}\sum_{i=1}^{5}\text{Range}_{t-i}
 \\
 \\
-\text{Range}^{m}_{t-1}&=\frac{1}{22}\sum_{i=1}^{22}\text{Range}_{t-1}
+\text{Range}^{m}_{t-1}&=\frac{1}{22}\sum_{i=1}^{22}\text{Range}_{t-i}
 \label{4}
 \end{aligned}
 \end{equation}
@@ -317,19 +325,19 @@ based on a Student t distribution.
 
 
 \subsection{CaViaR Method}
-Engle and Manganelli (2004) propose a conditional autoregressive quantile specification (CAViaR) quantile estimation. Instead of modeling the whole distribution, the quantile is modelled directly. The empirical fact that volatilities of stock market turns cluster over time may be translated in statistical words by saying that their distribution is autocorrelated. Consequently, the VaR, which is tightly linked to the standard deviation of distribution, must behave in similar way. A natural way to formalize this characteristic is to use some type of autoregressive specification
+Engle and Manganelli (2004) propose a conditional autoregressive quantile specification (CAViaR) quantile estimation. Instead of modeling the whole distribution, the quantile is modelled directly. The empirical fact that volatilities of stock market returns cluster over time may be translated in statistical words by saying that their distribution is autocorrelated. Consequently, the VaR, which is a quantile, must behave in similar way. A natural way to formalize this characteristic is to use some type of autoregressive specification
 \newline\newline
-let $\{y_t\}^T_{t-1}$ and $\theta$ be the probability associated with VaR. Let $x_t$ be a vector of time t observable variables, and ${\beta}_\theta$ be a $p$-vector of unknown parameters. Finally, let $f_t(\beta) $ $\equiv$ $ f_t(x_{t-1},{\beta}_\theta)$ denote the time $t$ $\theta$-quantile of the distribution of the portfolio returns formed at $t-1$, The $\theta$ subscript is however suppressed from $\beta_\theta$ for convenience in notation: The general specification of CaViar would be:
+let $\{y_t\}^T_{t=1}$ and $\theta$ be a vector of portfolio returns and the probability associated with VaR respectively. Let $x_t$ be a vector of time t observable variables(return or any other observable variables), and ${\beta}_\theta$ be a $p$-vector of unknown parameters. Finally, let $f_t(\beta) $ $\equiv$ $ f_t(x_{t-1},{\beta}_\theta)$ denote the time $t$ $\theta$-quantile of the distribution of the portfolio returns formed at $t-1$, The $\theta$ subscript is however suppressed from $\beta_\theta$ for convenience in notation: The general specification of CaViar would be:
 \begin{equation}
 \begin{aligned}
 f_t(\beta)=\beta_0 + \sum_{i=1}^{q} \beta_{i}f _{t-i}(\beta) +\sum_{j=1}^{r}\beta_{j}l(x_{t-j})
 \label{5}
 \end{aligned}
 \end{equation}
-where $p=q+r+1$ is the dimension of $\beta$ and $l$ is a function of a finite number of lagged values of observables. The autoregressive terms $\beta_{i}f_{t-i}(\beta)$, $i = 1,...,q$, ensure that the quantile changes smoothly over time. The parameters of CaViaR are estimated by regression quantile. The role of $l(x_{t-j})$ is to connect $f_{t}(\beta)$ to observable variables that belong to the information set.
+where $p=q+r+1$ is the dimension of $\beta$ and $l$ is a function of a finite number of lagged values of observables. The autoregressive terms $\beta_{i}f_{t-i}(\beta)$, $i = 1,...,q$, ensure that the quantile changes smoothly over time. The parameters of CaViaR are estimated by quantile regression. The role of $l(x_{t-j})$ is to connect $f_{t}(\beta)$ to observable variables that belong to the information set.
 \newline\newline
-The asymmetric slope is one of the four variants of CaViar model, which allows the response to positive and negative returns to be different. It is modelled as:\newline\newline
-$f_{t}(\beta)= \beta_{1} +\beta_{2}f_{t-1}(\beta)+\beta_{3}(y_{t-1})^{+} + \beta_{4}(y_{t-1})^{-}$.
+The asymmetric slope is a variant of CaViar model, which allows the response to positive and negative returns to be different. It is modelled as:\newline\newline
+$f_{t}(\beta)= \beta_{1} +\beta_{2}f_{t-1}(\beta)+\beta_{3}(y_{t-1})^{+} + \beta_{4}(y_{t-1})^{-}$. where, $(y_{t-1})^{+}$= max($y_{t-1}$, 0) and $(y_{t-1})^{-}$ = min($y_{t-1}$, 0)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

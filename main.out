@@ -5,7 +5,7 @@
 \BOOKMARK [0][-]{chapter.2}{Value-at-Risk: Concept, properties and methods}{}% 5
 \BOOKMARK [1][-]{section.2.1}{Concept}{chapter.2}% 6
 \BOOKMARK [1][-]{section.2.2}{Properties}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.3}{Value at Risk methods}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Popular methods for estimating VaR}{chapter.2}% 8
 \BOOKMARK [2][-]{subsection.2.3.1}{Historical simulation}{section.2.3}% 9
 \BOOKMARK [2][-]{subsection.2.3.2}{GARCH Model}{section.2.3}% 10
 \BOOKMARK [2][-]{subsection.2.3.3}{HAR Method}{section.2.3}% 11
