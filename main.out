@@ -11,22 +11,24 @@
 \BOOKMARK [2][-]{subsection.2.3.3}{HAR Method}{section.2.3}% 11
 \BOOKMARK [2][-]{subsection.2.3.4}{CaViaR Method}{section.2.3}% 12
 \BOOKMARK [0][-]{chapter.3}{Estimating VaR using Neural Networks }{}% 13
-\BOOKMARK [1][-]{section.3.1}{}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.2}{}{chapter.3}% 15
-\BOOKMARK [0][-]{chapter.4}{Figures, tables, enumerate and itemize}{}% 16
-\BOOKMARK [1][-]{section.4.1}{Figures}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.2}{Tables}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.3}{Enumerate and itemize}{chapter.4}% 19
-\BOOKMARK [0][-]{chapter.5}{Appendix, footnotes, todos and index}{}% 20
-\BOOKMARK [1][-]{section.5.1}{Appendix}{chapter.5}% 21
-\BOOKMARK [1][-]{section.5.2}{Footnotes}{chapter.5}% 22
-\BOOKMARK [1][-]{section.5.3}{Todos}{chapter.5}% 23
-\BOOKMARK [1][-]{section.5.4}{Index}{chapter.5}% 24
-\BOOKMARK [0][-]{appendix.A}{Just an example appendix}{}% 25
-\BOOKMARK [1][-]{section.A.1}{Bla blup}{appendix.A}% 26
-\BOOKMARK [0][-]{appendix.B}{Another example}{}% 27
-\BOOKMARK [1][-]{section.B.1}{More stuff}{appendix.B}% 28
-\BOOKMARK [0][-]{appendix*.3}{Bibliography}{}% 29
-\BOOKMARK [0][-]{appendix*.4}{List of Figures}{}% 30
-\BOOKMARK [0][-]{appendix*.5}{List of Tables}{}% 31
-\BOOKMARK [0][-]{appendix*.5}{Index}{}% 32
+\BOOKMARK [1][-]{section.3.1}{Mathematics of Neural Network}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.1.1}{A single Neuron}{section.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.1.2}{Activation Functions}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.3}{General Model Building}{section.3.1}% 17
+\BOOKMARK [0][-]{chapter.4}{Figures, tables, enumerate and itemize}{}% 18
+\BOOKMARK [1][-]{section.4.1}{Figures}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{Tables}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.3}{Enumerate and itemize}{chapter.4}% 21
+\BOOKMARK [0][-]{chapter.5}{Appendix, footnotes, todos and index}{}% 22
+\BOOKMARK [1][-]{section.5.1}{Appendix}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.2}{Footnotes}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.3}{Todos}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.4}{Index}{chapter.5}% 26
+\BOOKMARK [0][-]{appendix.A}{Just an example appendix}{}% 27
+\BOOKMARK [1][-]{section.A.1}{Bla blup}{appendix.A}% 28
+\BOOKMARK [0][-]{appendix.B}{Another example}{}% 29
+\BOOKMARK [1][-]{section.B.1}{More stuff}{appendix.B}% 30
+\BOOKMARK [0][-]{appendix*.3}{Bibliography}{}% 31
+\BOOKMARK [0][-]{appendix*.4}{List of Figures}{}% 32
+\BOOKMARK [0][-]{appendix*.5}{List of Tables}{}% 33
+\BOOKMARK [0][-]{appendix*.5}{Index}{}% 34

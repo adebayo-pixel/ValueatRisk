@@ -346,8 +346,16 @@ $f_{t}(\beta)= \beta_{1} +\beta_{2}f_{t-1}(\beta)+\beta_{3}(y_{t-1})^{+} + \beta
 
 \chapter{Estimating VaR using Neural Networks
 }
+Neural networks, also known as artificial neural networks (ANNs) are computing systems vaguely inspired by the biological neural networks that constitute animal brains. Their name and structure are inspired by the human brain, mimicking the way that biological neurons signal to one another.\newline\newline
 
-
+Artificial neural networks (ANNs) are comprised of a node layers, containing an input layer, one or more hidden layers, and an output layer. Each node, or artificial neuron, connects to another and has an associated weight and threshold. If the output of any individual node is above the specified threshold value, that node is activated, sending data to the next layer of the network. Otherwise, no data is passed along to the next layer of the network.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figures/NN}
+	\caption{A figure showing the layers of a Neural Network}
+	\label{firstfig}
+\end{figure}\newline
+Neural networks rely on training data to learn and improve their accuracy over time. However, once these learning algorithms are fine-tuned for accuracy, they are powerful tools in computer science and artificial intelligence, allowing us to classify and cluster data at a high velocity. Tasks in speech recognition or image recognition can take minutes versus hours when compared to the manual identification by human experts.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -357,13 +365,124 @@ $f_{t}(\beta)= \beta_{1} +\beta_{2}f_{t-1}(\beta)+\beta_{3}(y_{t-1})^{+} + \beta
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{}
+\section{Mathematics of Neural Network}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{}
+\subsection{A single Neuron}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figures/neuron}
+	\caption{A single neuron of neural networks}
+	\label{secondfig}
+\end{figure}
+
+\autoref{secondfig} shows a network with one layer containing a single neuron. This neuron receives input from the prior input layer, performs computations, and gives output. $x_1$ and $x_2$ are inputs with weights $w_1$ and $w_2$ respectively. The neuron applies a function $f$ to the dot-product of these inputs, which is $w_{1}x{1}+w_{2}x_{2}+b$.  Besides the two numerical input values, there is one input value 1 with weight $b$, called the Bias. The main function of bias is to stand for unknown parameters or unforeseen factors. The output $Y$ is computed by taking the dot-product of all input
+values and their associated weights and putting it into the function $f$. This function is called the Activation Function.\newline\newline
+Activation functions are needed because many problems take multiple influencing factors into account and yield classifications. For example, if one encounters a binary classification problem, the results would
+be either yes or no, activation functions are needed to map the results
+inside this range. If one encounters a problem involving probability, then
+one would wish to see the predictions from the neural network being in
+the range of [0, 1]. This is what activation functions can do.\newline\newline
+There are two types of activation functions: linear activation
+functions and non-linear ones. The biggest limitation of linear ones is
+that they cannot learn complex function mappings because they are
+just polynomials of one degree. Therefore, we always need non-linear
+activation functions to produce results in desired ranges and to send
+them as inputs to the next layer. The following subsection will introduce
+few generally used non-linear activation functions.
+\subsection{Activation Functions}
+An activation function takes the dot-product mentioned before as a input and performs a certain computation on it. We put a certain activation function inside of neurons of hidden layers based on the range of
+the result we expect to see. A notable property of activation functions is that they should
+be differentiable, because later we need this property to train the neural network using backpropagation optimization.
+\newline\newline
+Here are few commonly used activation functions:\newline\newline
+\textbf{Sigmoid}: This takes a real-valued input and returns a output in the range [0,1]:\newline\newline
+$\delta = \frac{1}{1+e^{-x}}$
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{figures/neuro}
+	\caption{Sigmoid() Activation Function}
+	\label{thirdfig}
+\end{figure}
+
+\autoref{thirdfig} shows an S-shaped curve and the values going
+through the Sigmoid function will be squeezed in the range of [0, 1].
+Since the probability of anything exists only between the range of 0 and
+1, Sigmoid is a compatible transfer function for probability.
+Although the Sigmoid function is easy to understand and ready
+to use, it is not frequently used because it has vanishing gradient
+problem. This problem is that, in some cases, the gradient gets so close to zero that it does not effectively apply change to the weight. In the
+worst case, this may completely stop the neural network from further
+training. Second, the output of this function is not zero-centered, which
+makes the gradient updates go far in different directions. Besides, the
+fact that output is in the narrow range [0, 1] makes optimization harder.
+In order to compensate the shortcomings, tanh() is an alternative option
+because it is a stretched version of the Sigmoid function, in which its
+output is zero-centered. \newline\newline
+\textbf{tanh}: This takes real-valued input and produces the results in the range [-1, 1]:\newline\newline
+$\text{tanh(x)}=\frac{sinh(x)}{cosh(x)}=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}$
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{figures/tanh}
+	\caption{tanh() Activation Function}
+	\label{fourthfig}
+\end{figure}
+
+The advantage is that the negative input values will be mapped
+strongly negative and the zeros will be mapped near zero through this
+function. Therefore, this function is useful in the performance of a classification between two distinct classes.
+Though, this function is preferred over the Sigmoid function in practice (output in wider range), but the gradient vanishing
+problem still exists. The following ReLU function rectifies this problem
+using a relatively simple formula.\newline\newline
+
+\textbf{ReLU} (Rectified Linear Unit): It takes a real-valued input and replaces the negative values with zero:
+\newline\newline
+$R(x)= \text{max}(0,x)$
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{figures/Relu}
+	\caption{ReLU() Activation Function}
+	\label{fifthfig}
+\end{figure}
+\newline\newline It is used in almost all the convolutional neural networks or deep learning because it is a relatively simple and efficient
+function which avoids and rectifies the gradient vanishing problem.
+The problem of this activation function is that all the negative
+values become zeros after this activation, which in turns affects the
+results by not taking negative values into account.
+\newline\newline We use different activation functions when we know what characteristics of results we expect to see.
+\subsection{General Model Building}
+A neural network learns from patterns of data and tries to make predictions as accurately as possible. Assume that we already have a
+set of $p$ data pairs containing the variables and the results, ($x^{(1)},t^{(1)}$), ($x^{(2)},t^{(2)}$),...,($x^{(p)},t^{(p)}$) where $x^{(i)}$ is the input value and $t^{(i)}$ is the target value for i= 1,2,...,p. We would like to build a neural net $F$ so that ideally, 
+\begin{center}
+$F(x^{(i)})=t^{(i)}$
+\end{center}
+However, typically we allow for error $\epsilon_i$. Let $y^{(i)}$ denote the output of the neural net so that
+
+\begin{center}
+	$y^{(i)}=F(x^{(i)})$ and $t^{(i)}=y^{(i)}+\overrightarrow{\epsilon}$
+\end{center}
+We know that $y^{(i)}$ depends on parameters, which are weights and biases,
+then it turns out as an optimization problem. We need to set up a neural net $F$ that minimizes the error function, which is denoted below:
+\begin{center}
+	$E = \frac{1}{N}\sum_{i=1}^{p}||t^{(i)}-y^{(i)}||^2$ 
+\end{center}
+where $N$ is the number of training patterns. If it is a two-way classification problem, then $N$ = 2. From this equation, we know that $E$ is a
+function of the parameters in F, and we need to determine the values
+of weights that minimize the error by differentiating $E$.
+If we focus on only one term of the sum, then
+\begin{center}
+	$||t-y||^2=(t_{1}-y_{1})^2+(t_{2}-y_{2})^2+...+(t_{p}-y_{p})^2$ 
+\end{center}
+
+
+
+
+
+
 
 
 

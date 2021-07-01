@@ -1,8 +1,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A figure showing the layers of a Neural Network}}{8}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A single neuron of neural networks}}{9}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Sigmoid() Activation Function}}{10}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces tanh() Activation Function}}{10}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces ReLU() Activation Function}}{11}{figure.3.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces A figure caption beneath the figure for description of the depicted concept which sometimes can be very long}}{9}{figure.4.1}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces A figure caption beneath the figure for description of the depicted concept which sometimes can be very long}}{12}{figure.4.1}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
