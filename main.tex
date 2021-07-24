@@ -179,24 +179,29 @@ Hence, a VaR model involves the specification of $F(r)$ or $G(r)$. There are sev
 
 \section{Properties}
 
-Fix $\alpha$ $\epsilon$(0,1), then the Value at Risk of a portfolio where the net payoff is modelled by X at a level $\alpha$ is given as:\newline
-$\text{VaR}_{\alpha}(X)$ = inf $\{x \epsilon \mathbb{R}| P(X \leq x)=\alpha\}$ has the following properties
+%Fix $\alpha$ $\epsilon$(0,1), then the Value at Risk of a portfolio %where the net payoff is modelled by X at a level $\alpha$ is given %as:\newline
+%$\text{VaR}_{\alpha}(X)$ = inf $\{x \epsilon \mathbb{R}| P(X \leq %x)=\alpha\}$. Value at risk as a risk measure satisfies the following %properties
+A functional $\tau: X,Y \rightarrow \mathbb{R} \cup \{+\infty\}$ is said to be coherent risk measure for portfolios $X$ and $Y$ if it satisfies the following properties:
 \newline
 
 \begin{description}
-	
-	\item[$\bullet$] Monotonicity \newline if $X \leq Y$ then $\text{VaR}_{\alpha}(X) \leq \text{VaR}_{\alpha}(Y)$
+	\item[$\bullet$] Normalization \newline $\tau[0] = 0$ \newline The risk when holding no assets is zero.
+	\item[$\bullet$] Monotonicity \newline if $X \leq Y$ then $\tau(X) \geq \tau(Y)$ \newline For financial applications, this implies that a
+	security that always has higher return in all future states has less risk of loss.
 	
 	\item[$\bullet$] Translation invariance
-	\newline  $\text{VaR}_{\alpha}(X+c) = \text{VaR}_{\alpha}(X)+c$
+	\newline  $\tau(X+c) = \tau(X)-c$ \newline In effect, if an amount of cash κ (or risk free asset)
+	is added to a portfolio, then the risk is reduced by that amount.
 	\item[$\bullet$] Positive Homogeneity
-	\newline $\text{VaR}_{\alpha}(cX) = c\text{VaR}_{\alpha}(X)$ if $c>0$. 
+	\newline $\tau(cX) = c\tau(X)$ if $c>0$. \newline In effect, if a portfolio or capital asset is, say,
+	doubled, then the risk will also be doubled.
 	
-		\item[$\bullet$] VaR is not subadditive: The sum of the VaRs of individual portfolio (VaR(X)+VaR(Y)) can be lesser than the VaR of the combined portfolio (VaR(X+Y)). This is however not a desirable property of value at risk
-	
+		\item[$\bullet$] subadditive: 
+	\newline $\tau(X+Y)\leq \tau(x)+\tau(Y)$. 
+	Indeed, the risk of two portfolios together cannot get any worse than adding the two risks separately: this is the diversification principle.
 	
 \end{description}
-
+One disadvantage of value at risk is that it does not always satisfy the sub-additivity, hence it might discourage diversification.
 
 \section{Popular methods for estimating VaR}
 The estimation of these functions ($F(r)$ or $G(r)$) can be carried out using the
@@ -254,14 +259,14 @@ In turn, the equation of conditional variance, in the GARCH($p$,$q$) model can b
 \end{aligned}
 \end{equation}
 where $\sigma$ =conditional variance in the period $t$,\newline
-$\omega$ = constant ($\omega$>0)\newline
+$\omega$ = constant ($\omega>0$)\newline
 $\alpha_{i}$ = weight of the random squared error in the period $t-1$,\newline
 $\beta_{i}$ = weight of the conditional variance in the period $t-1$,\newline
 $\varepsilon^{2}_{t-i}$= squared random error in the period $t-1$,\newline
 $\sigma^2_{t-i}$ =variance in the period $t-1$,\newline
 $q$ = number of random error squares periods used in the functional form of conditional variance,\newline
 $p$ = number of lagged conditional variances used in the
-functional form of conditional variance.\newline\newline. When we use high frequency data in conjunction with GARCH models, these need to be modified
+functional form of conditional variance.\newline\newline When we use high frequency data in conjunction with GARCH models, these need to be modified
 to incorporate the financial market micro structure. For example, we need to incorporate heterogeneous
 characteristics that appear when there are many traders working in a financial market trading with
 different time horizons. The HARCH(n) model was introduced by Müller et al. (1997) to try to solve this problem.
@@ -338,7 +343,8 @@ where $p=q+r+1$ is the dimension of $\beta$ and $l$ is a function of a finite nu
 \newline\newline
 The asymmetric slope is a variant of CaViar model, which allows the response to positive and negative returns to be different. It is modelled as:\newline\newline
 $f_{t}(\beta)= \beta_{1} +\beta_{2}f_{t-1}(\beta)+\beta_{3}(y_{t-1})^{+} + \beta_{4}(y_{t-1})^{-}$. where, $(y_{t-1})^{+}$= max($y_{t-1}$, 0) and $(y_{t-1})^{-}$ = min($y_{t-1}$, 0)
-
+\newline\newline
+\textbf{Note:} In this work, value at risk will be estimated based on financial log-returns.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -348,14 +354,19 @@ $f_{t}(\beta)= \beta_{1} +\beta_{2}f_{t-1}(\beta)+\beta_{3}(y_{t-1})^{+} + \beta
 }
 Neural networks, also known as artificial neural networks (ANNs) are computing systems vaguely inspired by the biological neural networks that constitute animal brains. Their name and structure are inspired by the human brain, mimicking the way that biological neurons signal to one another.\newline\newline
 
-Artificial neural networks (ANNs) are comprised of a node layers, containing an input layer, one or more hidden layers, and an output layer. Each node, or artificial neuron, connects to another and has an associated weight and threshold. If the output of any individual node is above the specified threshold value, that node is activated, sending data to the next layer of the network. Otherwise, no data is passed along to the next layer of the network.
+Neural networks are made of node layers, containing an input layer, one or more hidden layers, and an output layer. Each node (or artificial neuron), connects to another and has an assigned weight and threshold. If the output of any individual node exceeds the specified threshold value, that node is activated, transferring data to the next layer of the network. Else, no data is passed along to the next layer of the network.
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{figures/NN}
-	\caption{A figure showing the layers of a Neural Network}
+	\caption{A figure showing the layers of a Neural Network (see IBM)}
 	\label{firstfig}
 \end{figure}\newline
-Neural networks rely on training data to learn and improve their accuracy over time. However, once these learning algorithms are fine-tuned for accuracy, they are powerful tools in computer science and artificial intelligence, allowing us to classify and cluster data at a high velocity. Tasks in speech recognition or image recognition can take minutes versus hours when compared to the manual identification by human experts.
+Neural networks rely on training data to learn and improve their accuracy over time. However, once these learning algorithms are polished for accuracy, they become powerful tools in computer science and artificial intelligence, allowing us to classify and cluster data at a high speed. Tasks in speech recognition or image recognition can take minutes versus hours when compared to the manual identification by human experts.
+\newline\newline
+One major advantage of Neural Networks is that they have a flexible nonlinear
+function mapping capability, meaning that any model can be arbitrarily well
+approximated by a sufficiently large ANN. This model-free property of ANNs is an
+important advantage since returns do not display a specific nonlinear pattern. However, just like historical simulation they require large data set (which is not always available) for training to perform excellently well.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -367,6 +378,7 @@ Neural networks rely on training data to learn and improve their accuracy over t
 
 \section{Mathematics of Neural Network}
 
+Here, we consider a case of single neuron
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -454,37 +466,90 @@ The problem of this activation function is that all the negative
 values become zeros after this activation, which in turns affects the
 results by not taking negative values into account.
 \newline\newline We use different activation functions when we know what characteristics of results we expect to see.
-\subsection{General Model Building}
-A neural network learns from patterns of data and tries to make predictions as accurately as possible. Assume that we already have a
-set of $p$ data pairs containing the variables and the results, ($x^{(1)},t^{(1)}$), ($x^{(2)},t^{(2)}$),...,($x^{(p)},t^{(p)}$) where $x^{(i)}$ is the input value and $t^{(i)}$ is the target value for i= 1,2,...,p. We would like to build a neural net $F$ so that ideally, 
-\begin{center}
-$F(x^{(i)})=t^{(i)}$
+ \section{General Model Building}
+ Having discussed the mathematics behind neural network, it is however in important to talk about the neural network architectures and other components
+ \subsection{Neural network Architures}
+ Neural Networks are complex structures made of artificial neurons that can take in several inputs to produce a single(or more) output(s). Normally, a Neural Network consists of an input and output layer with one or multiple hidden layers within. In a Neural Network, all the neurons(contained in each layers) influence each other, and hence, they are all connected. The manner in which the input neurons produce a certain output is intimately linked
+ to the structure of the neural network. The two main classes of network architectures are discussed below
+ \subsubsection{Feed-forward Neural Network}
+ In feed-forward neural network(FFN), each neuron in a
+ particular layer is connected with all neurons in a subsequent layer. The information
+ flow in the network is of feedforward type (i.e the connections
+ can never skip a layer, or form any loops backwards). The picture below shows the architectural layout of a single hidden layer feed-forward neural network.\newline\newline\newline\newline
+ \begin{figure}
+ 	\centering
+ 	\includegraphics[width=0.4\textwidth]{figures/FFN}
+ 	\caption{A fully connected FFN with a single hidden layer (see Anna \& Bijelic, 2019)}
+ 	
+ 	\label{sixthfig}
+ \end{figure}
+ 
+ As shown the above figure, the values of the input are transported to the hidden layer through connections, each being characterised by certain weight coefficient, $W_{i,k}$.The degree of connection between an the input node and a hidden node is reflected by these weight coefficients. Defining [$x_{1,t};x_{2,t};...;x_{n,t}$] as the vector of the input signals and [$h_{1,t};h_{2,t};...;h_{m,t}$], the propagation of the input nodes to one hidden node can
+ mathematically be described by: \newline
+ \begin{center}
+
+
+ $h_{k,t} =\sum_{i=1}^{n} W_{i,k} \cdot x_{i,t}$ for $k = 1,2,...,m$
+  \end{center}
+An undesirable property of the formula is its linear representation,
+which, if applied, would suggest that the output prediction would be a linear function, which is not always the case. In order to deal with this, a non-linear activation function, $\Phi(\cdot)$ is applied to the weighted sum of
+inputs into a hidden node. This activation function, which in the majority of
+applications takes the form of a sigmoid function or a ReLu function, makes the neural network capable of approximating virtually any function. However, before applying
+the activation function, a bias vector [$b_{1};b_{2};...;b_{m}$] is added, which essentially
+indicates whether a neuron tends to be active or inactive in the prediction process. The
+propagation from the input layer to the hidden layer in a feed-forward neural
+network can then be reformulated to:
+ \begin{center}
+	$h_{k,t} =\Phi(b_{k,0} +\sum_{i=1}^{n} W_{i,k} \cdot x_{i,t}$) for $k = 1,2,...,m$
 \end{center}
-However, typically we allow for error $\epsilon_i$. Let $y^{(i)}$ denote the output of the neural net so that
+Although the model-free assumption underlying the feedforward neural network
+theoretically suggests that it should far better than the conventional GARCH(1,1) in
+predicting volatility, the feedforward neural network is subject to a
+major concern in that it precludes modelling time-dependencies in the data. This
+deficiency of not being able to take correlations between inputs into account is
+however resolved in the recurrent neural network, which is able to selectively pass
+information across sequences of elements by creating cycles in the network.
+\subsubsection{Recurrent Neural Network}
+Recurrent Neural Networks
+(RNN) can handle sequential data due to the capability of each neuron to
+maintain information about previous inputs, contrary feedforward neural networks. This means that the prediction a recurrent
+neural network node made at previous time step $t-1$ affects the prediction it will make one
+moment later, at time step $t$. RNN nodes can be thought of as having memory as it takes inputs not only the current signal, but also
+what has been perceived previously in time.\newline\newline
+RNNs contain feedback loops from the so-called hidden states, and this allows preservation of information from one node to another while reading in inputs. This feedback loop
+mechanism occurs at each time step in the data series, which results in each hidden
+state containing traces not only of the previous hidden state, but also of all the
+preceding ones, for as long as the memory of the network persists (Skymind, 2019).
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{figures/RNN}
+	\caption{Representation of an unrolled plain vanilla recurrent neural network. (see Anna \& Bijelic, 2019)}
+	
+	\label{seventhfig}
+\end{figure}
+
+The unrolled RNN illustrates how the network allows the hidden neurons to see their
+own previous output, so that their subsequent behavior can be shaped by previous
+responses (Tenti, 1996). Furthermore, by introducing time-lagged model components,
+it becomes evident that the utilization of a RNN is particularly desired when there are
+time dependencies in the data series at hand.
+Using the previous notation and assuming that the hidden states are the ones looped
+back, the output from a hidden node in the RNN model depends on the input values at
+time $t$, but also on its own lagged values at order $p$ as shown below:
 
 \begin{center}
-	$y^{(i)}=F(x^{(i)})$ and $t^{(i)}=y^{(i)}+\overrightarrow{\epsilon}$
-\end{center}
-We know that $y^{(i)}$ depends on parameters, which are weights and biases,
-then it turns out as an optimization problem. We need to set up a neural net $F$ that minimizes the error function, which is denoted below:
-\begin{center}
-	$E = \frac{1}{N}\sum_{i=1}^{p}||t^{(i)}-y^{(i)}||^2$ 
-\end{center}
-where $N$ is the number of training patterns. If it is a two-way classification problem, then $N$ = 2. From this equation, we know that $E$ is a
-function of the parameters in F, and we need to determine the values
-of weights that minimize the error by differentiating $E$.
-If we focus on only one term of the sum, then
-\begin{center}
-	$||t-y||^2=(t_{1}-y_{1})^2+(t_{2}-y_{2})^2+...+(t_{p}-y_{p})^2$ 
+	$h_{k,t} =\Phi(b_{k,0} + \sum_{i=1}^{n} W_{i,k} \cdot x_{i,t}) + \sum_{k=1}^{m} \gamma_{k} \cdot h_{k,t-p}$for $k = 1,2,...,m$
 \end{center}
 
+where $h_{k,t-p}$ represents the lagged hidden state values at order $p$, and $\gamma_{k}$ a coefficient. Another distinguishing characteristic of recurrent networks is that they share parameters across each layer of the network. While feedforward networks have different weights across each node, recurrent neural networks share the same weight parameter within each layer of the network. That said, these weights are still adjusted in the through the processes of backpropagation and gradient descent to facilitate reinforcement learning. Recurrent neural networks leverage backpropagation through time (BPTT) algorithm to determine the gradients, which is slightly different from traditional backpropagation as it is specific to sequence data. The principles of BPTT are the same as traditional backpropagation, where the model trains itself by calculating errors from its output layer to its input layer. These calculations allow us to adjust and fit the parameters of the model appropriately. BPTT differs from the traditional approach in that BPTT sums errors at each time step whereas feedforward networks do not need to sum errors as they do not share parameters across each layer.\newline\newline
+
+Through this process, RNNs tend to run into two problems, known as exploding gradients and vanishing gradients. These issues are defined by the size of the gradient, which is the slope of the loss function along the error curve. When the gradient is too small, it continues to become smaller, updating the weight parameters until they become insignificant—i.e. 0. When that occurs, the algorithm is no longer learning. Exploding gradients occur when the gradient is too large, creating an unstable model. In this case, the model weights will grow too large, and they will eventually be represented as NaN. One solution to these issues is to reduce the number of hidden layers within the neural network, eliminating some of the complexity in the RNN model(see, IBM 2020).
 
 
-
-
-
-
-
+\subsubsection{Long Short-Term Memory Recurrent Neural Network}
+Originally introduced by Hochreiter and Schmidhuber (1997), a main characteristic of LSTMs – which are a sub class of recurrent neural networks - is its purpose-built memory cells, which allows it to capture long range dependencies in the data. From a model perspective, LSTMs differ from other neural network architectures in that they are applied recurrently\newline\newline
+The output from a previous sequence of the network function serves – in combination with the next sequence element - as input for the next application of the network function. In this sense, the LSTM can be interpreted as being similar to an HMM (Hidden Markov Model), in that there is a hidden state which conditions the output distribution. However, the LSTM hidden state not only depends on its previous states, but it also captures long term sequence dependencies through its recurrent nature. Maybe most notably, the receptive field size of an LSTM is not bound architecture wise as in case of simple feed forward network and CNN. Instead, the LSTM’s receptive field depends solely on the LSTMs ability to memorize the past input.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

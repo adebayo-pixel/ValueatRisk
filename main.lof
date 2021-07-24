@@ -1,13 +1,15 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces A figure showing the layers of a Neural Network}}{8}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces A single neuron of neural networks}}{9}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Sigmoid() Activation Function}}{10}{figure.3.3}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces tanh() Activation Function}}{10}{figure.3.4}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces ReLU() Activation Function}}{11}{figure.3.5}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A figure showing the layers of a Neural Network (see IBM)}}{9}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A single neuron of neural networks}}{10}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Sigmoid() Activation Function}}{11}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces tanh() Activation Function}}{11}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces ReLU() Activation Function}}{12}{figure.3.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces A fully connected FFN with a single hidden layer (see Anna \& Bijelic, 2019)}}{13}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Representation of an unrolled plain vanilla recurrent neural network. (see Anna \& Bijelic, 2019)}}{14}{figure.3.7}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces A figure caption beneath the figure for description of the depicted concept which sometimes can be very long}}{12}{figure.4.1}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces A figure caption beneath the figure for description of the depicted concept which sometimes can be very long}}{16}{figure.4.1}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
