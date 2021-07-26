@@ -16,20 +16,21 @@
 \BOOKMARK [2][-]{subsection.3.1.2}{Activation Functions}{section.3.1}% 16
 \BOOKMARK [1][-]{section.3.2}{General Model Building}{chapter.3}% 17
 \BOOKMARK [2][-]{subsection.3.2.1}{Neural network Architures}{section.3.2}% 18
-\BOOKMARK [0][-]{chapter.4}{Figures, tables, enumerate and itemize}{}% 19
-\BOOKMARK [1][-]{section.4.1}{Figures}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.2}{Tables}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.3}{Enumerate and itemize}{chapter.4}% 22
-\BOOKMARK [0][-]{chapter.5}{Appendix, footnotes, todos and index}{}% 23
-\BOOKMARK [1][-]{section.5.1}{Appendix}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.2}{Footnotes}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.3}{Todos}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.4}{Index}{chapter.5}% 27
-\BOOKMARK [0][-]{appendix.A}{Just an example appendix}{}% 28
-\BOOKMARK [1][-]{section.A.1}{Bla blup}{appendix.A}% 29
-\BOOKMARK [0][-]{appendix.B}{Another example}{}% 30
-\BOOKMARK [1][-]{section.B.1}{More stuff}{appendix.B}% 31
-\BOOKMARK [0][-]{appendix*.6}{Bibliography}{}% 32
-\BOOKMARK [0][-]{appendix*.7}{List of Figures}{}% 33
-\BOOKMARK [0][-]{appendix*.8}{List of Tables}{}% 34
-\BOOKMARK [0][-]{appendix*.8}{Index}{}% 35
+\BOOKMARK [1][-]{section.3.3}{The LSTM Architecture}{chapter.3}% 19
+\BOOKMARK [0][-]{chapter.4}{Figures, tables, enumerate and itemize}{}% 20
+\BOOKMARK [1][-]{section.4.1}{Figures}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.2}{Tables}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.3}{Enumerate and itemize}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{Appendix, footnotes, todos and index}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Appendix}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.2}{Footnotes}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.3}{Todos}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.4}{Index}{chapter.5}% 28
+\BOOKMARK [0][-]{appendix.A}{Just an example appendix}{}% 29
+\BOOKMARK [1][-]{section.A.1}{Bla blup}{appendix.A}% 30
+\BOOKMARK [0][-]{appendix.B}{Another example}{}% 31
+\BOOKMARK [1][-]{section.B.1}{More stuff}{appendix.B}% 32
+\BOOKMARK [0][-]{appendix*.6}{Bibliography}{}% 33
+\BOOKMARK [0][-]{appendix*.7}{List of Figures}{}% 34
+\BOOKMARK [0][-]{appendix*.8}{List of Tables}{}% 35
+\BOOKMARK [0][-]{appendix*.8}{Index}{}% 36

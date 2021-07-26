@@ -475,7 +475,7 @@ results by not taking negative values into account.
  In feed-forward neural network(FFN), each neuron in a
  particular layer is connected with all neurons in a subsequent layer. The information
  flow in the network is of feedforward type (i.e the connections
- can never skip a layer, or form any loops backwards). The picture below shows the architectural layout of a single hidden layer feed-forward neural network.\newline\newline\newline\newline
+ can never skip a layer, or form any loops backwards).\newline
  \begin{figure}
  	\centering
  	\includegraphics[width=0.4\textwidth]{figures/FFN}
@@ -483,8 +483,8 @@ results by not taking negative values into account.
  	
  	\label{sixthfig}
  \end{figure}
- 
- As shown the above figure, the values of the input are transported to the hidden layer through connections, each being characterised by certain weight coefficient, $W_{i,k}$.The degree of connection between an the input node and a hidden node is reflected by these weight coefficients. Defining [$x_{1,t};x_{2,t};...;x_{n,t}$] as the vector of the input signals and [$h_{1,t};h_{2,t};...;h_{m,t}$], the propagation of the input nodes to one hidden node can
+\newline
+ As shown in the above figure, the values of the input are transported to the hidden layer through connections, each being characterised by certain weight coefficient, $W_{i,k}$. The degree of connection between the input node and a hidden node is reflected by these weight coefficients. Defining [$x_{1,t};x_{2,t};...;x_{n,t}$] as the vector of the input signals and [$h_{1,t};h_{2,t};...;h_{m,t}$], the propagation of the input nodes to one hidden node can
  mathematically be described by: \newline
  \begin{center}
 
@@ -549,7 +549,66 @@ Through this process, RNNs tend to run into two problems, known as exploding gra
 
 \subsubsection{Long Short-Term Memory Recurrent Neural Network}
 Originally introduced by Hochreiter and Schmidhuber (1997), a main characteristic of LSTMs – which are a sub class of recurrent neural networks - is its purpose-built memory cells, which allows it to capture long range dependencies in the data. From a model perspective, LSTMs differ from other neural network architectures in that they are applied recurrently\newline\newline
-The output from a previous sequence of the network function serves – in combination with the next sequence element - as input for the next application of the network function. In this sense, the LSTM can be interpreted as being similar to an HMM (Hidden Markov Model), in that there is a hidden state which conditions the output distribution. However, the LSTM hidden state not only depends on its previous states, but it also captures long term sequence dependencies through its recurrent nature. Maybe most notably, the receptive field size of an LSTM is not bound architecture wise as in case of simple feed forward network and CNN. Instead, the LSTM’s receptive field depends solely on the LSTMs ability to memorize the past input.
+The output from a previous sequence of the network function serves – in combination with the next sequence element - as input for the next application of the network function. In this sense, the LSTM can be interpreted as being similar to an HMM (Hidden Markov Model), in that there is a hidden state which conditions the output distribution. However, the LSTM hidden state not only depends on its previous states, but it also captures long term sequence dependencies through its recurrent nature. Maybe most notably, the receptive field size of an LSTM is not bound architecture wise as in case of simple feed forward network and CNN. Instead, the LSTM’s receptive field depends solely on the LSTMs ability to memorize the past input. Due to the attractiveness of the LSTM, it will be used in this work to forecast volatility of returns of stock markets. \newline\newline
+
+\section{The LSTM Architecture}
+Our LSTM has a single hidden layer. It has 100 nodes in the input layer as well as in the hidden layer, with tanh as the activation function. The following are the hyper parameter used in within the LSTM neural network:
+\begin{itemize}
+\item[$\bullet$] The Mean Square Error (MSE): This is the average squared difference between the estimated values and the actual value.
+
+\begin{center}
+	$L_{MSE} = 1/N\sum_{k=1}^{N} ({\hat{y}}_{k}-y_k)^2$
+\end{center}
+ It is also chosen as the loss function (between the predicted outputs and the actual outputs) performance measure(to assess the model fit while
+training and validating the network) of the
+LSTM neural network
+\item[$\bullet$]   The optimizer mirrors the use of the gradient descent method, as it controls the
+magnitude of changes to the weights within the network, with regard to the
+loss gradient. The optimization algorithm Adam is chosen as the optimizer in
+the LSTM neural network, because in contrast to the stochastic gradient
+descent, which maintains one single learning rate for all weight updates, Adam
+separately adapts a learning rate for each network weight. Some of Adam’s advantages are that the magnitudes of parameter updates are invariant to
+rescaling of the gradient, its stepsizes are approximately bounded by the stepsize hyperparameter,
+it does not require a stationary objective, it works with sparse gradients, and it naturally performs a
+form of step size annealing (Kingma and Ba, 2015).
+\item[$\bullet$] The batch size is the number of inputs that will be propagated in the
+LSTM neural network during the training process, and in this case the batch
+size is set to 64. As such, volatility inputs are
+fed in the network through numerous batches, each containing 100 inputs. After
+the propagation of a batch, the network is trained before receiving another
+batch of 64 inputs. This operation is repeated until the end of the training and
+validation processes, i.e. when all inputs are propagated.
+\item[$\bullet$] The look ahead specifies the number of time steps, i.e. the lagged
+inputs the RNN should use to forecast the desired outputs. To enforce the ability of the RNN to find
+repeating temporal patterns, the look ahead
+technique is used with the GRU neural
+network. Applying a sliding window technique seems even more relevant, as
+Ben Taieb et al. (2011) discuss the advantages of using such a technique when
+forecasting a single output for each time step, which is the case in this study.
+However, the sliding window (look ahead) should not be too small or the time
+dependencies will not be well captured, nor too large to avoid feeding
+excessively the same inputs, as this could lead to overfitting problems (Frank
+et al., 2001). For all trials, the look back is set to 100 lagged inputs, which
+corresponds to a 3-month period in the data sample.
+\item[$\bullet$] The dropout function is a regularization method used to prevent overfitting by
+allowing the GRU neural network to drop a random set of neurons while
+training the network. Ignoring several neurons for each iteration during the
+training process is necessary, because if the network is fully connected,
+neurons will become interdependent, leading to overfitting of the training data.
+The dropout function is first set to 0.25, implying that 25\% of the existing
+neurons within the network will be ignored during the training process.
+\item[$\bullet$] The number of epochs can also influence the accuracy of a neural network. It
+refers to the number of times all the training and validation datasets are
+propagated through the GRU neural network. The standard procedure is to
+increase the number of epochs until the chosen metric – in this case the MAE
+– decreases for the validation set, while it continues to increase for the training
+set, i.e. when the training set shows signs of overfitting.
+\end{itemize}
+
+The number of neurons, dropout function, activation functions and epochs are fine-tuned (i.e those values of those parameters were updated to see the peformance of the LSTM), and their respective values listed above are chosen as LSTM performs best with those values. That is, the LSTM with the lowest MSE value.
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

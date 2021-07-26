@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  23 JUL 2021 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  26 JUL 2021 12:27
 entering extended mode
 **./main.tex
 (main.tex
@@ -1193,7 +1193,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figures/download.png, id=169, 446.66875pt x 113.42375pt>
+<figures/download.png, id=173, 446.66875pt x 113.42375pt>
 File: figures/download.png Graphic file (type png)
 <use figures/download.png>
 Package pdftex.def Info: figures/download.png  used on input line 98.
@@ -1209,18 +1209,18 @@ r (name{page.1}) has been already used, duplicate ignored
 l.117 \end{titlepage}
                       [1
 
-]) (main.toc)
+]) (main.tocpdfTeX warning (ext4): destination with the same identifier (name{p
+age.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.39 ...entsline {chapter}{Index}{27}{appendix*.8}
+                                                  % [1
+
+])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.47 \chapter
-             {Introduction} [1
-
-]
+ [2]
 Chapter 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 56--72
@@ -1252,14 +1252,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--106
 
  []
 
-[2
+[3
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 107--121
 
  []
 
-[3]
+[4]
 Chapter 2.
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
 51.
@@ -1299,7 +1299,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--168
 
  []
 
-[4
+[5
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 184--186
@@ -1322,7 +1322,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--230
 
  []
 
-[5]
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 244--247
 
  []
@@ -1337,7 +1337,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 260--273
 
  []
 
-[6]
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 289--303
 
  []
@@ -1347,22 +1347,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 333--336
 
  []
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 341--352
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 341--352
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 341--352
-
- []
-
 [8]
+Underfull \hbox (badness 10000) in paragraph at lines 341--352
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--352
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--352
+
+ []
+
+[9]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 355--356
@@ -1374,7 +1374,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 355--356
 
  []
 
-<figures/NN.png, id=270, 544.28343pt x 383.93437pt>
+<figures/NN.png, id=279, 544.28343pt x 383.93437pt>
 File: figures/NN.png Graphic file (type png)
 <use figures/NN.png>
 Package pdftex.def Info: figures/NN.png  used on input line 360.
@@ -1384,10 +1384,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 357--372
 
  []
 
-[9
+[10
 
  <./figures/NN.png>]
-<figures/neuron.png, id=278, 389.20406pt x 228.855pt>
+<figures/neuron.png, id=287, 389.20406pt x 228.855pt>
 File: figures/neuron.png Graphic file (type png)
 <use figures/neuron.png>
 Package pdftex.def Info: figures/neuron.png  used on input line 389.
@@ -1402,7 +1402,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 394--408
 
  []
 
-<figures/neuro.png, id=280, 250.68657pt x 246.9225pt>
+<figures/neuro.png, id=289, 250.68657pt x 246.9225pt>
 File: figures/neuro.png Graphic file (type png)
 <use figures/neuro.png>
 Package pdftex.def Info: figures/neuro.png  used on input line 418.
@@ -1422,7 +1422,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 409--422
 
  []
 
-[10 <./figures/neuron.png>]
+[11 <./figures/neuron.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 423--439
 
  []
@@ -1432,7 +1432,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 423--439
 
  []
 
-<figures/tanh.png, id=288, 404.26031pt x 299.61937pt>
+<figures/tanh.png, id=298, 404.26031pt x 299.61937pt>
 File: figures/tanh.png Graphic file (type png)
 <use figures/tanh.png>
 Package pdftex.def Info: figures/tanh.png  used on input line 442.
@@ -1447,8 +1447,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 447--453
 
  []
 
-[11 <./figures/neuro.png> <./figures/tanh.png>]
-<figures/Relu.png, id=300, 136.25906pt x 121.20282pt>
+[12 <./figures/neuro.png> <./figures/tanh.png>]
+<figures/Relu.png, id=309, 136.25906pt x 121.20282pt>
 File: figures/Relu.png Graphic file (type png)
 <use figures/Relu.png>
 Package pdftex.def Info: figures/Relu.png  used on input line 459.
@@ -1468,38 +1468,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 454--469
 
  []
 
-<figures/FFN.png, id=301, 472.01344pt x 511.15968pt>
+<figures/FFN.png, id=310, 472.01344pt x 511.15968pt>
 File: figures/FFN.png Graphic file (type png)
 <use figures/FFN.png>
 Package pdftex.def Info: figures/FFN.png  used on input line 481.
 (pdftex.def)             Requested size: 182.09486pt x 197.19876pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--486
+Underfull \hbox (badness 10000) in paragraph at lines 475--489
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 475--486
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 475--486
-
- []
-
-[12 <./figures/Relu.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 487--489
-
- []
-
-
+[13 <./figures/Relu.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 513--523
 
  []
 
-[13 <./figures/FFN.png>]
-<figures/RNN.png, id=316, 657.2053pt x 342.5297pt>
+[14 <./figures/FFN.png>]
+<figures/RNN.png, id=325, 657.2053pt x 342.5297pt>
 File: figures/RNN.png Graphic file (type png)
 <use figures/RNN.png>
 Package pdftex.def Info: figures/RNN.png  used on input line 526.
@@ -1519,61 +1504,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 551--553
 
  []
 
-[14 <./figures/RNN.png>] [15]
+
+Underfull \hbox (badness 10000) in paragraph at lines 551--553
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 551--553
+
+ []
+
+[15 <./figures/RNN.png>] [16] [17]
 Chapter 4.
-<figures/cube.png, id=328, 287.57437pt x 296.60812pt>
+<figures/cube.png, id=342, 287.57437pt x 296.60812pt>
 File: figures/cube.png Graphic file (type png)
 <use figures/cube.png>
-Package pdftex.def Info: figures/cube.png  used on input line 569.
+Package pdftex.def Info: figures/cube.png  used on input line 628.
 (pdftex.def)             Requested size: 136.57462pt x 140.86769pt.
-[16
+[18
 
- <./figures/cube.png>] [17] [18]
+ <./figures/cube.png>] [19] [20]
 Chapter 5.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 742.
-[19
+ine 801.
+[21
 
 ]
 Appendix A.
-[20
+[22
 
 ]
 Appendix B.
-(main.bbl [21
+(main.bbl [23
 
-]) [22
+]) [24
 
 ] (main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [23
+ [25
 
 ] (main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- (main.ind [24
+ (main.ind [26
 
-] [25
+] [27
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 803.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 803.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 862.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 862.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 803.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 803.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 862.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 862.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1BE442A93A38C671B3B83116C2D6603F;2169.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 803.
+(rerunfilecheck)             Checksum: F953A05BD32EB4293DF5056A97C7E592;2237.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 862.
  ) 
 Here is how much of TeX's memory you used:
- 20127 strings out of 480898
- 370117 string characters out of 2908343
- 612966 words of memory out of 3000000
- 35452 multiletter control sequences out of 15000+200000
+ 20131 strings out of 480898
+ 370155 string characters out of 2908343
+ 612967 words of memory out of 3000000
+ 35453 multiletter control sequences out of 15000+200000
  545193 words of font info for 69 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,9n,85p,1219b,944s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1597,9 +1592,9 @@ cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10
 /Users/Hafees Yusuff/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/cbgreek/grmn
 1095.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm1
 0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (27 pages, 955702 bytes).
+Output written on main.pdf (29 pages, 963012 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 93 named destinations out of 1000 (max. 500000)
- 434 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 512 PDF objects out of 1000 (max. 8388607)
+ 96 named destinations out of 1000 (max. 500000)
+ 442 words of extra memory for PDF output out of 10000 (max. 10000000)
 
