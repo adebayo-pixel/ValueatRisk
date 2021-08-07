@@ -196,12 +196,12 @@ A functional $\tau: X,Y \rightarrow \mathbb{R} \cup \{+\infty\}$ is said to be c
 	\newline $\tau(cX) = c\tau(X)$ if $c>0$. \newline In effect, if a portfolio or capital asset is, say,
 	doubled, then the risk will also be doubled.
 	
-		\item[$\bullet$] subadditive: 
+		\item[$\bullet$] subadditivity: 
 	\newline $\tau(X+Y)\leq \tau(x)+\tau(Y)$. 
 	Indeed, the risk of two portfolios together cannot get any worse than adding the two risks separately: this is the diversification principle.
 	
 \end{description}
-One disadvantage of value at risk is that it does not always satisfy the sub-additivity, hence it might discourage diversification.
+Out of the above properties, all but subaddivitivity is not always satisfied by VaR. This is however a disadvantage of value at risk as a risk measure because it might discourage diversification.
 
 \section{Popular methods for estimating VaR}
 The estimation of these functions ($F(r)$ or $G(r)$) can be carried out using the
@@ -344,7 +344,7 @@ where $p=q+r+1$ is the dimension of $\beta$ and $l$ is a function of a finite nu
 The asymmetric slope is a variant of CaViar model, which allows the response to positive and negative returns to be different. It is modelled as:\newline\newline
 $f_{t}(\beta)= \beta_{1} +\beta_{2}f_{t-1}(\beta)+\beta_{3}(y_{t-1})^{+} + \beta_{4}(y_{t-1})^{-}$. where, $(y_{t-1})^{+}$= max($y_{t-1}$, 0) and $(y_{t-1})^{-}$ = min($y_{t-1}$, 0)
 \newline\newline
-\textbf{Note:} In this work, value at risk will be estimated based on financial log-returns.
+\textbf{Note:} In this work, value at risk will be estimated based on financial log-returns. Historical simulation, Garch models, and long short term memory neural network will be used for our VAR estimation. The latter will be discussed in the next chapter.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -364,7 +364,7 @@ Neural networks are made of node layers, containing an input layer, one or more 
 Neural networks rely on training data to learn and improve their accuracy over time. However, once these learning algorithms are polished for accuracy, they become powerful tools in computer science and artificial intelligence, allowing us to classify and cluster data at a high speed. Tasks in speech recognition or image recognition can take minutes versus hours when compared to the manual identification by human experts.
 \newline\newline
 One major advantage of Neural Networks is that they have a flexible nonlinear
-function mapping capability, meaning that any model can be arbitrarily well
+function mapping capability (Cybenko (1989) and Hornik et al. (1989)), this means that any model can be arbitrarily well
 approximated by a sufficiently large ANN. This model-free property of ANNs is an
 important advantage since returns do not display a specific nonlinear pattern. However, just like historical simulation they require large data set (which is not always available) for training to perform excellently well.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -377,9 +377,8 @@ important advantage since returns do not display a specific nonlinear pattern. H
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Mathematics of Neural Network}
-
-Here, we consider a case of single neuron
-
+The main idea of this section is gotten from the work of Chaoyi Lou, titled Artificial Neural Networks:
+their Training Process and Applications.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -549,10 +548,10 @@ Through this process, RNNs tend to run into two problems, known as exploding gra
 
 \subsubsection{Long Short-Term Memory Recurrent Neural Network}
 Originally introduced by Hochreiter and Schmidhuber (1997), a main characteristic of LSTMs – which are a sub class of recurrent neural networks - is its purpose-built memory cells, which allows it to capture long range dependencies in the data. From a model perspective, LSTMs differ from other neural network architectures in that they are applied recurrently\newline\newline
-The output from a previous sequence of the network function serves – in combination with the next sequence element - as input for the next application of the network function. In this sense, the LSTM can be interpreted as being similar to an HMM (Hidden Markov Model), in that there is a hidden state which conditions the output distribution. However, the LSTM hidden state not only depends on its previous states, but it also captures long term sequence dependencies through its recurrent nature. Maybe most notably, the receptive field size of an LSTM is not bound architecture wise as in case of simple feed forward network and CNN. Instead, the LSTM’s receptive field depends solely on the LSTMs ability to memorize the past input. Due to the attractiveness of the LSTM, it will be used in this work to forecast volatility of returns of stock markets. \newline\newline
+The output from a previous sequence of the network function serves – in combination with the next sequence element - as input for the next application of the network function. In this sense, the LSTM can be interpreted as being similar to an HMM (Hidden Markov Model), in that there is a hidden state which conditions the output distribution. However, the LSTM hidden state not only depends on its previous states, but it also captures long term sequence dependencies through its recurrent nature. Maybe most notably, the receptive field size (i.e the size of the region in the input that produces the feature) of an LSTM is not bound architecture wise as in case of simple feed forward network and CNN. Instead, the LSTM’s receptive field depends solely on the LSTMs ability to memorize the past input. Due to the attractiveness of the LSTM, it will be used in this work to forecast volatility of returns of stock markets. \newline\newline
 
 \section{The LSTM Architecture}
-Our LSTM has a single hidden layer. It has 100 nodes in the input layer as well as in the hidden layer, with tanh as the activation function. The following are the hyper parameter used in within the LSTM neural network:
+Our LSTM has a single hidden layer. It has 90 nodes in the input layer and 150 nodes in hidden layer, with 'tanh' as the activation function. The following are the hyper parameter used in within the LSTM neural network:
 \begin{itemize}
 \item[$\bullet$] The Mean Square Error (MSE): This is the average squared difference between the estimated values and the actual value.
 
@@ -573,39 +572,95 @@ it does not require a stationary objective, it works with sparse gradients, and 
 form of step size annealing (Kingma and Ba, 2015).
 \item[$\bullet$] The batch size is the number of inputs that will be propagated in the
 LSTM neural network during the training process, and in this case the batch
-size is set to 64. As such, volatility inputs are
-fed in the network through numerous batches, each containing 100 inputs. After
+size is set to 256. As such, volatility inputs are
+fed in the network through numerous batches, each containing 256 inputs. After
 the propagation of a batch, the network is trained before receiving another
-batch of 64 inputs. This operation is repeated until the end of the training and
+batch of 256 inputs. This operation is repeated until the end of the training and
 validation processes, i.e. when all inputs are propagated.
 \item[$\bullet$] The look ahead specifies the number of time steps, i.e. the lagged
 inputs the RNN should use to forecast the desired outputs. To enforce the ability of the RNN to find
 repeating temporal patterns, the look ahead
 technique is used with the GRU neural
-network. Applying a sliding window technique seems even more relevant, as
-Ben Taieb et al. (2011) discuss the advantages of using such a technique when
-forecasting a single output for each time step, which is the case in this study.
-However, the sliding window (look ahead) should not be too small or the time
+network. However, the sliding window (look ahead) should not be too small or the time
 dependencies will not be well captured, nor too large to avoid feeding
-excessively the same inputs, as this could lead to overfitting problems (Frank
-et al., 2001). For all trials, the look back is set to 100 lagged inputs, which
-corresponds to a 3-month period in the data sample.
+excessively the same inputs, as this could lead to overfitting problems. For all trials, the look back is set to 90 lagged inputs, which
+corresponds to about 3-month period in the data sample.
 \item[$\bullet$] The dropout function is a regularization method used to prevent overfitting by
 allowing the GRU neural network to drop a random set of neurons while
 training the network. Ignoring several neurons for each iteration during the
 training process is necessary, because if the network is fully connected,
 neurons will become interdependent, leading to overfitting of the training data.
-The dropout function is first set to 0.25, implying that 25\% of the existing
+The dropout function is set to 0.25, implying that 25\% of the existing
 neurons within the network will be ignored during the training process.
 \item[$\bullet$] The number of epochs can also influence the accuracy of a neural network. It
 refers to the number of times all the training and validation datasets are
 propagated through the GRU neural network. The standard procedure is to
-increase the number of epochs until the chosen metric – in this case the MAE
+increase the number of epochs until the chosen metric – in this case the MSE
 – decreases for the validation set, while it continues to increase for the training
 set, i.e. when the training set shows signs of overfitting.
 \end{itemize}
 
-The number of neurons, dropout function, activation functions and epochs are fine-tuned (i.e those values of those parameters were updated to see the peformance of the LSTM), and their respective values listed above are chosen as LSTM performs best with those values. That is, the LSTM with the lowest MSE value.
+The number of neurons, dropout function, activation functions and epochs are fine-tuned (i.e those values of those parameters were updated to see the peformance of the LSTM), and their respective values listed above are chosen as LSTM performs best with those values. That is, the LSTM with the lowest MSE value. This will be discussed in details in the next chapter.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Numerical comparisons}
+For the empirical study, the day-ahead forecasting of the 1\% and 5\% VAR for daily log-returns(natural log of the new value divided by the initial value) of the following stock markets: NIKKEI 225, FTSE 100 and S\&P 500 is considered. The data is downloaded from DataStream. Each series (NIKKEI 225, FTSE 100 and S\&P 500) consist of 8477 daily price indices (measure of how prices change over a period of time), the start date and end date are 04/01/1988 and 30/06/2020 respectively. Upon calculating the log-return, which is given as 
+
+\begin{center}
+	$R_{log} = ln(\frac{R_f}{R_i})$
+\end{center}
+the data in the first row of the series vanishes leaving us with 8476 daily log-returns and 05/01/1988 as starting date. Basically, this means we use 8476 daily log-returns for our VaR estimations. This longer sample is desirable for our models, most especially the historical simulation and neural network as they work best with large data. Moreover, data contains periods of low and high volatilities, which mitigates the probability of the historical simulation being bias (underestimation or overestimation) in the return estimation.\newline
+
+\section{Partitioning the Dataset}
+\subsection{LSTM Neural Network Model}
+
+Generally, data is divided into two main parts in neural network models: training set and test set. However, an additional intermediate set called validation set (sometimes modelled as part of training), is sometimes employed in order to avoid overfitting. The training and validation data can be jointly referred to as In-sample data, while the test data is sometimes referred to as Out-of-sample data. In most literatures, the common choice for training set between 70\% to 90\% of the original dataset, and 10\% to 20\% of the training are used as validation dataset. The rest are, of course the testing dataset. \newline\newline
+
+In this study, the first 7000 daily log-returns of each series (each series contains 8473 daily log-returns) are used as training dataset, which is around 83\% of each of the series. The last 700 (10\%) values (daily log-returns) of the training dataset are used for validation. The remaining 1476 daily log-returns are used for testing. However, the first 90 values in our test dataset vanishes due to use of lookahead (timesteps) of 90 days. Apparently, our resultant forecasts (out-of-sample) are 1386 daily log-returns. The dates for the data split are reported in the table below.
+%\makeatletter
+%\setlength\@fptop{0\p@}
+%\makeatother
+\newline\newline\newline\newline\newline
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{l|cl}
+		\hline \hline
+		In-sample
+		& out-of-sample\\ \hline
+		Training set: 11/04/1999 – 26/10/2012
+		& Test set
+		: 11/04/1999 – 26/10/2012
+	 \\
+		Validation set: 11/04/1999 – 26/10/2012
+		\\
+		\hline \hline
+	\end{tabular}
+	\caption{Data splits}
+	%\vspace{128in}
+	\label{firsttab}
+\end{table}
+
+\subsection{Historical simulation and GARCH(1,1) Volatility model}
+For congruency with the LSTM model (in regards to number of predictions), we use a rolling window of 7090 for Historical simulation and GARCH(1,1) Volatility model, which stands as our in-sample data and we have 1383 out-of-sample data (predictions).
+
+\subsection{Trial Results of the LSTM Neural Network}
+
+As discussed in the previous chapter, the performance of our LSTM model is based on MSE. Several trials are performed with different values of hyper-parameters in order to choose the one with the lowest MSE value. The LSTM model is done individually for each stock market, and for this reason, the number of neurons, dropout function, activation function and the number of epochs are different where necessary for each of the stock markets in their best individual models (the model with the least MSE)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

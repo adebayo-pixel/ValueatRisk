@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  26 JUL 2021 12:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  7 AUG 2021 10:05
 entering extended mode
 **./main.tex
 (main.tex
@@ -346,6 +346,16 @@ Package: bigstrut 2021/03/15 v2.8 Provide larger struts in tabulars
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\enumerate.sty"
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks24
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\array.sty"
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen152
+\ar@mcellbox=\box51
+\extrarowheight=\dimen153
+\NC@list=\toks25
+\extratabsurround=\skip59
+\backup@length=\skip60
+\ar@cellbox=\box52
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/textgreek\textgreek.sty"
 Package: textgreek 2011/10/09 v0.7 Greek symbols in text
@@ -727,13 +737,13 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf.sty"
 ("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrcs.sty"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common.tex"
-\pgfutil@everybye=\toks25
-\pgfutil@tempdima=\dimen152
-\pgfutil@tempdimb=\dimen153
+\pgfutil@everybye=\toks26
+\pgfutil@tempdima=\dimen154
+\pgfutil@tempdimb=\dimen155
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common-lists.te
 x")) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-latex.def"
-\pgfutil@abb=\box51
+\pgfutil@abb=\box53
 ("C:\Program Files\MiKTeX 2.9\tex/latex/ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -749,32 +759,32 @@ Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
 Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeys.code.tex"
-\pgfkeys@pathtoks=\toks26
-\pgfkeys@temptoks=\toks27
+\pgfkeys@pathtoks=\toks27
+\pgfkeys@temptoks=\toks28
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfkeysfiltered.code.te
 x"
-\pgfkeys@tmptoks=\toks28
+\pgfkeys@tmptoks=\toks29
 ))
-\pgf@x=\dimen154
-\pgf@y=\dimen155
-\pgf@xa=\dimen156
-\pgf@ya=\dimen157
-\pgf@xb=\dimen158
-\pgf@yb=\dimen159
-\pgf@xc=\dimen160
-\pgf@yc=\dimen161
-\pgf@xd=\dimen162
-\pgf@yd=\dimen163
+\pgf@x=\dimen156
+\pgf@y=\dimen157
+\pgf@xa=\dimen158
+\pgf@ya=\dimen159
+\pgf@xb=\dimen160
+\pgf@yb=\dimen161
+\pgf@xc=\dimen162
+\pgf@yc=\dimen163
+\pgf@xd=\dimen164
+\pgf@yd=\dimen165
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
 \c@pgf@counta=\count289
 \c@pgf@countb=\count290
 \c@pgf@countc=\count291
 \c@pgf@countd=\count292
-\t@pgf@toka=\toks29
-\t@pgf@tokb=\toks30
-\t@pgf@tokc=\toks31
+\t@pgf@toka=\toks30
+\t@pgf@tokb=\toks31
+\t@pgf@tokc=\toks32
 \pgf@sys@id@count=\count293
  ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgf.cfg"
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
@@ -803,12 +813,12 @@ Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathcalc.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathutil.code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathparser.code.tex"
-\pgfmath@dimen=\dimen164
+\pgfmath@dimen=\dimen166
 \pgfmath@count=\count296
-\pgfmath@box=\box52
-\pgfmath@toks=\toks32
-\pgfmath@stack@operand=\toks33
-\pgfmath@stack@operation=\toks34
+\pgfmath@box=\box54
+\pgfmath@toks=\toks33
+\pgfmath@stack@operand=\toks34
+\pgfmath@stack@operation=\toks35
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.basic.code.
@@ -834,52 +844,52 @@ hmetics.code.tex")))
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 "
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@picminx=\dimen165
-\pgf@picmaxx=\dimen166
-\pgf@picminy=\dimen167
-\pgf@picmaxy=\dimen168
-\pgf@pathminx=\dimen169
-\pgf@pathmaxx=\dimen170
-\pgf@pathminy=\dimen171
-\pgf@pathmaxy=\dimen172
-\pgf@xx=\dimen173
-\pgf@xy=\dimen174
-\pgf@yx=\dimen175
-\pgf@yy=\dimen176
-\pgf@zx=\dimen177
-\pgf@zy=\dimen178
+\pgf@picminx=\dimen167
+\pgf@picmaxx=\dimen168
+\pgf@picminy=\dimen169
+\pgf@picmaxy=\dimen170
+\pgf@pathminx=\dimen171
+\pgf@pathmaxx=\dimen172
+\pgf@pathminy=\dimen173
+\pgf@pathmaxy=\dimen174
+\pgf@xx=\dimen175
+\pgf@xy=\dimen176
+\pgf@yx=\dimen177
+\pgf@yy=\dimen178
+\pgf@zx=\dimen179
+\pgf@zy=\dimen180
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathconstruct.c
 ode.tex"
 File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@path@lastx=\dimen179
-\pgf@path@lasty=\dimen180
+\pgf@path@lastx=\dimen181
+\pgf@path@lasty=\dimen182
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathusage.code.
 tex"
 File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@shorten@end@additional=\dimen181
-\pgf@shorten@start@additional=\dimen182
+\pgf@shorten@end@additional=\dimen183
+\pgf@shorten@start@additional=\dimen184
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 "
 File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfpic=\box53
-\pgf@hbox=\box54
-\pgf@layerbox@main=\box55
+\pgfpic=\box55
+\pgf@hbox=\box56
+\pgf@layerbox@main=\box57
 \pgf@picture@serial@count=\count298
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoregraphicstate.co
 de.tex"
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgflinewidth=\dimen183
+\pgflinewidth=\dimen185
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransformations
 .code.tex"
 File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@pt@x=\dimen184
-\pgf@pt@y=\dimen185
-\pgf@pt@temp=\dimen186
+\pgf@pt@x=\dimen186
+\pgf@pt@y=\dimen187
+\pgf@pt@temp=\dimen188
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
@@ -895,11 +905,11 @@ File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 "
 File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowsep=\dimen187
+\pgfarrowsep=\dimen189
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@max=\dimen188
+\pgf@max=\dimen190
 \pgf@sys@shading@range@num=\count299
 \pgf@shadingcount=\count300
 ) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreimage.code.te
@@ -909,7 +919,7 @@ File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreexternal.code.t
 ex"
 File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfexternal@startupbox=\box56
+\pgfexternal@startupbox=\box58
 ))
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
 "
@@ -928,15 +938,15 @@ File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleshapes.code.
 tex"
 File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfnodeparttextbox=\box57
+\pgfnodeparttextbox=\box59
 ) ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduleplot.code.tex"
 File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-0-65.
 sty"
 Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@nodesepstart=\dimen189
-\pgf@nodesepend=\dimen190
+\pgf@nodesepstart=\dimen191
+\pgf@nodesepend=\dimen192
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-1-18.
 sty"
@@ -950,10 +960,10 @@ Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
 Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex")
-\pgffor@iter=\dimen191
-\pgffor@skip=\dimen192
-\pgffor@stack=\toks35
-\pgffor@toks=\toks36
+\pgffor@iter=\dimen193
+\pgffor@skip=\dimen194
+\pgffor@stack=\toks36
+\pgffor@toks=\toks37
 ))
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
 Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
@@ -962,20 +972,20 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 code.tex"
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@plot@mark@count=\count301
-\pgfplotmarksize=\dimen193
+\pgfplotmarksize=\dimen195
 )
-\tikz@lastx=\dimen194
-\tikz@lasty=\dimen195
-\tikz@lastxsaved=\dimen196
-\tikz@lastysaved=\dimen197
-\tikz@lastmovetox=\dimen198
-\tikz@lastmovetoy=\dimen199
-\tikzleveldistance=\dimen256
-\tikzsiblingdistance=\dimen257
-\tikz@figbox=\box58
-\tikz@figbox@bg=\box59
-\tikz@tempbox=\box60
-\tikz@tempbox@bg=\box61
+\tikz@lastx=\dimen196
+\tikz@lasty=\dimen197
+\tikz@lastxsaved=\dimen198
+\tikz@lastysaved=\dimen199
+\tikz@lastmovetox=\dimen256
+\tikz@lastmovetoy=\dimen257
+\tikzleveldistance=\dimen258
+\tikzsiblingdistance=\dimen259
+\tikz@figbox=\box60
+\tikz@figbox@bg=\box61
+\tikz@tempbox=\box62
+\tikz@tempbox@bg=\box63
 \tikztreelevel=\count302
 \tikznumberofchildren=\count303
 \tikznumberofcurrentchild=\count304
@@ -1012,14 +1022,14 @@ File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count310
 \calc@Bcount=\count311
-\calc@Adimen=\dimen258
-\calc@Bdimen=\dimen259
-\calc@Askip=\skip59
-\calc@Bskip=\skip60
+\calc@Adimen=\dimen260
+\calc@Bdimen=\dimen261
+\calc@Askip=\skip61
+\calc@Bskip=\skip62
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count312
-\calc@Cskip=\skip61
+\calc@Cskip=\skip63
 )
 \c@@todonotes@numberoftodonotes=\count313
 )
@@ -1031,6 +1041,10 @@ Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 
 
 Writing index file main.idx
+)
+("C:\Users\Hafees Yusuff\AppData\Roaming\MiKTeX\2.9\tex/latex/placeins\placeins
+.sty"
+Package: placeins 2005/04/18  v 2.2
 ) (settings/page.tex
 ("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -1041,35 +1055,35 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@cnth=\count314
 \Gm@cntv=\count315
 \c@Gm@tempcnt=\count316
-\Gm@bindingoffset=\dimen260
-\Gm@wd@mp=\dimen261
-\Gm@odd@mp=\dimen262
-\Gm@even@mp=\dimen263
-\Gm@layoutwidth=\dimen264
-\Gm@layoutheight=\dimen265
-\Gm@layouthoffset=\dimen266
-\Gm@layoutvoffset=\dimen267
-\Gm@dimlist=\toks37
+\Gm@bindingoffset=\dimen262
+\Gm@wd@mp=\dimen263
+\Gm@odd@mp=\dimen264
+\Gm@even@mp=\dimen265
+\Gm@layoutwidth=\dimen266
+\Gm@layoutheight=\dimen267
+\Gm@layouthoffset=\dimen268
+\Gm@layoutvoffset=\dimen269
+\Gm@dimlist=\toks38
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg")))
 ("C:\Program Files\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.sty"
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip62
-\f@nch@O@elh=\skip63
-\f@nch@O@erh=\skip64
-\f@nch@O@olh=\skip65
-\f@nch@O@orh=\skip66
-\f@nch@O@elf=\skip67
-\f@nch@O@erf=\skip68
-\f@nch@O@olf=\skip69
-\f@nch@O@orf=\skip70
+\f@nch@headwidth=\skip64
+\f@nch@O@elh=\skip65
+\f@nch@O@erh=\skip66
+\f@nch@O@olh=\skip67
+\f@nch@O@orh=\skip68
+\f@nch@O@elf=\skip69
+\f@nch@O@erf=\skip70
+\f@nch@O@olf=\skip71
+\f@nch@O@orf=\skip72
 )
 (settings/macros.tex)
 ("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count317
-\l__pdf_internal_box=\box62
+\l__pdf_internal_box=\box64
 )
 (main.aux)
 \openout1 = `main.aux'.
@@ -1099,7 +1113,7 @@ LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 2
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 )
 LaTeX Font Info:    ... okay on input line 21.
-\AtBeginShipoutBox=\box63
+\AtBeginShipoutBox=\box65
 Package hyperref Info: Link coloring ON on input line 21.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1124,16 +1138,16 @@ LaTeX Info: Redefining \nameref on input line 21.
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count319
-\scratchdimen=\dimen268
-\scratchbox=\box64
+\scratchdimen=\dimen270
+\scratchbox=\box66
 \nofMPsegments=\count320
 \nofMParguments=\count321
-\everyMPshowfont=\toks38
+\everyMPshowfont=\toks39
 \MPscratchCnt=\count322
-\MPscratchDim=\dimen269
+\MPscratchDim=\dimen271
 \MPnumerator=\count323
 \makeMPintoPDFobject=\count324
-\everyMPtoPDFconversion=\toks39
+\everyMPtoPDFconversion=\toks40
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1193,7 +1207,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figures/download.png, id=173, 446.66875pt x 113.42375pt>
+<figures/download.png, id=193, 446.66875pt x 113.42375pt>
 File: figures/download.png Graphic file (type png)
 <use figures/download.png>
 Package pdftex.def Info: figures/download.png  used on input line 98.
@@ -1213,7 +1227,7 @@ l.117 \end{titlepage}
 age.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 ...entsline {chapter}{Index}{27}{appendix*.8}
+l.41 ...e {chapter}{Bibliography}{26}{appendix*.6}
                                                   % [1
 
 ])
@@ -1374,7 +1388,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 355--356
 
  []
 
-<figures/NN.png, id=279, 544.28343pt x 383.93437pt>
+<figures/NN.png, id=304, 544.28343pt x 383.93437pt>
 File: figures/NN.png Graphic file (type png)
 <use figures/NN.png>
 Package pdftex.def Info: figures/NN.png  used on input line 360.
@@ -1387,188 +1401,233 @@ Underfull \hbox (badness 10000) in paragraph at lines 357--372
 [10
 
  <./figures/NN.png>]
-<figures/neuron.png, id=287, 389.20406pt x 228.855pt>
+<figures/neuron.png, id=312, 389.20406pt x 228.855pt>
 File: figures/neuron.png Graphic file (type png)
 <use figures/neuron.png>
-Package pdftex.def Info: figures/neuron.png  used on input line 389.
+Package pdftex.def Info: figures/neuron.png  used on input line 388.
 (pdftex.def)             Requested size: 318.66948pt x 187.38643pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--408
+Underfull \hbox (badness 10000) in paragraph at lines 393--407
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--408
+Underfull \hbox (badness 10000) in paragraph at lines 393--407
 
  []
 
-<figures/neuro.png, id=289, 250.68657pt x 246.9225pt>
+<figures/neuro.png, id=314, 250.68657pt x 246.9225pt>
 File: figures/neuro.png Graphic file (type png)
 <use figures/neuro.png>
-Package pdftex.def Info: figures/neuro.png  used on input line 418.
+Package pdftex.def Info: figures/neuro.png  used on input line 417.
 (pdftex.def)             Requested size: 182.09486pt x 179.37025pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--422
+Underfull \hbox (badness 10000) in paragraph at lines 408--421
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--422
+Underfull \hbox (badness 10000) in paragraph at lines 408--421
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--422
+Underfull \hbox (badness 10000) in paragraph at lines 408--421
 
  []
 
 [11 <./figures/neuron.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 423--439
+Underfull \hbox (badness 10000) in paragraph at lines 422--438
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--439
+Underfull \hbox (badness 10000) in paragraph at lines 422--438
 
  []
 
-<figures/tanh.png, id=298, 404.26031pt x 299.61937pt>
+<figures/tanh.png, id=323, 404.26031pt x 299.61937pt>
 File: figures/tanh.png Graphic file (type png)
 <use figures/tanh.png>
-Package pdftex.def Info: figures/tanh.png  used on input line 442.
+Package pdftex.def Info: figures/tanh.png  used on input line 441.
 (pdftex.def)             Requested size: 182.09486pt x 134.96005pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--453
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--452
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--453
+Underfull \hbox (badness 10000) in paragraph at lines 446--452
 
  []
 
-[12 <./figures/neuro.png> <./figures/tanh.png>]
-<figures/Relu.png, id=309, 136.25906pt x 121.20282pt>
+<figures/Relu.png, id=324, 136.25906pt x 121.20282pt>
 File: figures/Relu.png Graphic file (type png)
 <use figures/Relu.png>
-Package pdftex.def Info: figures/Relu.png  used on input line 459.
+Package pdftex.def Info: figures/Relu.png  used on input line 458.
 (pdftex.def)             Requested size: 182.09486pt x 161.9837pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--469
+Underfull \hbox (badness 10000) in paragraph at lines 453--468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--469
+Underfull \hbox (badness 10000) in paragraph at lines 453--468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--469
+Underfull \hbox (badness 10000) in paragraph at lines 453--468
 
  []
 
-<figures/FFN.png, id=310, 472.01344pt x 511.15968pt>
+[12 <./figures/neuro.png>]
+<figures/FFN.png, id=333, 472.01344pt x 511.15968pt>
 File: figures/FFN.png Graphic file (type png)
 <use figures/FFN.png>
-Package pdftex.def Info: figures/FFN.png  used on input line 481.
+Package pdftex.def Info: figures/FFN.png  used on input line 480.
 (pdftex.def)             Requested size: 182.09486pt x 197.19876pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--489
+Underfull \hbox (badness 10000) in paragraph at lines 474--488
 
  []
 
-[13 <./figures/Relu.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 513--523
+[13 <./figures/tanh.png> <./figures/Relu.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 512--522
 
  []
 
 [14 <./figures/FFN.png>]
-<figures/RNN.png, id=325, 657.2053pt x 342.5297pt>
+<figures/RNN.png, id=350, 657.2053pt x 342.5297pt>
 File: figures/RNN.png Graphic file (type png)
 <use figures/RNN.png>
-Package pdftex.def Info: figures/RNN.png  used on input line 526.
+Package pdftex.def Info: figures/RNN.png  used on input line 525.
 (pdftex.def)             Requested size: 182.09486pt x 94.90414pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--546
+Underfull \hbox (badness 10000) in paragraph at lines 544--545
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--546
+Underfull \hbox (badness 10000) in paragraph at lines 544--545
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--553
+Underfull \hbox (badness 10000) in paragraph at lines 550--552
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--553
+Underfull \hbox (badness 10000) in paragraph at lines 550--552
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--553
+Underfull \hbox (badness 10000) in paragraph at lines 550--552
 
  []
 
 [15 <./figures/RNN.png>] [16] [17]
 Chapter 4.
-<figures/cube.png, id=342, 287.57437pt x 296.60812pt>
-File: figures/cube.png Graphic file (type png)
-<use figures/cube.png>
-Package pdftex.def Info: figures/cube.png  used on input line 628.
-(pdftex.def)             Requested size: 136.57462pt x 140.86769pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 615--616
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 620--621
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 620--621
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--645
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--645
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--645
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--645
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 [18
 
- <./figures/cube.png>] [19] [20]
+] [19]
 Chapter 5.
+<figures/cube.png, id=376, 287.57437pt x 296.60812pt>
+File: figures/cube.png Graphic file (type png)
+<use figures/cube.png>
+Package pdftex.def Info: figures/cube.png  used on input line 683.
+(pdftex.def)             Requested size: 136.57462pt x 140.86769pt.
+[20
+
+ <./figures/cube.png>] [21] [22]
+Chapter 6.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 801.
-[21
+ine 856.
+[23
 
 ]
 Appendix A.
-[22
+[24
 
 ]
 Appendix B.
-(main.bbl [23
+(main.bbl [25
 
-]) [24
+]) [26
 
 ] (main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [25
+ [27
 
 ] (main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- (main.ind [26
+ (main.ind [28
 
-] [27
+] [29
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 862.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 862.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 917.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 917.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 862.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 862.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 917.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 917.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F953A05BD32EB4293DF5056A97C7E592;2237.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 862.
+(rerunfilecheck)             Checksum: 08DFA9249A086F2573D50D3056508A41;2647.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 917.
  ) 
 Here is how much of TeX's memory you used:
- 20131 strings out of 480898
- 370155 string characters out of 2908343
- 612967 words of memory out of 3000000
- 35453 multiletter control sequences out of 15000+200000
+ 20211 strings out of 480898
+ 371297 string characters out of 2908343
+ 611994 words of memory out of 3000000
+ 35519 multiletter control sequences out of 15000+200000
  545193 words of font info for 69 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,9n,85p,1219b,944s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1592,9 +1651,9 @@ cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10
 /Users/Hafees Yusuff/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/cbgreek/grmn
 1095.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm1
 0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (29 pages, 963012 bytes).
+Output written on main.pdf (31 pages, 974211 bytes).
 PDF statistics:
- 512 PDF objects out of 1000 (max. 8388607)
- 96 named destinations out of 1000 (max. 500000)
- 442 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 550 PDF objects out of 1000 (max. 8388607)
+ 104 named destinations out of 1000 (max. 500000)
+ 482 words of extra memory for PDF output out of 10000 (max. 10000000)
 

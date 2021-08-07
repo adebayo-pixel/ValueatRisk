@@ -17,20 +17,25 @@
 \BOOKMARK [1][-]{section.3.2}{General Model Building}{chapter.3}% 17
 \BOOKMARK [2][-]{subsection.3.2.1}{Neural network Architures}{section.3.2}% 18
 \BOOKMARK [1][-]{section.3.3}{The LSTM Architecture}{chapter.3}% 19
-\BOOKMARK [0][-]{chapter.4}{Figures, tables, enumerate and itemize}{}% 20
-\BOOKMARK [1][-]{section.4.1}{Figures}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.2}{Tables}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.3}{Enumerate and itemize}{chapter.4}% 23
-\BOOKMARK [0][-]{chapter.5}{Appendix, footnotes, todos and index}{}% 24
-\BOOKMARK [1][-]{section.5.1}{Appendix}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.2}{Footnotes}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.3}{Todos}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.4}{Index}{chapter.5}% 28
-\BOOKMARK [0][-]{appendix.A}{Just an example appendix}{}% 29
-\BOOKMARK [1][-]{section.A.1}{Bla blup}{appendix.A}% 30
-\BOOKMARK [0][-]{appendix.B}{Another example}{}% 31
-\BOOKMARK [1][-]{section.B.1}{More stuff}{appendix.B}% 32
-\BOOKMARK [0][-]{appendix*.6}{Bibliography}{}% 33
-\BOOKMARK [0][-]{appendix*.7}{List of Figures}{}% 34
-\BOOKMARK [0][-]{appendix*.8}{List of Tables}{}% 35
-\BOOKMARK [0][-]{appendix*.8}{Index}{}% 36
+\BOOKMARK [0][-]{chapter.4}{Numerical comparisons}{}% 20
+\BOOKMARK [1][-]{section.4.1}{Partitioning the Dataset}{chapter.4}% 21
+\BOOKMARK [2][-]{subsection.4.1.1}{LSTM Neural Network Model}{section.4.1}% 22
+\BOOKMARK [2][-]{subsection.4.1.2}{Historical simulation and GARCH\(1,1\) Volatility model}{section.4.1}% 23
+\BOOKMARK [2][-]{subsection.4.1.3}{Trial Results of the LSTM Neural Network}{section.4.1}% 24
+\BOOKMARK [0][-]{chapter.5}{Figures, tables, enumerate and itemize}{}% 25
+\BOOKMARK [1][-]{section.5.1}{Figures}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.2}{Tables}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.3}{Enumerate and itemize}{chapter.5}% 28
+\BOOKMARK [0][-]{chapter.6}{Appendix, footnotes, todos and index}{}% 29
+\BOOKMARK [1][-]{section.6.1}{Appendix}{chapter.6}% 30
+\BOOKMARK [1][-]{section.6.2}{Footnotes}{chapter.6}% 31
+\BOOKMARK [1][-]{section.6.3}{Todos}{chapter.6}% 32
+\BOOKMARK [1][-]{section.6.4}{Index}{chapter.6}% 33
+\BOOKMARK [0][-]{appendix.A}{Just an example appendix}{}% 34
+\BOOKMARK [1][-]{section.A.1}{Bla blup}{appendix.A}% 35
+\BOOKMARK [0][-]{appendix.B}{Another example}{}% 36
+\BOOKMARK [1][-]{section.B.1}{More stuff}{appendix.B}% 37
+\BOOKMARK [0][-]{appendix*.6}{Bibliography}{}% 38
+\BOOKMARK [0][-]{appendix*.7}{List of Figures}{}% 39
+\BOOKMARK [0][-]{appendix*.8}{List of Tables}{}% 40
+\BOOKMARK [0][-]{appendix*.8}{Index}{}% 41

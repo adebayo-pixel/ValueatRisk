@@ -13,27 +13,32 @@
 \contentsline {chapter}{\numberline {3}Estimating VaR using Neural Networks }{10}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Mathematics of Neural Network}{11}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}A single Neuron}{11}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Activation Functions}{11}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.2}Activation Functions}{12}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}General Model Building}{13}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Neural network Architures}{13}{subsection.3.2.1}%
-\contentsline {subsubsection}{Feed-forward Neural Network}{13}{section*.2}%
+\contentsline {subsubsection}{Feed-forward Neural Network}{14}{section*.2}%
 \contentsline {subsubsection}{Recurrent Neural Network}{14}{section*.3}%
-\contentsline {subsubsection}{Long Short-Term Memory Recurrent Neural Network}{15}{section*.4}%
+\contentsline {subsubsection}{Long Short-Term Memory Recurrent Neural Network}{16}{section*.4}%
 \contentsline {section}{\numberline {3.3}The LSTM Architecture}{16}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Figures, tables, enumerate and itemize}{18}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Figures}{18}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Tables}{18}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Enumerate and itemize}{20}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Appendix, footnotes, todos and index}{21}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Appendix}{21}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Footnotes}{21}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Todos}{21}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Index}{21}{section.5.4}%
-\contentsline {chapter}{\numberline {A}Just an example appendix}{22}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Bla blup}{22}{section.A.1}%
-\contentsline {chapter}{\numberline {B}Another example}{23}{appendix.B}%
-\contentsline {section}{\numberline {B.1}More stuff}{23}{section.B.1}%
-\contentsline {chapter}{Bibliography}{24}{appendix*.6}%
-\contentsline {chapter}{List of Figures}{25}{appendix*.7}%
-\contentsline {chapter}{List of Tables}{26}{appendix*.8}%
-\contentsline {chapter}{Index}{27}{appendix*.8}%
+\contentsline {chapter}{\numberline {4}Numerical comparisons}{18}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Partitioning the Dataset}{18}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}LSTM Neural Network Model}{18}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Historical simulation and GARCH(1,1) Volatility model}{19}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Trial Results of the LSTM Neural Network}{19}{subsection.4.1.3}%
+\contentsline {chapter}{\numberline {5}Figures, tables, enumerate and itemize}{20}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Figures}{20}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Tables}{20}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Enumerate and itemize}{22}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Appendix, footnotes, todos and index}{23}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Appendix}{23}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Footnotes}{23}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Todos}{23}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Index}{23}{section.6.4}%
+\contentsline {chapter}{\numberline {A}Just an example appendix}{24}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Bla blup}{24}{section.A.1}%
+\contentsline {chapter}{\numberline {B}Another example}{25}{appendix.B}%
+\contentsline {section}{\numberline {B.1}More stuff}{25}{section.B.1}%
+\contentsline {chapter}{Bibliography}{26}{appendix*.6}%
+\contentsline {chapter}{List of Figures}{27}{appendix*.7}%
+\contentsline {chapter}{List of Tables}{28}{appendix*.8}%
+\contentsline {chapter}{Index}{29}{appendix*.8}%
