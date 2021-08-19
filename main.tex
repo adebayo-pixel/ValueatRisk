@@ -553,14 +553,7 @@ The output from a previous sequence of the network function serves – in combin
 \section{The LSTM Architecture}
 Our LSTM has a single hidden layer. It has 90 nodes in the input layer and 150 nodes in hidden layer, with 'tanh' as the activation function. The following are the hyper parameter used in within the LSTM neural network:
 \begin{itemize}
-\item[$\bullet$] The Mean Square Error (MSE): This is the average squared difference between the estimated values and the actual value.
 
-\begin{center}
-	$L_{MSE} = 1/N\sum_{k=1}^{N} ({\hat{y}}_{k}-y_k)^2$
-\end{center}
- It is also chosen as the loss function (between the predicted outputs and the actual outputs) performance measure(to assess the model fit while
-training and validating the network) of the
-LSTM neural network
 \item[$\bullet$]   The optimizer mirrors the use of the gradient descent method, as it controls the
 magnitude of changes to the weights within the network, with regard to the
 loss gradient. The optimization algorithm Adam is chosen as the optimizer in
@@ -572,25 +565,24 @@ it does not require a stationary objective, it works with sparse gradients, and 
 form of step size annealing (Kingma and Ba, 2015).
 \item[$\bullet$] The batch size is the number of inputs that will be propagated in the
 LSTM neural network during the training process, and in this case the batch
-size is set to 256. As such, volatility inputs are
-fed in the network through numerous batches, each containing 256 inputs. After
+size is set to 128. As such, volatility inputs are
+fed in the network through numerous batches, each containing 128 inputs. After
 the propagation of a batch, the network is trained before receiving another
-batch of 256 inputs. This operation is repeated until the end of the training and
+batch of 128 inputs. This operation is repeated until the end of the training and
 validation processes, i.e. when all inputs are propagated.
 \item[$\bullet$] The look ahead specifies the number of time steps, i.e. the lagged
 inputs the RNN should use to forecast the desired outputs. To enforce the ability of the RNN to find
 repeating temporal patterns, the look ahead
-technique is used with the GRU neural
+technique is used with the LSTM neural
 network. However, the sliding window (look ahead) should not be too small or the time
 dependencies will not be well captured, nor too large to avoid feeding
 excessively the same inputs, as this could lead to overfitting problems. For all trials, the look back is set to 90 lagged inputs, which
 corresponds to about 3-month period in the data sample.
 \item[$\bullet$] The dropout function is a regularization method used to prevent overfitting by
-allowing the GRU neural network to drop a random set of neurons while
+allowing the LSTM neural network to drop a random set of neurons while
 training the network. Ignoring several neurons for each iteration during the
 training process is necessary, because if the network is fully connected,
-neurons will become interdependent, leading to overfitting of the training data.
-The dropout function is set to 0.25, implying that 25\% of the existing
+neurons will become interdependent, leading to overfitting of the training data. For example, if the dropout function is set to 0.25, this means that 25\% of the existing
 neurons within the network will be ignored during the training process.
 \item[$\bullet$] The number of epochs can also influence the accuracy of a neural network. It
 refers to the number of times all the training and validation datasets are
@@ -598,9 +590,17 @@ propagated through the GRU neural network. The standard procedure is to
 increase the number of epochs until the chosen metric – in this case the MSE
 – decreases for the validation set, while it continues to increase for the training
 set, i.e. when the training set shows signs of overfitting.
+\item[$\bullet$] The Mean Square Error (MSE): This is the average squared difference between the estimated values and the actual value.
+
+\begin{center}
+	$L_{MSE} = 1/N\sum_{k=1}^{N} ({\hat{y}}_{k}-y_k)^2$
+\end{center}
+It is also chosen as the loss function (between the predicted outputs and the actual outputs) performance measure(to assess the model fit while
+training and validating the network) of the
+LSTM neural network
 \end{itemize}
 
-The number of neurons, dropout function, activation functions and epochs are fine-tuned (i.e those values of those parameters were updated to see the peformance of the LSTM), and their respective values listed above are chosen as LSTM performs best with those values. That is, the LSTM with the lowest MSE value. This will be discussed in details in the next chapter.
+The number of neurons, dropout function, activation functions and epochs are changed in each LSTM models to choose the one that performs best. That is, the LSTM with the lowest MSE value. This will be discussed in details in the next chapter.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -630,11 +630,11 @@ In this study, the first 7000 daily log-returns of each series (each series cont
 		\hline \hline
 		In-sample
 		& out-of-sample\\ \hline
-		Training set: 11/04/1999 – 26/10/2012
+		Training set: 05/01/1988 – 27/02/2012
 		& Test set
-		: 11/04/1999 – 26/10/2012
+		: 10/03/2015 – 30/06/2020
 	 \\
-		Validation set: 11/04/1999 – 26/10/2012
+		Validation set: 28/02/2012– 03/11/2014
 		\\
 		\hline \hline
 	\end{tabular}
@@ -643,245 +643,225 @@ In this study, the first 7000 daily log-returns of each series (each series cont
 	\label{firsttab}
 \end{table}
 
+An important pre-processing step is input normalization, as it is considered good practice for neural network training, data scaling helps neural networks train and converge faster. We use the z-score (StandardScaler): 
+
+\begin{center}
+	$X_{new} = \frac{X-\mu}{\sigma}$
+\end{center}
+
+
+
+
 \subsection{Historical simulation and GARCH(1,1) Volatility model}
-For congruency with the LSTM model (in regards to number of predictions), we use a rolling window of 7090 for Historical simulation and GARCH(1,1) Volatility model, which stands as our in-sample data and we have 1383 out-of-sample data (predictions).
+For congruency with the LSTM model (in regards to number of predictions), we use a rolling window of 7090 for Historical simulation and GARCH(1,1) Volatility model, which stands as our in-sample data and we have 1386 out-of-sample data (predictions).
 
 \subsection{Trial Results of the LSTM Neural Network}
 
-As discussed in the previous chapter, the performance of our LSTM model is based on MSE. Several trials are performed with different values of hyper-parameters in order to choose the one with the lowest MSE value. The LSTM model is done individually for each stock market, and for this reason, the number of neurons, dropout function, activation function and the number of epochs are different where necessary for each of the stock markets in their best individual models (the model with the least MSE)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\chapter{Figures, tables, enumerate and itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Figures}
-
-In almost every document figures will be needed in order to explain a concept or just present something. The package \imp{graphicx} is needed for embedding figures.
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.3\textwidth]{figures/cube}
-	\caption{A figure caption beneath the figure for description of the depicted concept which sometimes can be very long}
-	\label{ft_fig_firstfig}
-\end{figure}
-
-In \autoref{ft_fig_firstfig}, for example, a PNG image is depicted (compiled with pdflatex). Alternatively, EPS figures can be embedded if dvips and ps2pdf compilation is used. All figures are listed in the list of figures with the command \imp{listoffigures}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Tables}
-
-Data can be presented in tables, e.g., as shown in \autoref{ft_tab_ex}.
-
-\begin{table}[!h]
-	\centering
-	\begin{tabular}{l|cl}
-		\hline \hline
-		
-		& Property 1
-		& Property 2\\ \hline
-		Criterion 1
-		& 764
-		& 23546 \\
-		Criterion 2
-		& 3
-		& 34 \\
-		\hline \hline
-	\end{tabular}
-	\caption{Exemplary table}
-	\label{ft_tab_ex}
-\end{table}
-
-Sometimes very long tables must be presented which may also go over pages. For this cases the packages \imp{longtable} is useful, as used in 
+As discussed in the previous chapter, the performance of our LSTM model is based on MSE. In this paper, we follow a best-out-of-5 approach, that means each training is done five times with varying initialization and the best one is selected for VAR estimation.\newline\newline
+\textbf{NIKKEI}\newline\newline
+The training and validation loss continues to decrease as the number of epochs increases until 200 epochs,
+after which the model started to overfit. This was made evident as a result of a slow and steady rise in the
+validation loss after 200 epochs, while the training loss kept reducing.
+It was also observed that the most effective size of the LSTM network was 350, and the higher the intensity
+of regularization applied, the better the model was able to perform.
 
 \begin{center}
-	\begin{longtable}{l|l|l}
-		
-		% \baselinestretch{1.5}
-		
-		\hline \hline
-		$i^3$ & $2i^3$ & $3i^3$ \bigstrut \\ \hline
-		\endfirsthead
-		
-		\multicolumn{3}{c}{\tablename\ \thetable{} -- information message on top} \\
+	\begin{tabular}{||c c c c c||} 
 		\hline
-		$i^3$ & $2i^3$ & $3i^3$ \bigstrut \\ \hline 
-		\endhead
-		
+		Trials & Epochs & Dropout & Neurons & Validation result\\ [0.5ex] 
+		\hline\hline
+		1 & 500 & 0.5 & 256 & 0.00036662753 \\ 
 		\hline
-		\multicolumn{3}{c}{Foot information} \\ \hline
-		\endfoot
-		
-		\hline \hline
-		\caption{Long Table}
-		\label{lt}
-		\endlastfoot
-		
-		1 & 2 & 3 \\
-		8 & 16 & 24 \\
-		27 & 54 & 81 \\
-		64 & 128 & 192 \\
-		125 & 250 & 375 \\
-		216 & 432 & 648 \\
-		343 & 686 & 1029 \\
-		512 & 1024 & 1536 \\
-		729 & 1458 & 2187 \\
-		1000 & 2000 & 3000 \\
-		1331 & 2662 & 3993 \\
-		1728 & 3456 & 5184 \\
-		2197 & 4394 & 6591 \\
-		2744 & 5488 & 8232 \\
-		3375 & 6750 & 10125 \\
-		4096 & 8192 & 12288 \\
-		4913 & 9826 & 14739 \\
-		5832 & 11664 & 17496 \\
-		6859 & 13718 & 20577 \\
-		8000 & 16000 & 24000 \\
-		9261 & 18522 & 27783 \\
-		10648 & 21296 & 31944 \\
-		12167 & 24334 & 36501 \\
-		13824 & 27648 & 41472 \\
-		15625 & 31250 & 46875 \\
-		17576 & 35152 & 52728 \\
-		19683 & 39366 & 59049 \\
-		21952 & 43904 & 65856 \\
-		24389 & 48778 & 73167 \\
-		27000 & 54000 & 81000 \\
-		29791 & 59582 & 89373 \\
-		32768 & 65536 & 98304 \\
-		35937 & 71874 & 107811 \\
-		39304 & 78608 & 117912 \\
-		42875 & 85750 & 128625 \\
-		46656 & 93312 & 139968 \\
-		50653 & 101306 & 151959 \\
-		54872 & 109744 & 164616 \\
-		59319 & 118638 & 177957 \\
-		64000 & 128000 & 192000 \\
-		68921 & 137842 & 206763 \\
-		74088 & 148176 & 222264 \\
-		79507 & 159014 & 238521 \\
-		85184 & 170368 & 255552 \\
-		91125 & 182250 & 273375 \\
-		97336 & 194672 & 292008 \\
-		103823 & 207646 & 311469 \\
-		110592 & 221184 & 331776 \\
-		117649 & 235298 & 352947 \\
-		125000 & 250000 & 375000 \\
-	\end{longtable}
+		2 & 300 & 0.75 & 256 & 0.0001696553 \\
+		\hline
+		3 & 300 & 0.75 & 350 & 0.00017357965 \\
+		\hline
+		4 & 200 & 0.5 & 256 & 0.0002184841 \\
+		\hline
+		5 & 200 & 0.75 & 350 & 0.00016831204\\ [1ex] 
+		\hline
+	\end{tabular}
 \end{center}
 
-All tables are listed with \imp{listoftables}.
+In the first trial, the model trained for 500 epochs, which is more than the desired 200 epochs. The intensity of
+regularization is also low at 0.5, the LSTM network size was also low. As a result of the high number of
+epochs and low regularization effect, it suffered from the highest variance and produced the worst result.\newline
+
+The second produced the second best result,as it trained more than 200 epochs, and
+also the LSTM network at 256 falls short of 350. As a result of this, the model suffered from a higher bias as
+compared to the last trial, because the model was not able to learn well as a result of the inadequate LSTM network.\newline
+
+Trial 3 is the third in line, the model trained for 300 epochs which is longer than the required 200 epochs,
+this led the model to suffer from high variance. Since the LSTM is large although the right size, an increase
+above the required number of epochs will lead the model to start to overt rapidly, that was why this trial
+performed worse than the second trial.\newline
+
+Trained with the desired 200 epochs, with a low dropout of 0.5, and a low LSTM size of 256. This trial
+has the lower regularization effect of using a dropout of 0.5 and an insuffcient LSTM
+network made the model suffer from higher bias.\newline
+
+The best performed trial is the fifth trial. As a result of the 200 epochs the model trained for being within the range
+of avoiding high variance and high bias. The dropout regularization intensity was also high enough at 0.75,
+and the size of the Long Short Term Memory (LSTM) network at 350 was large enough.\newline\newline
+
+\textbf{FTSE 100}\newline\newline
+
+A decrease in the training and validation loss continues to occur as the number of epochs increases until 205
+epochs, after which the model started to overt. This was made evident as a result of a slow and steady rise
+in the validation loss after 205 epochs, while the training loss kept reducing.
+It was also observed that the most effective size of the LSTM network was 350, and the higher the intensity
+of regularization applied, the better the model was able to perform.
+\begin{center}
+	\begin{tabular}{||c c c c c||} 
+		\hline
+		Trials & Epochs & Dropout & Neurons & Validation result\\ [0.5ex] 
+		\hline\hline
+		1 & 500 & 0.5 & 250 & 0.00013862312 \\ 
+		\hline
+		2 & 300 & 0.75 & 250 & 0.00012870964 \\
+		\hline
+		3 & 300 & 0.75 & 350 & 0.000117358715 \\
+		\hline
+		4 & 200 & 0.5 & 250 & 0.00012332022 \\
+		\hline
+		5 & 200 & 0.75 & 350 & 0.00011699893\\ [1ex] 
+		\hline
+	\end{tabular}
+\end{center}
+
+The last trial produced the best result, as a result of the 200 epochs the model trained for being within the range
+of avoiding high variance and high bias. The dropout regularization intensity was also high enough at 0.75,
+and the size of the Long Short Term Memory (LSTM) network at 350 was large enough.\newline
+
+The third attempt produced the next best result, it fell short of case 10 because it trained more than 200 epochs. As a
+result of this, the model suffered from a higher variance as compared to case 10.\newline
+
+Although, the forth trial was trained for the required 200 epochs but fell short, as a result of the low dropout of 0.5 and inadequate
+LSTM network size. The low regularization intensity had the greatest effect, leading to high variance.\newline
+
+The second trial was over trained for 300 epochs, the dropout at 0.5 was low, and the LSTM network at 250, are what
+led to a less impressive result compared to trial 5,3, and 4 \newline
+
+Suffered the same set back as the second trial, the first trial was trained with an even larger number of epochs at 500. This made it
+perform the worst compared to the rest of the trails.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Enumerate and itemize}
-
-If important sequential points are to presented the environment \imp{enumerate} can be used as follows:
-\begin{enumerate}
-	\item
-	Some important stuff
-	\item
-	More stuff
-\end{enumerate}
-With the package \imp{enumerate} some options can be used, e.g.,
-\begin{enumerate}[a)]
-	\item
-	Some important stuff
-	\item
-	More stuff
-\end{enumerate}
-or 
-\begin{enumerate}[~~~1)]
-	\item
-	Some important stuff
-	\item
-	More stuff
-\end{enumerate}
-
-Alternatively, point can be just presented without any enumeration with the environment \imp{itemize}
-\begin{itemize}
-	\item
-	Some important stuff
-	\item
-	More stuff
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Appendix, footnotes, todos and index}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Appendix}
-
-For many reasons some concept may be important for the document but too long for the main text. In this kind of cases these concept can be presented with the environment \imp{appendix} in appendices, e.g., as in \autoref{app_ex1} and \autoref{app_ex2}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Footnotes}
-
-You may want to give additional information to some points\footnote{Bla bla} in the text\footnote{Blu blup}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Todos}
-
-With the package \imp{todonotes} comments\todo{like this one}\ pointing to their place can be embedded into the text. These comments are veeeery useful if you are writing something for the first time or are working on a draft. The todos can be listed with \imp{listoftodos} where you want it to appear in order to see what is unfinished or needs some more work.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Index}
-
-If the document is very long, it may be very useful for a lot of readers to have an index for searching key words and certain concepts (Crtl+F is usually very helpful in PDFs but not always the best solution). For this, the  package \imp{makeidx}, the commands \imp{makeindex} and \imp{printindex} and the compiling option \imp{make index} are needed. You may want to index different words like heterogeneous materials\index{Heterogeneous materials}, effective properties\index{Effective properties} and homogenization\index{Homogenization}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{appendix}
+		\chapter{}
 	
+	Graphs of log-return series of each stock market	
+	
+\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.8\textwidth]{figures/logNikkei}
+		\caption{log-returns of Nikkei 225}
+		\label{logNikkei}
+\end{figure}
+		
+\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.8\textwidth]{figures/logFTSE}
+		\caption{log-returns of FTSE 100}
+		\label{logFTSE}
+\end{figure}
+		
+		
+\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.8\textwidth]{figures/logS&P500}
+		\caption{log-returns of S\&P 500}
+		\label{logSandP 500}
+\end{figure}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
-	\chapter{Just an example appendix}
-	\label{app_ex1}
-	
+
+	\chapter{}
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
-	\section{Bla blup}
+In all the graphs below, number of epochs is represented by the
+horizontal axis (X-axis), while the loss functions are represented by the vertical axis
+(Y-axis).
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/Nik1}
+	\caption{Training and Validation loss functions under Trial 1 (Nikkei 225))}
+	\label{Nik1}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/Nik2}
+	\caption{Training and Validation loss functions under Trial 2 (Nikkei 225))}
+	\label{Nik2}
+\end{figure}
+
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/Nik3}
+	\caption{Training and Validation loss functions under Trial 3 (Nikkei 225))}
+	\label{Nik3}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/Nik4}
+	\caption{Training and Validation loss functions under Trial 4 (Nikkei 225))}
+	\label{Nik4}
+\end{figure}
+
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/Nik5}
+	\caption{Training and Validation loss functions under Trial 5 (Nikkei 225))}
+	\label{Nik5}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/FTSE1}
+	\caption{Training and Validation loss functions under Trial 1 (FTSE 100))}
+	\label{FTSE1}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/FTSE2}
+	\caption{Training and Validation loss functions under Trial 2 (FTSE 100))}
+	\label{FTSE2}
+\end{figure}	
 	
-	Sme stuff
-	\begin{equation}
-	f(x) = \int_{\Omega} g(x) dx \ .
-	\end{equation}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/FTSE3}
+	\caption{Training and Validation loss functions under Trial 3 (FTSE 100))}
+	\label{FTSE3}
+\end{figure}	
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/FTSE4}
+	\caption{Training and Validation loss functions under Trial 4 (FTSE 100))}
+	\label{FTSE4}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/FTSE5}
+	\caption{Training and Validation loss functions under Trial 5 (FTSE 100))}
+	\label{FTSE5}
+\end{figure}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\\
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
