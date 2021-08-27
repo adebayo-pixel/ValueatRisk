@@ -26,7 +26,7 @@
 	
 	%\pagestyle{empty}
 	%\title{Basic elements for writing a book/thesis using \LaTeX}
-	%\author{Mauricio Lobos}
+	%\autr{Mauricio Lobos}
 	%\date{}
 	%\maketitle
 	\input{content/title_page_1} % downloaded template
@@ -86,8 +86,8 @@ Pritsker (1997), reported that the Historical Simulation performed at least as w
 others. The evaluation and categorization of models carried out in the work by McAleer, Jimenez-Martin and Perez-Amaral(2009) and Shams and Sina (2014), among others, try to determine the conditions under which certain models predict the best. Researchers compared models in periods of varying volatility-before the crisis and after the crisis (When there was no high volatility and when volatility was high, respectively). However, this confirms that some models have good predictions before the start of the crisis, but their quality reduces with increased volatility. Others are more conservative during periods of low volatility, but in the time of the crisis the number of errors made by these models is relatively low.
 \newline\newline
 Bao et al.(2006), Consigli(2002) and Danielson(2002), among
-others, show that in stable periods, parametric models provide satisfactory results
-that become less satisfactory during high volatility periods.  Additional studies that find
+others, show that "in stable periods, parametric models provide satisfactory results
+that become less satisfactory during high volatility periods".  Additional studies that find
 evidence in favour of parametric methods are Sarma et al.(2003), who compare
 Historical simulation and Parametric methods, and Danielson and Vries(2000) in a
 similar comparison that also includes Extreme value theory methods. Chong(2004),
@@ -154,7 +154,7 @@ $F(r) = Pr(r_{t} < r|\Omega_{t-1})$ conditional on the information set $\Omega_{
 \begin{aligned}
 r_t &= \mu_t + \varepsilon_t
 \\
-\varepsilon_t &= \sigma_t  z_t \qquad   z_i \sim N(0,1)
+\varepsilon_t &= \sigma_t  z_t \qquad   z_t \sim iid(0,1)
 \label{1}
 \end{aligned}
 \end{equation}
@@ -258,7 +258,7 @@ In turn, the equation of conditional variance, in the GARCH($p$,$q$) model can b
 \label{7}
 \end{aligned}
 \end{equation}
-where $\sigma$ =conditional variance in the period $t$,\newline
+where $\sigma^2$ =conditional variance in the period $t$,\newline
 $\omega$ = constant ($\omega>0$)\newline
 $\alpha_{i}$ = weight of the random squared error in the period $t-1$,\newline
 $\beta_{i}$ = weight of the conditional variance in the period $t-1$,\newline
@@ -266,10 +266,10 @@ $\varepsilon^{2}_{t-i}$= squared random error in the period $t-1$,\newline
 $\sigma^2_{t-i}$ =variance in the period $t-1$,\newline
 $q$ = number of random error squares periods used in the functional form of conditional variance,\newline
 $p$ = number of lagged conditional variances used in the
-functional form of conditional variance.\newline\newline When we use high frequency data in conjunction with GARCH models, these need to be modified
+functional form of conditional variance (see Buczyński \& Chlebus (2018)).\newline\newline Ruilova \& Morettin (2020) "When we use high frequency data in conjunction with GARCH models, these need to be modified
 to incorporate the financial market micro structure. For example, we need to incorporate heterogeneous
 characteristics that appear when there are many traders working in a financial market trading with
-different time horizons. The HARCH(n) model was introduced by Müller et al. (1997) to try to solve this problem.
+different time horizons. The HARCH(n) model was introduced by Müller et al. (1997) to try to solve this problem".
 
 \subsection{HAR Method}
 
@@ -342,7 +342,7 @@ f_t(\beta)=\beta_0 + \sum_{i=1}^{q} \beta_{i}f _{t-i}(\beta) +\sum_{j=1}^{r}\bet
 where $p=q+r+1$ is the dimension of $\beta$ and $l$ is a function of a finite number of lagged values of observables. The autoregressive terms $\beta_{i}f_{t-i}(\beta)$, $i = 1,...,q$, ensure that the quantile changes smoothly over time. The parameters of CaViaR are estimated by quantile regression. The role of $l(x_{t-j})$ is to connect $f_{t}(\beta)$ to observable variables that belong to the information set.
 \newline\newline
 The asymmetric slope is a variant of CaViar model, which allows the response to positive and negative returns to be different. It is modelled as:\newline\newline
-$f_{t}(\beta)= \beta_{1} +\beta_{2}f_{t-1}(\beta)+\beta_{3}(y_{t-1})^{+} + \beta_{4}(y_{t-1})^{-}$. where, $(y_{t-1})^{+}$= max($y_{t-1}$, 0) and $(y_{t-1})^{-}$ = min($y_{t-1}$, 0)
+$f_{t}(\beta)= \beta_{1} +\beta_{2}f_{t-1}(\beta)+\beta_{3}(y_{t-1})^{+} + \beta_{4}(y_{t-1})^{-}$. where, $(y_{t-1})^{+}$= max($y_{t-1}$, 0) and $(y_{t-1})^{-}$ = -min($y_{t-1}$, 0)
 \newline\newline
 \textbf{Note:} In this work, value at risk will be estimated based on financial log-returns. Historical simulation, Garch models, and long short term memory neural network will be used for our VAR estimation. The latter will be discussed in the next chapter.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -358,15 +358,12 @@ Neural networks are made of node layers, containing an input layer, one or more 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{figures/NN}
-	\caption{A figure showing the layers of a Neural Network (see IBM)}
+	\caption{A figure showing the layers of a Neural Network (see IBM, 2020)}
 	\label{firstfig}
 \end{figure}\newline
 Neural networks rely on training data to learn and improve their accuracy over time. However, once these learning algorithms are polished for accuracy, they become powerful tools in computer science and artificial intelligence, allowing us to classify and cluster data at a high speed. Tasks in speech recognition or image recognition can take minutes versus hours when compared to the manual identification by human experts.
 \newline\newline
-One major advantage of Neural Networks is that they have a flexible nonlinear
-function mapping capability (Cybenko (1989) and Hornik et al. (1989)), this means that any model can be arbitrarily well
-approximated by a sufficiently large ANN. This model-free property of ANNs is an
-important advantage since returns do not display a specific nonlinear pattern. However, just like historical simulation they require large data set (which is not always available) for training to perform excellently well.
+Neural network is good for returns prediction as it can accommodate nonlinear interactions, and no distribution is assumed. However, just like historical simulation they require large data set (which is not always available) for training to perform excellently well.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -444,7 +441,7 @@ $\text{tanh(x)}=\frac{sinh(x)}{cosh(x)}=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}$
 \end{figure}
 
 The advantage is that the negative input values will be mapped
-strongly negative and the zeros will be mapped near zero through this
+strongly negative and very small values close to zero will be mapped to values close to zero through this
 function. Therefore, this function is useful in the performance of a classification between two distinct classes.
 Though, this function is preferred over the Sigmoid function in practice (output in wider range), but the gradient vanishing
 problem still exists. The following ReLU function rectifies this problem
@@ -470,7 +467,7 @@ results by not taking negative values into account.
  \subsection{Neural network Architures}
  Neural Networks are complex structures made of artificial neurons that can take in several inputs to produce a single(or more) output(s). Normally, a Neural Network consists of an input and output layer with one or multiple hidden layers within. In a Neural Network, all the neurons(contained in each layers) influence each other, and hence, they are all connected. The manner in which the input neurons produce a certain output is intimately linked
  to the structure of the neural network. The two main classes of network architectures are discussed below
- \subsubsection{Feed-forward Neural Network}
+ \subsubsection{Feed-forward Neural Network} (see Bijelic \& Ouijjane, 2019)
  In feed-forward neural network(FFN), each neuron in a
  particular layer is connected with all neurons in a subsequent layer. The information
  flow in the network is of feedforward type (i.e the connections
@@ -478,7 +475,7 @@ results by not taking negative values into account.
  \begin{figure}
  	\centering
  	\includegraphics[width=0.4\textwidth]{figures/FFN}
- 	\caption{A fully connected FFN with a single hidden layer (see Anna \& Bijelic, 2019)}
+ 	\caption{A fully connected FFN with a single hidden layer (see Bijelic \& Ouijjane, 2019)}
  	
  	\label{sixthfig}
  \end{figure}
@@ -508,7 +505,7 @@ major concern in that it precludes modelling time-dependencies in the data. This
 deficiency of not being able to take correlations between inputs into account is
 however resolved in the recurrent neural network, which is able to selectively pass
 information across sequences of elements by creating cycles in the network.
-\subsubsection{Recurrent Neural Network}
+\subsubsection{Recurrent Neural Network} (see Bijelic \& Ouijjane, 2019)
 Recurrent Neural Networks
 (RNN) can handle sequential data due to the capability of each neuron to
 maintain information about previous inputs, contrary feedforward neural networks. This means that the prediction a recurrent
@@ -518,12 +515,12 @@ what has been perceived previously in time.\newline\newline
 RNNs contain feedback loops from the so-called hidden states, and this allows preservation of information from one node to another while reading in inputs. This feedback loop
 mechanism occurs at each time step in the data series, which results in each hidden
 state containing traces not only of the previous hidden state, but also of all the
-preceding ones, for as long as the memory of the network persists (Skymind, 2019).
+preceding ones, for as long as the memory of the network persists (Skymind, 2019).\newline
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.4\textwidth]{figures/RNN}
-	\caption{Representation of an unrolled plain vanilla recurrent neural network. (see Anna \& Bijelic, 2019)}
+	\caption{Representation of an unrolled plain vanilla recurrent neural network. (see Bijelic \& Ouijjane, 2019)}
 	
 	\label{seventhfig}
 \end{figure}
@@ -547,36 +544,25 @@ Through this process, RNNs tend to run into two problems, known as exploding gra
 
 
 \subsubsection{Long Short-Term Memory Recurrent Neural Network}
-Originally introduced by Hochreiter and Schmidhuber (1997), a main characteristic of LSTMs – which are a sub class of recurrent neural networks - is its purpose-built memory cells, which allows it to capture long range dependencies in the data. From a model perspective, LSTMs differ from other neural network architectures in that they are applied recurrently\newline\newline
-The output from a previous sequence of the network function serves – in combination with the next sequence element - as input for the next application of the network function. In this sense, the LSTM can be interpreted as being similar to an HMM (Hidden Markov Model), in that there is a hidden state which conditions the output distribution. However, the LSTM hidden state not only depends on its previous states, but it also captures long term sequence dependencies through its recurrent nature. Maybe most notably, the receptive field size (i.e the size of the region in the input that produces the feature) of an LSTM is not bound architecture wise as in case of simple feed forward network and CNN. Instead, the LSTM’s receptive field depends solely on the LSTMs ability to memorize the past input. Due to the attractiveness of the LSTM, it will be used in this work to forecast volatility of returns of stock markets. \newline\newline
+Originally introduced by Hochreiter and Schmidhuber (1997), a main characteristic of LSTMs – which are a sub class of recurrent neural networks - is its purpose-built memory cells, which allows it to capture long range dependencies in the data. From a model perspective, LSTMs differ from other neural network architectures in that they are applied recurrently.\newline\newline
+The output from a previous sequence of the network function serves – in combination with the next sequence element - as input for the next application of the network function. In this sense, the LSTM can be interpreted as being similar to an HMM (Hidden Markov Model), in that there is a hidden state which conditions the output distribution. However, the LSTM hidden state not only depends on its previous states, but it also captures long term sequence dependencies through its recurrent nature. Maybe most notably, the receptive field size (i.e the size of the region in the input that produces the feature) of an LSTM is not bound architecture wise as in case of simple feed forward network and CNN. Instead, the LSTM’s receptive field depends solely on the LSTMs ability to memorize the past input (Arimond et al, 2020). \newline\newline Due to the attractiveness of the LSTM, it will be used in this work to forecast volatility of returns of stock markets. \newline\newline
 
 \section{The LSTM Architecture}
-Our LSTM has a single hidden layer. It has 90 nodes in the input layer and 150 nodes in hidden layer, with 'tanh' as the activation function. The following are the hyper parameter used in within the LSTM neural network:
+Our LSTM has a single hidden layer,  with 'tanh' as the activation function. The following are the hyper parameter used in within the LSTM neural network:
 \begin{itemize}
 
-\item[$\bullet$]   The optimizer mirrors the use of the gradient descent method, as it controls the
-magnitude of changes to the weights within the network, with regard to the
-loss gradient. The optimization algorithm Adam is chosen as the optimizer in
-the LSTM neural network, because in contrast to the stochastic gradient
-descent, which maintains one single learning rate for all weight updates, Adam
-separately adapts a learning rate for each network weight. Some of Adam’s advantages are that the magnitudes of parameter updates are invariant to
+\item[$\bullet$]   
+Optimizers are algorithms used to change the properties of the neural network such as weights and learning rate to minimize the losses. Adam is the chosen optimizer in our LSTM model. Some of its advantages are that the magnitudes of parameter updates are invariant to
 rescaling of the gradient, its stepsizes are approximately bounded by the stepsize hyperparameter,
 it does not require a stationary objective, it works with sparse gradients, and it naturally performs a
 form of step size annealing (Kingma and Ba, 2015).
 \item[$\bullet$] The batch size is the number of inputs that will be propagated in the
-LSTM neural network during the training process, and in this case the batch
-size is set to 128. As such, volatility inputs are
-fed in the network through numerous batches, each containing 128 inputs. After
+LSTM neural network during the training process. In our LSTM model 128 is the chosen batch size, and this means that the volatility inputs are
+fed in the network in batches, each containing 128 inputs. After
 the propagation of a batch, the network is trained before receiving another
-batch of 128 inputs. This operation is repeated until the end of the training and
-validation processes, i.e. when all inputs are propagated.
-\item[$\bullet$] The look ahead specifies the number of time steps, i.e. the lagged
-inputs the RNN should use to forecast the desired outputs. To enforce the ability of the RNN to find
-repeating temporal patterns, the look ahead
-technique is used with the LSTM neural
-network. However, the sliding window (look ahead) should not be too small or the time
-dependencies will not be well captured, nor too large to avoid feeding
-excessively the same inputs, as this could lead to overfitting problems. For all trials, the look back is set to 90 lagged inputs, which
+batch of 128 inputs. This operation continues until all inputs are propagated.
+\item[$\bullet$] The look ahead is the amount of time steps, i.e. the lagged
+inputs the RNN should use to forecast the desired outputs. For all trials, the look back is set to 90 lagged inputs, which
 corresponds to about 3-month period in the data sample.
 \item[$\bullet$] The dropout function is a regularization method used to prevent overfitting by
 allowing the LSTM neural network to drop a random set of neurons while
@@ -595,7 +581,7 @@ set, i.e. when the training set shows signs of overfitting.
 \begin{center}
 	$L_{MSE} = 1/N\sum_{k=1}^{N} ({\hat{y}}_{k}-y_k)^2$
 \end{center}
-It is also chosen as the loss function (between the predicted outputs and the actual outputs) performance measure(to assess the model fit while
+It is also chosen as the loss function (between the predicted outputs and the actual outputs) and the performance measure(to assess the model fit while
 training and validating the network) of the
 LSTM neural network
 \end{itemize}
@@ -614,6 +600,28 @@ For the empirical study, the day-ahead forecasting of the 1\% and 5\% VAR for da
 \end{center}
 the data in the first row of the series vanishes leaving us with 8476 daily log-returns and 05/01/1988 as starting date. Basically, this means we use 8476 daily log-returns for our VaR estimations. This longer sample is desirable for our models, most especially the historical simulation and neural network as they work best with large data. Moreover, data contains periods of low and high volatilities, which mitigates the probability of the historical simulation being bias (underestimation or overestimation) in the return estimation.\newline
 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/logNikkei}
+	\caption{The series of log-returns of Nikkei 225}
+	\label{logNikkei}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/logFTSE}
+	\caption{The series of log-returns of FTSE 100}
+	\label{logFTSE}
+\end{figure}
+
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/logS&P500}
+	\caption{The series of log-returns of S\&P 500}
+	\label{logSandP 500}
+\end{figure}
+
 \section{Partitioning the Dataset}
 \subsection{LSTM Neural Network Model}
 
@@ -623,7 +631,7 @@ In this study, the first 7000 daily log-returns of each series (each series cont
 %\makeatletter
 %\setlength\@fptop{0\p@}
 %\makeatother
-\newline\newline\newline\newline\newline
+\newline\newline
 \begin{table}[!h]
 	\centering
 	\begin{tabular}{l|cl}
@@ -646,10 +654,10 @@ In this study, the first 7000 daily log-returns of each series (each series cont
 An important pre-processing step is input normalization, as it is considered good practice for neural network training, data scaling helps neural networks train and converge faster. We use the z-score (StandardScaler): 
 
 \begin{center}
-	$X_{new} = \frac{X-\mu}{\sigma}$
+	$X_{new} = \frac{X_{i}-\mu}{\sigma}$
 \end{center}
 
-
+where $X_{new}$ is the standardized data point, $X_{i}$ is the initial data point, $\mu$ is the sample mean and $\sigma$ is the sample variance.
 
 
 \subsection{Historical simulation and GARCH(1,1) Volatility model}
@@ -657,18 +665,18 @@ For congruency with the LSTM model (in regards to number of predictions), we use
 
 \subsection{Trial Results of the LSTM Neural Network}
 
-As discussed in the previous chapter, the performance of our LSTM model is based on MSE. In this paper, we follow a best-out-of-5 approach, that means each training is done five times with varying initialization and the best one is selected for VAR estimation.\newline\newline
-\textbf{NIKKEI}\newline\newline
+As discussed in the previous chapter, the performance of our LSTM model is based on MSE. In this paper, we follow a best-out-of-5 approach, that means for each stock market, we train our model five times with different values of the hyperparameters and the best one (in each of the model training for the three stock market) is selected for VAR estimation. Tanh is the activation function in all models.\newline
+\textbf{NIKKEI}\newline
 The training and validation loss continues to decrease as the number of epochs increases until 200 epochs,
-after which the model started to overfit. This was made evident as a result of a slow and steady rise in the
-validation loss after 200 epochs, while the training loss kept reducing.
-It was also observed that the most effective size of the LSTM network was 350, and the higher the intensity
-of regularization applied, the better the model was able to perform.
+after which the model starts to overfit. This was made evident as a result of a slow and steady rise in the
+validation loss after 200 epochs, while the training loss keeps reducing.
+It was also observed that the most effective size of the LSTM network is 350, and the higher the intensity
+of regularization applied, the better the model was able to perform.\newline
 
 \begin{center}
 	\begin{tabular}{||c c c c c||} 
 		\hline
-		Trials & Epochs & Dropout & Neurons & Validation result\\ [0.5ex] 
+		Trials & Epochs & Dropout & Hidden Neurons & Validation result\\ [0.5ex] 
 		\hline\hline
 		1 & 500 & 0.5 & 256 & 0.00036662753 \\ 
 		\hline
@@ -683,38 +691,69 @@ of regularization applied, the better the model was able to perform.
 	\end{tabular}
 \end{center}
 
-In the first trial, the model trained for 500 epochs, which is more than the desired 200 epochs. The intensity of
-regularization is also low at 0.5, the LSTM network size was also low. As a result of the high number of
-epochs and low regularization effect, it suffered from the highest variance and produced the worst result.\newline
+In the first trial, the model is trained for 500 epochs, which is more than the desired 200 epochs. The intensity of
+regularization is also low at 0.5, the LSTM network size is also low. As a result of the high number of
+epochs and low regularization effect, it suffers from the highest variance and produced the worst result.\newline
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/Nik1}
+	\caption{Training and Validation loss functions under Trial 1 (Nikkei 225))}
+	\label{Nik1}
+\end{figure}
 
-The second produced the second best result,as it trained more than 200 epochs, and
-also the LSTM network at 256 falls short of 350. As a result of this, the model suffered from a higher bias as
-compared to the last trial, because the model was not able to learn well as a result of the inadequate LSTM network.\newline
 
-Trial 3 is the third in line, the model trained for 300 epochs which is longer than the required 200 epochs,
-this led the model to suffer from high variance. Since the LSTM is large although the right size, an increase
-above the required number of epochs will lead the model to start to overt rapidly, that was why this trial
-performed worse than the second trial.\newline
+ The second gives the second best result,as it is trained for more than 200 epochs, and
+also the LSTM network at 256 fell short of 350. As a result of this, the model suffers from a higher bias as
+compared to the last trial, because the model is not able to learn well as a result of the inadequate LSTM network.\newline\newline\newline\newline\newline\newline\newline\newline\newline\newline\newline
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/Nik2}
+	\caption{Training and Validation loss functions under Trial 2 (Nikkei 225))}
+	\label{Nik2}
+\end{figure}
 
-Trained with the desired 200 epochs, with a low dropout of 0.5, and a low LSTM size of 256. This trial
+Trial 3 is the third in line, the model is trained for 300 epochs which is longer than the required 200 epochs,
+this made the model to suffer from high variance. Since the LSTM is large although the right size, an increase
+above the required number of epochs will lead the model to start to overfit rapidly, that was why this trial
+performed worse than the second trial.\newline\newline
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/Nik3}
+	\caption{Training and Validation loss functions under Trial 3 (Nikkei 225))}
+	\label{Nik3}
+\end{figure}
+
+
+Trained with the desired 200 epochs, with a low dropout of 0.5, and a low LSTM size of 256. The forth trial
 has the lower regularization effect of using a dropout of 0.5 and an insuffcient LSTM
-network made the model suffer from higher bias.\newline
+network made the model suffer from higher bias.\newline\newline\newline
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/Nik4}
+	\caption{Training and Validation loss functions under Trial 4 (Nikkei 225))}
+	\label{Nik4}
+\end{figure}
 
 The best performed trial is the fifth trial. As a result of the 200 epochs the model trained for being within the range
-of avoiding high variance and high bias. The dropout regularization intensity was also high enough at 0.75,
-and the size of the Long Short Term Memory (LSTM) network at 350 was large enough.\newline\newline
-
-\textbf{FTSE 100}\newline\newline
+of avoiding high variance (overfitting) and high bias (underfitting). The dropout regularization intensity is also high enough at 0.75,
+and the size of the Long Short Term Memory (LSTM) network at 350 is large enough.\newline
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/Nik5}
+	\caption{Training and Validation loss functions under Trial 5 (Nikkei 225))}
+	\label{Nik5}
+\end{figure}
+\newline\textbf{FTSE 100}\newline
 
 A decrease in the training and validation loss continues to occur as the number of epochs increases until 205
-epochs, after which the model started to overt. This was made evident as a result of a slow and steady rise
-in the validation loss after 205 epochs, while the training loss kept reducing.
-It was also observed that the most effective size of the LSTM network was 350, and the higher the intensity
+epochs, after which the model starts to overfit. This is made evident as a result of a slow and steady rise
+in the validation loss after 205 epochs, while the training loss keeps reducing.
+It was also observed that the most effective size of the LSTM network is 350, and the higher the intensity
 of regularization applied, the better the model was able to perform.
 \begin{center}
 	\begin{tabular}{||c c c c c||} 
 		\hline
-		Trials & Epochs & Dropout & Neurons & Validation result\\ [0.5ex] 
+		Trials & Epochs & Dropout & Hidden Neurons & Validation result\\ [0.5ex] 
 		\hline\hline
 		1 & 500 & 0.5 & 250 & 0.00013862312 \\ 
 		\hline
@@ -729,21 +768,117 @@ of regularization applied, the better the model was able to perform.
 	\end{tabular}
 \end{center}
 
-The last trial produced the best result, as a result of the 200 epochs the model trained for being within the range
-of avoiding high variance and high bias. The dropout regularization intensity was also high enough at 0.75,
-and the size of the Long Short Term Memory (LSTM) network at 350 was large enough.\newline
-
-The third attempt produced the next best result, it fell short of case 10 because it trained more than 200 epochs. As a
-result of this, the model suffered from a higher variance as compared to case 10.\newline
-
-Although, the forth trial was trained for the required 200 epochs but fell short, as a result of the low dropout of 0.5 and inadequate
+The last trial produced the best result, as a result of the 200 epochs used in the training, being within the range
+of avoiding high variance and high bias. The dropout regularization intensity is also high enough at 0.75,
+and the size of the Long Short Term Memory (LSTM) network at 350 is large enough.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/FTSE5}
+	\caption{Training and Validation loss functions under Trial 5 (FTSE 100))}
+	\label{FTSE5}
+\end{figure}
+\newline The third attempt has the second lowest MSE, it fell short because it is trained with more than 200 epochs. As a
+result of this, the model suffers from a higher variance as compared to trial 5.\newline\newline\newline\newline\newline\newline\newline\newline\newline\newline\newline\newline
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/FTSE3}
+	\caption{Training and Validation loss functions under Trial 3 (FTSE 100))}
+	\label{FTSE3}
+\end{figure}
+\newline Although, the forth trial is trained with the required 200 epochs but fall short, as a result of the low dropout of 0.5 and inadequate
 LSTM network size. The low regularization intensity had the greatest effect, leading to high variance.\newline
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/FTSE4}
+	\caption{Training and Validation loss functions under Trial 4 (FTSE 100))}
+	\label{FTSE4}
+\end{figure}
+\newline The second trial is overtrained for 300 epochs, the dropout at 0.5 is low, and the LSTM network at 250, are what
+led to a less impressive result compared to trial 5,3, and 4 \newline\newline\newline
 
-The second trial was over trained for 300 epochs, the dropout at 0.5 was low, and the LSTM network at 250, are what
-led to a less impressive result compared to trial 5,3, and 4 \newline
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/FTSE2}
+	\caption{Training and Validation loss functions under Trial 2 (FTSE 100))}
+	\label{FTSE2}
+\end{figure}
 
-Suffered the same set back as the second trial, the first trial was trained with an even larger number of epochs at 500. This made it
-perform the worst compared to the rest of the trails.
+ Suffers the same set back as the second trial, the first trial is trained with an even larger number of epochs at 500. This made it
+perform the worst in comparison with the rest of the trails.\newline\newline\newline
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/FTSE1}
+	\caption{Training and Validation loss functions under Trial 1 (FTSE 100))}
+	\label{FTSE1}
+\end{figure}
+ 
+ 
+ \textbf{S\&P500}\newline\newline
+A decrease in the training and validation loss continues to occur as the number of epochs increases until 270
+epochs, after which the model starts to overfit. This was made evident as a result of a slow and steady rise
+in the validation loss after 270 epochs, while the training loss keeps reducing.
+
+\begin{center}
+	\begin{tabular}{||c c c c c||} 
+		\hline
+		Trials & Epochs & Dropout & Hidden Neurons & Validation result\\ [0.5ex] 
+		\hline\hline
+		1 & 500 & 0.5 & 250 & 0.00020557812 \\ 
+		\hline
+		2 & 300 & 0.75 & 250 & 0.00017026176 \\
+		\hline
+		3 & 300 & 0.75 & 350 & 0.00013683487 \\
+		\hline
+		4 & 270 & 0.5 & 256 & 0.00015936441 \\
+		\hline
+		5 & 270 & 0.8 & 356 & 0.00013847416 \\ [1ex] 
+		\hline
+	\end{tabular}
+\end{center}
+
+
+
+With the largest number of epochs of 500. The first trial suffers from severe overfitting, and made it perform the worst compared to the rest of the trials.\newline
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/sanp1}
+	\caption{Training and Validation loss functions under Trial 1 (S\&P 500)}
+	\label{sanp1}
+\end{figure}
+\newline The second trial is modelled with 300 epochs, the dropout at 0.5 is low, and the LSTM network at 250 neurons, are what
+led to a less impressive result compared to the subsequent trials. \newline\newline\newline\newline\newline\newline\newline\newline\newline\newline\newline
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/sanp2}
+	\caption{Training and Validation loss functions under Trial 2 (S\&P 500)}
+	\label{sanp2}
+\end{figure}
+\newline The third attempt has the same number of epochs as second trial, produced the least MSE value, but still suffers from much overfitting despite increasing the dropout and the number of neurons.\newline
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/sanp3}
+	\caption{Training and Validation loss functions under Trial 3 (S\&P 500)}
+	\label{sanp3}
+\end{figure}
+
+The penultimate trial is trained with the sufficient 270 epochs, but as a result of the low dropout of 0.5 and inadequate LSTM
+network size. The low regularization intensity has the greatest effect, leading to high variance.\newline
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/sanp4}
+	\caption{Training and Validation loss functions under Trial 4 (S\&P 500)}
+	\label{sanp4}
+\end{figure}
+\newline The final trial is trained with 270 epochs and the increased number of hidden neurons and dropout made it outperform the fourth trial and this is considered the best model.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/sanp5}
+	\caption{Training and Validation loss functions under Trial 5 (S\&P 500)}
+	\label{sanp5}
+\end{figure}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -759,27 +894,7 @@ perform the worst compared to the rest of the trails.
 	
 	Graphs of log-return series of each stock market	
 	
-\begin{figure}[!h]
-		\centering
-		\includegraphics[width=0.8\textwidth]{figures/logNikkei}
-		\caption{log-returns of Nikkei 225}
-		\label{logNikkei}
-\end{figure}
-		
-\begin{figure}[!h]
-		\centering
-		\includegraphics[width=0.8\textwidth]{figures/logFTSE}
-		\caption{log-returns of FTSE 100}
-		\label{logFTSE}
-\end{figure}
-		
-		
-\begin{figure}[!h]
-		\centering
-		\includegraphics[width=0.8\textwidth]{figures/logS&P500}
-		\caption{log-returns of S\&P 500}
-		\label{logSandP 500}
-\end{figure}
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -791,78 +906,17 @@ In all the graphs below, number of epochs is represented by the
 horizontal axis (X-axis), while the loss functions are represented by the vertical axis
 (Y-axis).
 
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{figures/Nik1}
-	\caption{Training and Validation loss functions under Trial 1 (Nikkei 225))}
-	\label{Nik1}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{figures/Nik2}
-	\caption{Training and Validation loss functions under Trial 2 (Nikkei 225))}
-	\label{Nik2}
-\end{figure}
 
 
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{figures/Nik3}
-	\caption{Training and Validation loss functions under Trial 3 (Nikkei 225))}
-	\label{Nik3}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{figures/Nik4}
-	\caption{Training and Validation loss functions under Trial 4 (Nikkei 225))}
-	\label{Nik4}
-\end{figure}
-
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{figures/Nik5}
-	\caption{Training and Validation loss functions under Trial 5 (Nikkei 225))}
-	\label{Nik5}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{figures/FTSE1}
-	\caption{Training and Validation loss functions under Trial 1 (FTSE 100))}
-	\label{FTSE1}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{figures/FTSE2}
-	\caption{Training and Validation loss functions under Trial 2 (FTSE 100))}
-	\label{FTSE2}
-\end{figure}	
 	
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{figures/FTSE3}
-	\caption{Training and Validation loss functions under Trial 3 (FTSE 100))}
-	\label{FTSE3}
-\end{figure}	
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{figures/FTSE4}
-	\caption{Training and Validation loss functions under Trial 4 (FTSE 100))}
-	\label{FTSE4}
-\end{figure}
-
-\begin{figure}[!h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{figures/FTSE5}
-	\caption{Training and Validation loss functions under Trial 5 (FTSE 100))}
-	\label{FTSE5}
-\end{figure}
 	
+	
+
+
+
+
+
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\\
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
@@ -888,7 +942,7 @@ horizontal axis (X-axis), while the loss functions are represented by the vertic
 \listoffigures
 \listoftables
 
-\printindex
+%\printindex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
