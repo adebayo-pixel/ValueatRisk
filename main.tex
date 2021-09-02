@@ -81,9 +81,9 @@ Many VaR estimation methods have been developed in order to reduced uncertainty.
 
 \section{Literature review}
 
-The first papers involving the comparison of VaR methodologies, such as those by Beder (1995, 1996), Hendricks (1996), and
-Pritsker (1997), reported that the Historical Simulation performed at least as well as the methodologies developed in the early years, the Parametric approach and the Monte Carlo simulation. These papers conclude that among earlier methods, no approach appeared to perform better than the
-others. The evaluation and categorization of models carried out in the work by McAleer, Jimenez-Martin and Perez-Amaral(2009) and Shams and Sina (2014), among others, try to determine the conditions under which certain models predict the best. Researchers compared models in periods of varying volatility-before the crisis and after the crisis (When there was no high volatility and when volatility was high, respectively). However, this confirms that some models have good predictions before the start of the crisis, but their quality reduces with increased volatility. Others are more conservative during periods of low volatility, but in the time of the crisis the number of errors made by these models is relatively low.
+Beder (1995, 1996), Hendricks (1996), and
+Pritsker (1997), are among the first set of papers in which comparison of value at risk methods were made. They reported that the Historical Simulation performed at least as well as the methodologies developed in the early years, the Parametric approach and the Monte Carlo simulation. These papers conclude that among earlier methods, no approach appeared to perform better than the
+others (Abed et all, 2013). The evaluation and categorization of models carried out in the work by McAleer, Jimenez-Martin and Perez-Amaral(2009) and Shams and Sina (2014), among others, try to determine the conditions under which certain models predict the best. Researchers compared models in periods of varying volatility-before the crisis and after the crisis (When there was no high volatility and when volatility was high, respectively). However, this confirms that some models have good predictions before the start of the crisis, but their quality reduces with increased volatility. Others are more conservative during periods of low volatility, but in the time of the crisis the number of errors made by these models is relatively low.
 \newline\newline
 Bao et al.(2006), Consigli(2002) and Danielson(2002), among
 others, show that "in stable periods, parametric models provide satisfactory results
@@ -92,7 +92,7 @@ evidence in favour of parametric methods are Sarma et al.(2003), who compare
 Historical simulation and Parametric methods, and Danielson and Vries(2000) in a
 similar comparison that also includes Extreme value theory methods. Chong(2004),
 who uses parametric methods to estimate VaR under a Normal distribution and under a
-Student’s t-distribution, finds a better performance under Normality. McAleer et al.(2009) showed that RiskMetrics\textsuperscript{TM} was
+Student’s t-distribution, finds a better performance under Normality (Abed and Muela, 2010). McAleer et al.(2009) showed that RiskMetrics\textsuperscript{TM} was
 the best fitted model during a crisis, while Shams and Sina(2014) recognized GARCH(1,1) and GJR-GARCH as well
 forecasting models. In contrast to the results obtained
 by McAleer et al.(2009), the level of quality of forecasts
@@ -101,7 +101,7 @@ unsatisfactory by them. However, attention needs to be
 drawn to one difference in the samples, on which the
 study was conducted, i.e. the first one comes from a
 developed country (USA, S\&P500), and the second one
-from a developing country (Iran, TSEM). Taylor(2020) evaluate Value at Risk using quantile skill score and the conditional autoregressive model outperformed others.
+from a developing country (Iran, TSEM) (Buczyński, Chlebus). Taylor(2020) evaluate Value at Risk using quantile skill score and the conditional autoregressive model outperformed others.
 \newline\newline
 
 Attempts have been made to predicts VaR with ANN. VaR estimation on the exchange rate market in the context of ANNs is dealt with in
@@ -137,16 +137,13 @@ The next chapter of discusses the properties and basic methods to estimate VaR. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Concept}
-Higher volatility in exchange markets, credit defaults, even endangering countries, and the call for more regulation drastically changed the circumstances in which banks operate. These situations of uncertainty are called risks and managing them is of great importance to financial institutions (e.g Banks) in order to keep them afloat. A possible method of measurement is the evaluation of losses likely to be incurred when the price of the portfolio falls. Value at Risk (VaR) does this.
+"Higher volatility in exchange markets, credit defaults, even endangering countries, and the call for more regulation drastically changed the circumstances in which banks have to perform". These situations of uncertainty are called risks and managing them is of great importance to financial institutions (e.g Banks) in order to keep them afloat (Kremer, 2013). Value at risk measures the losses which may be incurred when the price of the portfolio falls. Hence it is an important measure of risk to financial institutions.
 \newline\newline
-According to Jorion (2001), “VaR measure is defined as the worst
-expected loss over a given horizon under normal market conditions
-at a given level of confidence. For instance, a bank might say that
+According to Jorion (2007), “VaR measure is defined as the worst loss over a target horizon such that there is a low prespecified probability that the actual loss will be larger'. For example, if a financial institutions says that
 the daily VaR of its trading portfolio is \$2 million at the 99\%
-confidence level. In other words, under normal market conditions,
-only 1\% of the time, the daily loss will exceed \$2 million (99\% of the time, their loss will not be more than \$2 million)”. As represented in the mathematical representation below, it can also be stated as the least expected return of a portfolio at time $t$ and at a certain level of significance, $\alpha$.
+confidence level, this simply means that under normal market conditions,
+only 1\% of the time, the daily loss will be more than \$2 million (99\% of the time, its loss will not be more than \$2 million). As represented in the mathematical representation below, it can also be stated as the least expected return of a portfolio at time $t$ and at a certain level of significance, $\alpha$.
 \newline\newline
-Mathematically,\newline\newline
 Let $r_1, r_2, ..., r_n$ be independently and identically distributed(iid) random variables representing financial log returns. Use $F(r)$ to denote the cumulative distribution function,
 $F(r) = Pr(r_{t} < r|\Omega_{t-1})$ conditional on the information set $\Omega_{t-1}$ available at time $t$-1. Assume that \{$r_t$\} follows the stochastic process; \newline
 
@@ -201,7 +198,7 @@ A functional $\tau: X,Y \rightarrow \mathbb{R} \cup \{+\infty\}$ is said to be c
 	Indeed, the risk of two portfolios together cannot get any worse than adding the two risks separately: this is the diversification principle.
 	
 \end{description}
-Out of the above properties, all but subaddivitivity is not always satisfied by VaR. This is however a disadvantage of value at risk as a risk measure because it might discourage diversification.
+Out of the above properties, all but subaddivitivity is not always satisfied by VaR. This is however a disadvantage of value at risk as a risk measure because it might discourage diversification (see Acerbi and Tasche, 2002).
 
 \section{Popular methods for estimating VaR}
 The estimation of these functions ($F(r)$ or $G(r)$) can be carried out using the
@@ -593,10 +590,10 @@ The number of neurons, dropout function, activation functions and epochs are cha
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Numerical comparisons}
-For the empirical study, the day-ahead forecasting of the 1\% and 5\% VAR for daily log-returns(natural log of the new value divided by the initial value) of the following stock markets: NIKKEI 225, FTSE 100 and S\&P 500 is considered. The data is downloaded from DataStream. Each series (NIKKEI 225, FTSE 100 and S\&P 500) consist of 8477 daily price indices (measure of how prices change over a period of time), the start date and end date are 04/01/1988 and 30/06/2020 respectively. Upon calculating the log-return, which is given as 
+For the empirical study, the day-ahead forecasting of the 1\% and 5\% VAR for daily log-returns(natural log of the new value divided by the initial value) of the following stock markets: NIKKEI 225, FTSE 100 and S\&P 500 is considered. The data is downloaded from DataStream. Each series (NIKKEI 225, FTSE 100 and S\&P 500) consist of 8477 daily price indices (measure of how prices change over a period of time), the start date and end date are 04/01/1988 and 30/06/2020 respectively. Upon calculating the log-returns, which is given as 
 
 \begin{center}
-	$R_{log} = ln(\frac{R_f}{R_i})$
+	$R_{log} = ln(\frac{R_f}{R_i})$, where ${R_f}$ and ${R_i}$ are current return and initial return respectively
 \end{center}
 the data in the first row of the series vanishes leaving us with 8476 daily log-returns and 05/01/1988 as starting date. Basically, this means we use 8476 daily log-returns for our VaR estimations. This longer sample is desirable for our models, most especially the historical simulation and neural network as they work best with large data. Moreover, data contains periods of low and high volatilities, which mitigates the probability of the historical simulation being bias (underestimation or overestimation) in the return estimation.\newline
 
@@ -657,7 +654,7 @@ An important pre-processing step is input normalization, as it is considered goo
 	$X_{new} = \frac{X_{i}-\mu}{\sigma}$
 \end{center}
 
-where $X_{new}$ is the standardized data point, $X_{i}$ is the initial data point, $\mu$ is the sample mean and $\sigma$ is the sample variance.
+where $X_{new}$ is the standardized data point, $X_{i}$ is the initial data point, $\mu$ is the sample mean and $\sigma$ is the sample standard deviation.
 
 
 \subsection{Historical simulation and GARCH(1,1) Volatility model}
@@ -875,7 +872,66 @@ network size. The low regularization intensity has the greatest effect, leading 
 	\includegraphics[width=0.8\textwidth]{figures/sanp5}
 	\caption{Training and Validation loss functions under Trial 5 (S\&P 500)}
 	\label{sanp5}
-\end{figure}
+\end{figure}\newline\newline\newline\newline\newline
+
+\section{VAR Estimation}
+In this section, we discuss the estimation of one step-ahead value at risk.
+
+\subsection{GARCH (1,1) model}
+
+For our VaR estimation, we use the conditional variance given by GARCH(1,1) model. We assume the random error to have a student’s t-distribution. Our Value at Risk is given by:
+\begin{center}
+$\text{VaR}_{t+1|t}$ = $\mu_{t+1|t} + \sigma_{t+1|t} * q_{\alpha}$
+\end{center}
+where $\mu$ is the conditional mean, $\sigma$ is the conditional volatility, and $q_{\alpha}$ is the $\alpha$ quantile of the standardized residuals
+
+\subsection{The LSTM model}
+We determine our value at risk by calculating the 0.05 quantile (95\% Var) and 0.01 (99\% Var) of our predicted values. Our LSTM model is equation is given as:
+\begin{center}
+	$y_t= f(y_i,...y_{i+90}, \beta)+\varepsilon_t$
+\end{center} 
+
+where $\beta$ is the bias and $\varepsilon_t$ is the error term which has a standard normal distribution.
+
+
+
+
+
+\section{VAR Backtesting}
+%\subsection{Binomial Test}
+One easy way to test the efficiency of a VaR model is to count the number of violation (number of days when portfolio returns are less than VaR model estimates). A VaR model performs overestimation of risk if the number of exceptions is less than the selected confidence level, and underestimation if there are too much violation. It is nearly impossible to have the exact amount of violation specified by the confidence level.\newline\newline
+
+Suppose we use a 99\% confidence for our VaR model, we have $K$ as the number of violations and N observations. The ratio $k$/$N$ gives the failure rate. Our null hypothesis is that the frequency of tail loss is $p$= 0.01. Assuming that the model is accurate, the observed failure rate $k$/$N$
+should act as an unbiased measure of p, and thus converge to 1\% as sample size is
+increased. (Jorion, 2007) \newline\newline
+"The setup for this test is the classic testing framework for a sequence of success and failures, also called Bernoull trials". Under the null hypothesis, the number of violations(breaches) k follows a binomial probability distribution:
+\begin{center}
+	$f(k)$ =$N \choose {k}$ $p^{k}(1-p)^{N-k}$ 
+\end{center}
+
+"When T is large, we can use the central limit theorem and approximate the binomial distribution by the normal distribution"
+\begin{center}
+	$z$ =$\frac{k-pN}{\sqrt{p(1-p)T}}\sim N(0,1)$ 
+\end{center}
+(Jorion, 2007)
+
+\subsection{Kupiec POF-Test}
+Kupiec POF-test (proportion of failures) is based on failure rate and was propose by Kupiec (1995). Under null
+hypothesis that the model is correct, the number of violations follows the
+binomial distribution. According to Kupiec
+(1995), the POF-test is best conducted as a likelihood-ratio (LR) test. The test
+statistic takes the form
+\begin{center}
+	$LR_{pof}$ =$-2\ln$ $\left(\frac{(1-p)^{N-k}p^k}{[1-(k/N)]^{N-k}(k/N)^k}\right)$
+\end{center}
+$LR_{pof}$ (when $N$ is large) is asymptotically $\chi^2$ distributed with one degree of freedom under the null hypothesis that our model is correct. Thus our null hypothesis will be rejected if $LR_{pof}$ is greater than the critical value of the $\chi^2$ significant level (Jorion, 2007).
+
+
+\subsection{Results}
+For congruency with the VaR calculated from our LSTM forecasts, we calculate our actual VaR as the average of daily VaRs stimulated in the Garch and historical simulation model, and this actual VaR is used for comparison with our out-of sample data.
+
+
+
 
 
 
