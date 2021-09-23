@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  21 SEP 2021 21:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  23 SEP 2021 14:28
 entering extended mode
 **./main.tex
 (main.tex
@@ -2199,9 +2199,9 @@ c/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095
 .pfb>
-Output written on main.pdf (37 pages, 1422145 bytes).
+Output written on main.pdf (37 pages, 1422727 bytes).
 PDF statistics:
- 601 PDF objects out of 1000 (max. 8388607)
+ 602 PDF objects out of 1000 (max. 8388607)
  114 named destinations out of 1000 (max. 500000)
  543 words of extra memory for PDF output out of 10000 (max. 10000000)
 
