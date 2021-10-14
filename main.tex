@@ -283,7 +283,7 @@ f_t(\beta)=\beta_0 + \sum_{i=1}^{q} \beta_{i}f _{t-i}(\beta) +\sum_{j=1}^{r}\bet
 \end{equation}
 where $p=q+r+1$ is the dimension of $\beta$ and $l$ is a function of a finite number of lagged values of observables. The autoregressive terms $\beta_{i}f_{t-i}(\beta)$, $i = 1,...,q$, ensure that the quantile changes "smoothly" over time. The role of $l(x_{t-j})$ is to link $f_{t}(\beta)$ to observable variables that belong to the information set. The parameters of CaViaR are estimated by quantile regression (see Engle and Manganelli (2004)).
 \newline\newline
-\textbf{Note:} In this work, value at risk will be estimated based on financial log-returns. Historical simulation, Garch(1,1) model, and long short term memory neural network will be used for our VAR estimation. CaViaR and Harch model are not commonly used in practice. Moreover, there is no intraday data to use in modelling VaR by Harch method.
+\textbf{Note:} In this thesis, value at risk will be estimated based on financial log-returns. Historical simulation, Garch(1,1) model, and long short term memory neural network will be used for our VAR estimation. CaViaR and Harch model are not commonly used in practice. Moreover, there is no intraday data to use in modelling VaR by Harch method.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -313,7 +313,7 @@ Neural network is good for returns prediction as it can accommodate nonlinear in
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Mathematics of Neural Network}
-The main idea of this section is gotten from the work of Chaoyi Lou, titled Artificial Neural Networks:
+The main idea of this section is gotten from the thesis of Chaoyi Lou, titled Artificial Neural Networks:
 their Training Process and Applications.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -422,7 +422,7 @@ neural network node made at previous time step $t-1$ affects the prediction it w
 moment later, at time step $t$. RNN nodes can be thought of as having memory as it takes inputs not only the current signal, but also
 what has been perceived previously in time.\newline
 RNNs contain feedback loops from the so-called hidden states, and this allows preservation of information from one node to another while reading in inputs. At each time step in the data series, the feedback loop mechanism occurs, which causes each hidden state to contain traces not only of the respective hidden state before it, but also of all those preceding it, for as long as the memory of the network lasts.\newline
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.4\textwidth]{figures/RNN}
 	\caption{Representation of an unrolled plain vanilla recurrent neural network. (see Bijelic \& Ouijjane, 2019)}
@@ -446,10 +446,72 @@ where $h_{k,t-p}$ represents the lagged hidden state values at order $p$, and $\
 
 In this process, RNNs tend to experience two issues, known as exploding gradients and vanishing gradients. These issues are defined by the gradient size, which is the slope of the loss function along the error curve. If the gradient is too small, the weight parameters will be updated until they become insignificant - i.e. 0, and the algorithm will no longer learn. Gradients explode when they are too large, creating an unstable model. In this case, the model weights will grow too large and will eventually be labelled NaN values. In order to reduce these issues, it is possible to reduce the number of hidden layers within the neural network, thereby reducing its complexity (see IBM 2020).
 
-
 \subsubsection{Long Short-Term Memory Recurrent Neural Network}
 LSTM is a class of recurrent neural networks and its main feature is its purpose-built memory cells, which allows it to capture long range dependencies in the data.\newline\newline
-A previous sequence element and the output from the network function serve as input for the next sequence element in the network function. As such, the LSTM can be compared to a HMM (Hidden Markov Model), in which there is a hidden state which conditions the output distribution. Furthermore, LSTM hidden state not only depends on its previous states but also reflects long-term sequence dependence since it is recurrent. In particular, the receptive field size of an LSTM (i.e. the size of the input region that generates the feature) is unbounded architecture-wise, unlike simple feed forward networks and CNNs (see Arimond et al, 2020). \newline\newline Due to the attractiveness of the LSTM, it will be used in this work to forecast volatility of returns of stock markets. \newline\newline
+A previous sequence element and the output from the network function serve as input for the next sequence element in the network function. As such, the LSTM can be compared to a HMM (Hidden Markov Model), in which there is a hidden state which conditions the output distribution. Furthermore, LSTM hidden state not only depends on its previous states but also reflects long-term sequence dependence since it is recurrent. In particular, the receptive field size of an LSTM (i.e. the size of the input region that generates the feature) is unbounded architecture-wise, unlike simple feed forward networks and CNNs (see Arimond et al, 2020). Due to the attractiveness of the LSTM, it will be used in this work to forecast volatility of returns of stock markets. \newline\newline
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{figures/lstm}
+	\caption{Diagrammatic representation of an LSTM cell  (see KRETSCHMER, 2019)}
+	
+	\label{lstm}
+\end{figure}
+
+LSTM has basically the same setting as the standard RNN. In each time step $t$, the input $x_t$ and the past state information, for an LSTM $c_{t-1}$ and $h_{t-1}$, are taken into the hidden mapping. However, in the LSTM the hidden mapping is not just a linear layer followed by an activation function. It rather uses a group of gates and activations to determine the flow of information. A representation of the architecture is shown in the above figure where the rectangular blocks represent layers and nodes pointwise operations.\newline\newline
+
+A gate is a simple sigmoid layer which may at its extremes be either open or closed if its outputs 1 or 0 respectively, depending on the input. For this reason, if another variable gets multiplied by such a gate, the model may either pass the variables information (gate open) or ends the flow (gate closed). The forget, the input and the output gate exist in LSTM\\\\
+
+In contradiction to the basic RNN, the LSTM has two state variables: the cell state and the hidden state. The cell state may be seen as a summary statistic of past and current  information and the hidden state may be viewed as a polished version of the cell state capturing enough information for the output.\\\\
+
+Let us have a look at each of the steps within an LSTM cell
+
+\begin{description}
+	\item[$\bullet$] Forget\\
+	First, the LSTM determines which part of the past information in the cell state $c_{t-1}$ can be removed. This may be useful if context changes and previous information is no longer a valid predictor for future tasks. Hence, the forget gate $f_t$ is calculated based on the  past hidden state $h_{t-1}$ and the current input $x_t$
+\begin{center}
+	$f_t$ =  $\sigma(W_{f}x_{t}+V_{f}h_{t-1}+b_{f})\in (0,1)^{D}$
+\end{center}
+\item[$\bullet$] Input\\
+Next, the LSTM recognizes new information which should be incorporated in the cell state $c_t$. Like the forget gate, the input gate $i_t$ gets calculated
+\begin{center}
+	$i_t$ =  $\sigma(W_{i}x_{t}+V_{i}h_{t-1}+b_{i})\in (0,1)^{D}$
+\end{center}
+to decide which part of the cell state to add the new information $\tilde{c_t}$ given by 
+\begin{center}
+	$\tilde{c_t}$ =  $\text{tanh}(W_{c}x_{t}+V_{c}h_{t-1}+b_{c})\in (-1,1)^{D}$
+\end{center}
+
+\item[$\bullet$] Update cell state\\
+Combine Step 1 and Step 2 to obtain the new cell state
+
+\begin{center}
+	${c_t}$ =  $f_{t} \odot+c_{t-1}+i_{t}\odot \tilde{c_t} \in \mathbb{R}^{D}$
+\end{center}
+giving a summary statistics of relevant past and current information.
+
+\item[$\bullet$] Update hidden state\\
+Determine the parts of the cell state that are enough for the output by calculating
+the output gate
+\begin{center}
+	$o_t$ =  $\sigma(W_{o}x_{t}+V_{o}h_{t-1}+b_{o})\in (0,1)^{D}$
+\end{center}
+and use this to determine the hidden state $h_t$ as a polished version of the cell state.
+
+\begin{center}
+	$h_t$ =  $o_t \odot \text{tanh}(c_t)\in (-1,1)^{D}$
+\end{center}
+
+\end{description}
+(see KRETSCHMER, 2019)
+
+
+
+
+
+
+
+
 
 \section{The LSTM Architecture}
 Our LSTM has a single hidden layer,  with 'tanh' as the activation function. The following are the hyper parameter (all but MSE has to be determined before you can actually start training, validating and testing your LSTM net) used in within the LSTM neural network:
@@ -472,7 +534,7 @@ allowing the LSTM neural network to drop a random set of neurons while
 training the network. Ignoring several neurons for each iteration during the
 training process is necessary, because if the network is fully connected,
 neurons will become interdependent, leading to overfitting of the training data. For example, if the dropout function is set to 0.25, this means that 25\% of the existing
-neurons within the network will be ignored during the training process.
+neurons within the network will be ignored during the training process (in different training steps one drops different neurons as otherwise you will not train the full network).
 \item[$\bullet$] The number of epochs can also influence the accuracy of a neural network. It
 refers to the number of times all the training and validation datasets are
 propagated through the LSTM neural network. The standard procedure is to
@@ -488,8 +550,6 @@ set, i.e. when the training set shows signs of overfitting.
 It is also chosen as the loss function (between the predicted outputs and the actual outputs) and the performance measure(to assess the model fit while
 training and validating the network) of the
 LSTM neural network.
-
-
 \end{itemize}
 
 The number of neurons, dropout function, and epochs are changed in each LSTM models to choose the one that performs best. That is, the LSTM with the lowest MSE value. This will be discussed in details in the next chapter.
@@ -768,9 +828,9 @@ As a nonparametric method, we use historical simulation with rolling window of 7
 
 For our VaR estimation, we use the conditional variance given by GARCH(1,1) model. We assume the random error to have a student’s t-distribution. Our Value at Risk is given by:
 \begin{center}
-$\text{VaR}_{t+1|t}$ = $\mu_{t+1|t} + \sigma_{t+1|t} * q_{\alpha}$
+$\text{VaR}_{t+1|t}$ = -$\mu_{t+1|t} - \sigma_{t+1|t} * q_{\alpha}$
 \end{center}
-where $\mu$ is the conditional mean, $\sigma$ is the conditional volatility, and $q_{\alpha}$ is the $\alpha$ quantile of the standardized residuals.
+where $\mu$ is the conditional mean, $\sigma$ is the conditional volatility, and $q_{\alpha}$ is the $\alpha$ quantile of the student's t-distribution.
 
 \subsection{The LSTM model}
 We determine our value at risk by calculating the 0.05 quantile (95\% Var) and 0.01 quantile (99\% Var) of our predicted values. Our LSTM model equation is assumed to be of the form:
@@ -779,13 +839,38 @@ We determine our value at risk by calculating the 0.05 quantile (95\% Var) and 0
 \end{center} 
 
 where $u_{i}$ are the inputs, $W_i$ are the weights, $\beta$ is the bias and $\varepsilon_t$ = random error in the period $t$, which equals to the
-product of conditional standard deviation $\sigma_t$ and  the
+product of standard deviation $\sigma_t$ of the calibration set and  the
 standardized random error $\xi_t$ in the period $t$ ($\xi_t$ $\sim$ N(0,1)), tanh is the activation function. As the output from the network function serves as input for the next sequence element in the network function, the general equation would be of the form:
 
 \begin{center}
 	$y_n= tanh(\sum_{i=1}^{i=90}W_{i}u_{i}+\sum_{i=1}^{n-1}y_{i}K_{i}+\beta)+\varepsilon_t$
 \end{center} 
 where $K_i$ are weights, $y_i$ are initial outputs.\newline
+
+\subsubsection{How we estimate our value at risk from our LSTM model}
+
+Here we discuss the two approaches we use in estimating our VAR with LSTM model. 
+\begin{itemize}
+	
+\item[$\bullet$]   We are at time t and have given a trained NN that uses the (log-)returns of the last 90 days (up to
+today) as input to predict the log return $r_{t+1}$ from time $t$ to time $t+1$.
+\item[$\bullet$]      Now simulate 1000 predictions $r(1), ..., r(1000)$ of this log return from $t$ to $t+1$ by generating a standard normal distribuion with a sample size of 1000, then scale these samples with the standard deviation of the historical returns (the first 7090 days of our original data that make up the timesteps and training). Then add each scaled samples to  our predicted return $r_{t+1}$. Call the ordered
+predictions $p(1),p(2),...,p(1000)$.
+
+\item[$\bullet$] Estimate the VaR95 = 0.5*($p(950)+p(951)$), VaR99 = 0.5*($p(990)+p(991)$)
+
+
+\item[$\bullet$] Compare the actual log return $r_{t+1}$ in the test data set with VaR95 and VaR99 and increase the number
+of breaches for VaR95 by 1 if you have VaR95 $<$ $r_{t+1}$ and do the same for VaR99.
+
+\item[$\bullet$] Then update your trained NN by moving one time step forward, i.e. by including the predicted $r_t+1$ as input.
+\item[$\bullet$] Go back to the first step where you replace $t$ by $t+1$. Repeat till you get to the end of the test data.
+
+\end{itemize}
+
+Another alternative is to perform step 1 to 3 for each predicted log returns. Then estimate the breaches by comparing each results in step 3 with the test data.\\\\
+
+Both methods give similar results  and we evaluate our value at risk based on the first approach
 
 \section{VAR Backtesting}
 %\subsection{Binomial Test}
@@ -1075,7 +1160,8 @@ Locarek-Junge, H. and Prinzler, R. (1999). Using ANN to Estimate VaR, working
 paper.\\\\
 S. A. Hamid and Z. Iqbal. Using neural networks for forecasting volatility of S\&P 500 Index futures prices \textit{Journal of Business Research 57 (2004) 1116–1125}.\\\\
 He, K., Ji, L., Tso, G. K. F., Zhu, B., \& Zou, Y. (2018). Forecasting Exchange Rate Value at Risk using Deep Belief Network Ensemble based Approach. \textit{Procedia Computer Science}, 139, 25-32.
-https://doi.org/10.1016/j.procs.2018.10.213.
+https://doi.org/10.1016/j.procs.2018.10.213.\\\\
+K. Hornik, M. Stinchcombe, H. White. Multilayer Feedforward Networks are Universal Approximators , Vol. 2, pp. 35Y-366, 1989
 
 
 
