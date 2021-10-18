@@ -518,7 +518,7 @@ Our LSTM has a single hidden layer,  with 'tanh' as the activation function. The
 \begin{itemize}
 
 \item[$\bullet$]   
-To determine the best weights of the neural network, Adam (Adaptive Moment Estimation) is the chosen optimizer in our LSTM model. "Some of its advantages are that the sizes of parameter updates are invariant to
+To determine the best weights of the neural network, Adam (Adaptive Moment Estimation) is the chosen optimizer in our LSTM model. Some of its advantages are that the sizes of parameter updates are invariant to
 rescaling of the gradient, its stepsizes are approximately bounded by the stepsize hyperparameter, stationary objective is not required, it works with sparse gradients, and it naturally performs a
 form of step size annealing (see Kingma and Ba, 2015).
 \item[$\bullet$] The batch size is the number of inputs that will be propagated in the
@@ -549,8 +549,8 @@ set, i.e. when the training set shows signs of overfitting.
 \end{center}
 It is also chosen as the loss function (between the predicted outputs and the actual outputs) and the performance measure(to assess the model fit while
 training and validating the network) of the
-LSTM neural network.
-\end{itemize}
+LSTM neural network.\\\\
+
 
 The number of neurons, dropout function, and epochs are changed in each LSTM models to choose the one that performs best. That is, the LSTM with the lowest MSE value. This will be discussed in details in the next chapter.
 
@@ -591,7 +591,7 @@ the data in the first row of the series vanishes leaving us with 8476 daily log-
 \section{Partitioning the Dataset}
 \subsection{LSTM Neural Network Model}
 
-Generally, data is divided into two main parts in neural network models: training set and test set. However, an additional intermediate set called validation set (sometimes modelled as part of training), is sometimes employed in order to avoid overfitting. The training and validation data can be jointly referred to as In-sample data, while the test data is sometimes referred to as Out-of-sample data. In most literatures, the common choice for training set between 70\% to 90\% of the original dataset, and 10\% to 20\% of the training are used as validation dataset. The rest are, of course the testing dataset. \newline\newline
+Our LSTM is used for time series predictions and our predictions will then be modelled into VaR estimates. Generally, data is divided into two main parts in neural network models: training set and test set. However, an additional intermediate set called validation set (sometimes modelled as part of training), is sometimes employed in order to avoid overfitting. The training and validation data can be jointly referred to as In-sample data, while the test data is sometimes referred to as Out-of-sample data. In most literatures, the common choice for training set between 70\% to 90\% of the original dataset, and 10\% to 20\% of the training are used as validation dataset. The rest are, of course the testing dataset, which will be to evaluate our predictions using MSE and also compared with our value at risk estimates. \newline\newline
 
 In this study, we have a lookahead (timestep) of 90 days, and in turn, we are left with 8386 days for training and testing. The first 7000 daily log-returns of each series are used as training dataset, which is around 83\% of each of the series. The last 1400 (20\%) values (daily log-returns) of the training dataset are used for validation. The remaining 1386 daily log-returns are used for testing. The dates for the data split are reported in the table below.
 %\makeatletter
@@ -826,7 +826,7 @@ As a nonparametric method, we use historical simulation with rolling window of 7
 
 \subsection{GARCH (1,1) model}
 
-For our VaR estimation, we use the conditional variance given by GARCH(1,1) model. We assume the random error to have a student’s t-distribution. Our Value at Risk is given by:
+For our daily VaR estimation, we use the conditional variance given by GARCH(1,1) model. We assume the random error to have a student’s t-distribution. Our Value at Risk is given by:
 \begin{center}
 $\text{VaR}_{t+1|t}$ = -$\mu_{t+1|t} - \sigma_{t+1|t} * q_{\alpha}$
 \end{center}
@@ -870,7 +870,7 @@ of breaches for VaR95 by 1 if you have VaR95 $<$ $r_{t+1}$ and do the same for V
 
 Another alternative is to perform step 1 to 3 for each predicted log returns. Then estimate the breaches by comparing each results in step 3 with the test data.\\\\
 
-Both methods give similar results  and we evaluate our value at risk based on the first approach
+Both methods give similar results  and we evaluate our value at risk based on the first approach.
 
 \section{VAR Backtesting}
 %\subsection{Binomial Test}
@@ -899,12 +899,11 @@ statistic takes the form
 \begin{center}
 	$LR_{pof}$ =$-2\ln$ $\left(\frac{(1-p)^{N-k}p^k}{[1-(k/N)]^{N-k}(k/N)^k}\right)$
 \end{center}
-$LR_{pof}$ (when $N$ is large) is asymptotically $\chi^2$ distributed with one degree of freedom under the null hypothesis that our model is correct. Thus our null hypothesis will be rejected if $LR_{pof}$ is greater than the critical value of the $\chi^2$ significant level (see Jorion, 2007). It is common to choose a 95\% confidence level for backtesting and apply this level to different VaR models regardless of the VaR confidence level chosen.
+$LR_{pof}$ (when $N$ is large) is asymptotically $\chi^2$ distributed with one degree of freedom under the null hypothesis that our model is correct. Thus our null hypothesis will be rejected if $LR_{pof}$ is greater than the critical value of the $\chi^2$ significant level (see Jorion, 2007). It is common to choose a 95\% confidence level for backtesting and apply this level to different VaR models regardless of the VaR confidence level chosen. As the critical value of $\chi^2$ with 95\% confidence level is 3.841, we reject our null hypothesis that are model works fine if $LR_{pof} > 3.841$.
 \newline
 
 \subsection{Results}
-For congruency with the VaR calculated from our LSTM forecasts, we calculate our actual VaR as the average of daily VaRs stimulated in the Garch and historical simulation model, and this actual VaR is used for comparison with our out-of sample data.\newline\newline\newline\newline
-
+The results of our daily VaR estimation of 1386 days are discussed in this section.
 
 
 
@@ -912,20 +911,21 @@ For congruency with the VaR calculated from our LSTM forecasts, we calculate our
 	\caption {VaR results for Nikkei 225}
 	\centering\setlength{\extrarowheight}{2pt}
 	\centering
-	\begin{tabular}{|*{7}{c|}}
+	\begin{tabular}{|*{5}{c|}}
 		\hline
 		\multirowcell{3}{model} & 
 		
-		\multicolumn{2}{c|}{VaR} & \multicolumn{2}{c|}{No. of VAR breaches} &
+		%\multicolumn{2}{c|}{VaR} & 
+		\multicolumn{2}{c|}{(\% of breaches) No. of VAR breaches} &
 		\multicolumn{2}{c|}{kupiec 95\% test} \\
-		\cline{2-7}
-		&  \makecell{95\%} & \makecell{99\%} & \makecell{95\%} & \makecell{99\%} & \makecell{95\%} & \makecell{99\%} \\
+		\cline{2-5}
+		 & \makecell{95\%} & \makecell{99\%} & \makecell{95\%} & \makecell{99\%} \\
 		\hline
-		Historical Simulation  & -0.023307  & -0.039578 &   57  & 16  & 2.44  & 0.318 \\ 
+		Historical Simulation  &  (0.041)  57  & (0.012) 16   & 2.44 (acc)  & 0.318 (acc) \\ 
 		\hline
-		Garch(1,1) model &  -0.019251 & -0.031422 & 82   &  29 & 2.32  & 12.71 \\
+		Garch(1,1) model & (0.060) 83   &  (0.019) 26 & 2.69 (acc)  & 8.54 (rej) \\
 		\hline
-		NN model & -0.026480 & -0.036325 &  43  & 21  & 12.08   &3.21  \\
+		NN model  & (0.032) 44  & (0.014) 19  & 11.11 (rej)  & 1.73 (acc)  \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -935,23 +935,25 @@ For congruency with the VaR calculated from our LSTM forecasts, we calculate our
 	\caption {VaR results for FTSE 100}
 	\centering\setlength{\extrarowheight}{2pt}
 	\centering
-	\begin{tabular}{|*{7}{c|}}
+	\begin{tabular}{|*{5}{c|}}
 		\hline
 		\multirowcell{3}{model} & 
 		
-		\multicolumn{2}{c|}{VaR} & \multicolumn{2}{c|}{No. of VAR breaches} &
+		%\multicolumn{2}{c|}{VaR} & 
+		\multicolumn{2}{c|}{(\% of breaches) No. of VAR breaches} &
 		\multicolumn{2}{c|}{kupiec 95\% test} \\
-		\cline{2-7}
-		&  \makecell{95\%} & \makecell{99\%} & \makecell{95\%} & \makecell{99\%} & \makecell{95\%} & \makecell{99\%} \\
+		\cline{2-5}
+		& \makecell{95\%} & \makecell{99\%} & \makecell{95\%} & \makecell{99\%} \\
 		\hline
-		Historical Simulation  & -0.016711 & -0.030739 &   61  & 21  & 1.09  & 3.21 \\ 
+		Historical Simulation  &  (0.044)  61  & (0.014) 20  & 1.09 (acc)  & 2.42 (acc) \\ 
 		\hline
-		Garch(1,1) model & -0.014778  & -0.022997 &  73  &  40 & 0.20  & 33.01 \\
+		Garch(1,1) model & (0.061) 85   & (0.020) 28 & 3.50 (acc)  & 11.25 (rej) \\
 		\hline
-		NN model & -0.018395 & -0.025791 & 55   &  28 &  3.33  & 11.25 \\
+		NN model  & (0.040) 56  & (0.022) 31  & 2.87 (acc)   &15.84 (rej)  \\
 		\hline
 	\end{tabular}
 \end{table}
+
 
 
 
@@ -959,23 +961,57 @@ For congruency with the VaR calculated from our LSTM forecasts, we calculate our
 	\caption {VaR results for S\&P 500}
 	\centering\setlength{\extrarowheight}{2pt}
 	\centering
-	\begin{tabular}{|*{7}{c|}}
+	\begin{tabular}{|*{5}{c|}}
 		\hline
 		\multirowcell{3}{model} & 
 		
-		\multicolumn{2}{c|}{VaR} & \multicolumn{2}{c|}{No. of VAR breaches} &
+		%\multicolumn{2}{c|}{VaR} & 
+		\multicolumn{2}{c|}{(\% of breaches) No. of VAR breaches} &
 		\multicolumn{2}{c|}{kupiec 95\% test} \\
-		\cline{2-7}
-		&  \makecell{95\%} & \makecell{99\%} & \makecell{95\%} & \makecell{99\%} & \makecell{95\%} & \makecell{99\%} \\
+		\cline{2-5}
+		& \makecell{95\%} & \makecell{99\%} & \makecell{95\%} & \makecell{99\%} \\
 		\hline
-		Historical Simulation  & -0.017029 & -0.031004 &  70   & 21  &  0.007 & 3.21 \\ 
+		Historical Simulation  & (0.049)  68  & (0.014) 20  & 0.03 (acc)  & 2.42 (acc)\\ 
 		\hline
-		Garch(1,1) model & -0.014281 & -0.023931 &  91  &  39 & 6.54 & 30.88 \\
+		Garch(1,1) model & (0.059) 82   & (0.020)  28 & 2.32 (acc)  & 11.25 (rej) \\
 		\hline
-		NN model & -0.018968 & -0.028131 &   56 & 28  &  2.87  & 11.25 \\
+		NN model  & (0.046)  64  & (0.022) 30  & 0.44 (acc)  &14.24 (rej)  \\
 		\hline
 	\end{tabular}
 \end{table}
+
+
+In the tables above where we reject our null hypothesis indicated by 'rej' and acceptance is indicated by 'acc'\\\\
+
+Inituitively , we expect our VaR violations not to be more than the VaR significant level. This however not always the case, but having figures around these values is acceptable. The situation where our number of violations is far more than the significant level is called underestimation and overestimation is when the violation is the far less than the significant level.  In our case, for the 95\% Var and 99\% Var, we expect VaR our violations not to be more than 69 and 14 respectively (i.e 5\% and 1\% of our estimated daily VaR of 1386 days). \\\\
+
+Considering our Kupiec test results, the historical simulation outperforms the other models. The garch performs well with the 95\% confidence interval for all the three stock markets. The neural network performs well at the 95\% for the FTSE 100 and S\%P 500, but rejected by the test for the NIKKEI 225 perhaps due to overestimation. The neural network outperforms the Garch model at 99\% confidence level. Although, a 99\% VaR
+is required by the Basel II regulation, a 95\% VaR is more admissible in our case,
+because models based on a 99\% level are more prone to a low power when
+applied on sample periods longer than a year. This implies that, with a 99\%
+confidence level, the probability of rejecting an incorrect model is very low.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Graphs}
 In this section, graphical representation of our results are shown \newline\newline
