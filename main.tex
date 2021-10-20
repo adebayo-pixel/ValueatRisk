@@ -34,7 +34,12 @@
 	%\pagestyle{plain}
 	%\listoftodos
 	\tableofcontents
+	\begin{titlepage}
+	\section*{Acknowledgements}
+	I would like to express my profound gratitude to my supervisor Prof. Dr. Ralf Korn for his untiring support and guidance in the course of writing this thesis.\newline
 	
+	I thank family for their emotional support and encouragement. I appreciate my friends, Ajay Chawda and Mahboob Zakariyau for their technical support.
+	\end{titlepage}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,10 +81,10 @@ Pritsker (1997), are among the first set of papers in which comparison of value 
 others (see Abed et all, 2013). The evaluation and categorization of models carried out in the work by McAleer, Jimenez-Martin and Perez-Amaral(2009) and Shams and Sina (2014), among others, try to determine the conditions under which certain models predict the best. Researchers made comparison of models in the time of varying volatility-before the crisis and after the crisis (When there was no high volatility and when volatility was high, respectively). However, this confirms that some models have good predictions before the start of the crisis, but their quality reduces with increased volatility. Others are more conservative during periods of low volatility, but have relatively low amount of errors in the period of crisis (see Buczyński \& Chlebus, 2018).
 \newline\newline
 Bao et al.(2006), Consigli(2002) and Danielson(2002), among
-others, show that "in stable periods, parametric models provide satisfactory results
-that become less satisfactory during high volatility periods". Sarma et al. (2003), and Danielson and Vries (2000) favour Parametric methods with evidence from their comparison of Historical simulation and Parametric methods. "Chong(2004),
-who uses parametric methods to estimate VaR under a Normal distribution and under a
-Student’s t-distribution, finds a better performance under Normality" (see Abed and Benito, 2010). McAleer et al (2009) presented RiskMetrics\textsuperscript{TM} as
+others, proof that in stable periods, parametric models give satisfactory results
+that become less satisfactory during high volatility periods. Sarma et al. (2003), and Danielson and Vries (2000) favour Parametric methods with evidence from their comparison of Historical simulation and Parametric methods. Chong(2004),
+who uses parametric methods for VaR estimation under a Normal distribution and under a
+Student’s t-distribution, finds a better performance under Normality (see Abed and Benito, 2009). McAleer et al (2009) presented RiskMetrics\textsuperscript{TM} as
 the best fitted model during high volatility, while Shams and Sina(2014) recognized GARCH(1,1) and GJR-GARCH as better
 forecasting models. In opposition to the results obtained
 by McAleer et al (2009), the level of quality of forecasts
@@ -111,13 +116,13 @@ The next chapter of discusses the properties and basic methods to estimate VaR. 
 \section{Concept}
 Increasing volatility in exchange markets, increased credit defaults, even putting countries' financial security at risk, and calls for more regulation drastically changed the circumstances in which banks operate. These situations of uncertainty are called risks and managing them is of great importance to financial institutions (e.g Banks) in order to keep them afloat (see Kremer, 2013). Value at risk measures the losses which may be incurred when the price of the portfolio falls. Hence it is an important measure of risk to financial institutions.
 \newline\newline
-According to Jorion (2007), “VaR measure is defined as the worst loss over a target horizon such that there is a low prespecified probability that the actual loss will be larger'. For example, if a financial institutions says that
+According to Jorion (2007), "VaR measure is defined as the worst loss over a target horizon such that there is a low prespecified probability that the actual loss will be larger". For example, if a financial institutions says that
 the daily VaR of its trading portfolio is \$2 million at the 99\%
 confidence level, this simply means that under normal market conditions,
 only 1\% of the time, the daily loss will be more than \$2 million (99\% of the time, its loss will not be more than \$2 million). As represented in the mathematical representation below, it can also be stated as the least expected return of a portfolio at time $t$ and at a certain level of significance, $\alpha$.
 \newline\newline
 Assume $r_1, r_2, ..., r_n$ to be conditionally independent and identically distributed(iid) random variables representing financial log returns. Use $F(r)$ to denote the cumulative distribution function,
-$F(r) = Pr(r_{t} < r|\Omega_{t-1})$ conditional on the information set $\Omega_{t-1}$ available at time $t$-1. Assume that \{$r_t$\} follows the stochastic process; \newline
+$F(r) = Pr(r_{t} < r|\Omega_{t-1})$ conditional on the information set $\Omega_{t-1}$ available at time $t$-1. Assume that \{$r_t$\} follows the stochastic process; 
 
 \begin{equation}
 \begin{aligned}
@@ -151,7 +156,6 @@ Hence, a VaR model involves the specification of $F(r)$ or $G(r)$ (see Abed and 
 %Fix $\alpha$ $\epsilon$(0,1), then the Value at Risk of a portfolio %where the net payoff is modelled by X at a level $\alpha$ is given %as:\newline
 %$\text{VaR}_{\alpha}(X)$ = inf $\{x \epsilon \mathbb{R}| P(X \leq %x)=\alpha\}$. Value at risk as a risk measure satisfies the following %properties
 First, we will introduce the notion of a coherent risk measure. A functional $\tau: X,Y \rightarrow \mathbb{R} \cup \{+\infty\}$ is said to be coherent risk measure for portfolios $X$ and $Y$ if it satisfies the following properties:
-\newline
 
 \begin{description}
 	\item[$\bullet$] Normalization \newline $\tau[0] = 0$ \newline The risk when holding no assets is zero.
@@ -247,7 +251,7 @@ lowest log prices on day $t$, to predict tomorrow's range from past daily, weekl
 
 \begin{equation}
 \begin{aligned}
-\text{Range}_{t}&=\beta_1+\beta_{2}\text{Range}_{t-1} + \beta_{3}\text{Range}^{w}_{t-1} + \beta_{4}\text{Range}^{m}_{t-1} + \varepsilon_t
+\text{Range}_{t}&=\beta_1+\beta_{2}\text{Range}_{t-1}+\beta_{3}\text{Range}^{w}_{t-1}+\beta_{4}\text{Range}^{m}_{t-1}+\varepsilon_t
 \\
 \\
 \text{Range}^{w}_{t-1}&=\frac{1}{5}\sum_{i=1}^{5}\text{Range}_{t-i}
@@ -313,7 +317,7 @@ Neural network is good for returns prediction as it can accommodate nonlinear in
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Mathematics of Neural Network}
-The main idea of this section is gotten from the thesis of Chaoyi Lou, titled Artificial Neural Networks:
+The main idea as well as the figures of this section is gotten from the thesis of Chaoyi Lou, titled Artificial Neural Networks:
 their Training Process and Applications.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -383,17 +387,16 @@ The difficulty with this activation function is that after it is activated, all 
  In feed-forward neural network(FFN), each neuron in a
  particular layer is connected with all neurons in a subsequent layer. The information
  flow in the network is of feedforward type (i.e the connections
- can never skip a layer, or form any loops backwards).\newline\newline\newline\newline\newline\newline
+ can never skip a layer, or form any loops backwards).
+ \newpage
  \begin{figure}
  	\centering
  	\includegraphics[width=0.4\textwidth]{figures/FFN}
  	\caption{A fully connected FFN with a single hidden layer (see Bijelic \& Ouijjane, 2019)}
- 	
- 	\label{sixthfig}
+ 		\label{sixthfig}
  \end{figure}
-\newline
  As shown in the above figure, the values of the input are transported to the hidden layer through connections, each being characterised by certain weight coefficient, $W_{i,k}$. The degree of connection between the input node and a hidden node is reflected by these weight coefficients. Defining [$x_{1,t};x_{2,t};...;x_{n,t}$] as the vector of the input signals and [$h_{1,t};h_{2,t};...;h_{m,t}$], the propagation of the input nodes to one hidden node can
- mathematically be described by: \newline
+ mathematically be described by: 
  \begin{center}
 
 
@@ -420,7 +423,7 @@ Recurrent Neural Networks
 maintain information about previous inputs, contrary feedforward neural networks. This implies that the prediction a recurrent
 neural network node made at previous time step $t-1$ affects the prediction it will make one
 moment later, at time step $t$. RNN nodes can be thought of as having memory as it takes inputs not only the current signal, but also
-what has been perceived previously in time.\newline
+what has been perceived previously in time.\newline\newline
 RNNs contain feedback loops from the so-called hidden states, and this allows preservation of information from one node to another while reading in inputs. At each time step in the data series, the feedback loop mechanism occurs, which causes each hidden state to contain traces not only of the respective hidden state before it, but also of all those preceding it, for as long as the memory of the network lasts.\newline
 \begin{figure}[h]
 	\centering
@@ -448,7 +451,7 @@ In this process, RNNs tend to experience two issues, known as exploding gradient
 
 \subsubsection{Long Short-Term Memory Recurrent Neural Network}
 LSTM is a class of recurrent neural networks and its main feature is its purpose-built memory cells, which allows it to capture long range dependencies in the data.\newline\newline
-A previous sequence element and the output from the network function serve as input for the next sequence element in the network function. As such, the LSTM can be compared to a HMM (Hidden Markov Model), in which there is a hidden state which conditions the output distribution. Furthermore, LSTM hidden state not only depends on its previous states but also reflects long-term sequence dependence since it is recurrent. In particular, the receptive field size of an LSTM (i.e. the size of the input region that generates the feature) is unbounded architecture-wise, unlike simple feed forward networks and CNNs (see Arimond et al, 2020). Due to the attractiveness of the LSTM, it will be used in this work to forecast volatility of returns of stock markets. \newline\newline
+A previous sequence element and the output from the network function serve as input for the next sequence element in the network function. As such, the LSTM can be compared to a HMM (Hidden Markov Model), in which there is a hidden state which conditions the output distribution. Furthermore, LSTM hidden state not only depends on its previous states but also reflects long-term sequence dependence since it is recurrent. In particular, the receptive field size of an LSTM (i.e. the size of the input region that generates the feature) is unbounded architecture-wise, unlike simple feed forward networks and CNNs (see Arimond et al, 2020). Due to the attractiveness of the LSTM, it will be used in this work to forecast volatility of returns of stock markets. 
 
 \begin{figure}[h]
 	\centering
@@ -514,7 +517,7 @@ and use this to determine the hidden state $h_t$ as a polished version of the ce
 
 
 \section{The LSTM Architecture}
-Our LSTM has a single hidden layer,  with 'tanh' as the activation function. The following are the hyper parameter (all but MSE has to be determined before you can actually start training, validating and testing your LSTM net) used in within the LSTM neural network:
+Our LSTM has a single hidden layer,  with 'tanh' as the activation function. The following are the parameters (all but MSE has to be determined before you can actually start training, validating and testing your LSTM net) used in within the LSTM neural network:
 \begin{itemize}
 
 \item[$\bullet$]   
@@ -632,7 +635,7 @@ For congruency with the LSTM model (in regards to number of predictions), we use
 \subsection{Trial Results of the LSTM Neural Network}
 
 As discussed in the previous chapter, the performance of our LSTM model is based on MSE. In this paper, we follow a best-out-of-5 approach, that means for each stock market, we train our model five times with different values of the hyperparameters and the best one (in each of the model training for the three stock market) is selected for VAR estimation. Tanh is the activation function in all models.\newline
-\textbf{NIKKEI}\newline
+\textbf{NIKKEI}
 
 
 \begin{center}
@@ -644,11 +647,11 @@ As discussed in the previous chapter, the performance of our LSTM model is based
 		\hline
 		2 & 190 & 0.1 & 100 & 0.00020421705 \\
 		\hline
-		3 & 111 & 0.2 & 100 & 0.0001751952 \\
+		3 & 111 & 0.2 & 100 & 0.0001736877 \\
 		\hline
-		4 & 111 & 0.2 & 150 & 0.0001786659 \\
+		4 & 111 & 0.2 & 150 & 0.0001814346 \\
 		\hline
-		5 & 111 & 0.3 & 150 & 0.0001772641\\ [1ex] 
+		5 & 111 & 0.3 & 150 & 0.0001725089\\ [1ex] 
 		\hline
 	\end{tabular}
 \end{center}
@@ -671,7 +674,7 @@ In the first trial, the model is trained for 500 epochs. Both training and valid
 	\label{Nik2}
 \end{figure}
 
-As the perfect amount of epochs has been known, we run our third trial with 111 epochs and we increase our dropout. This model has the least MSE and it is chosen for our VaR estimation.\newline\newline\newline
+As the perfect amount of epochs has been known, we run our third trial with 111 epochs and we increase our dropout. This model has the second lowest MSE. \newline\newline\newline\newline\newline
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures/Nik3}
@@ -680,7 +683,7 @@ As the perfect amount of epochs has been known, we run our third trial with 111 
 \end{figure}
 
 We perform our fourth model with an increase in the amount of neurons in the hidden layer to see if our model will perform better, but this is not the case has it has a higher MSE than the third model.
-\newline\newline\newline
+\newline
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures/Nik4}
@@ -688,14 +691,14 @@ We perform our fourth model with an increase in the amount of neurons in the hid
 	\label{Nik4}
 \end{figure}
 
-The second best performed model is the fifth trial. We maintain 150 neurons in the hidden layer, however we increase the amount of dropout to 0.3.\newline
+The best performed model is the fifth trial. We maintain 150 neurons in the hidden layer, however we increase the amount of dropout to 0.3. This model will be chosen for our VaR estimation.\newline
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures/Nik5}
 	\caption{Training and Validation loss functions under Trial 5 (Nikkei 225))}
 	\label{Nik5}
 \end{figure}
-\newline\textbf{FTSE 100}\newline
+\newline\textbf{FTSE 100}
 
 
 \begin{center}
@@ -730,7 +733,7 @@ In the first trial, the model is trained with 500 epochs. Both training and vali
 	\includegraphics[width=0.8\textwidth]{figures/FTSE2}
 	\caption{Training and Validation loss functions under Trial 2 (FTSE 100))}
 	\label{FTSE2}
-\end{figure}\newline
+\end{figure}
 
  We perform the third trial with the required 147 epochs and the amount of neurons in the hidden layers is increased to 120. This model gives the third lowest MSE.
 
@@ -740,7 +743,8 @@ In the first trial, the model is trained with 500 epochs. Both training and vali
 	\caption{Training and Validation loss functions under Trial 3 (FTSE 100))}
 	\label{FTSE3}
 \end{figure}
- The fourth trial is trained with 147 epochs, the increased amount of dropout leads to a lower MSE result compared to the third trial. \newline\newline\newline\newline\newline\newline
+ The fourth trial is trained with 147 epochs, the increased amount of dropout leads to a lower MSE result compared to the third trial. 
+ \newpage
 
 \begin{figure}[!h]
 	\centering
@@ -787,14 +791,14 @@ In the first trial, the model is trained with 500 epochs. Both training and vali
 	\label{sanp1}
 \end{figure}
 \newline The second test is run with 195 epochs to discard the utmost overfitting and to confirm the intuition that the lowest loss on the validation set exists
-before the 150th epoch. Here it becomes clear that our model performs well till 147 epochs after which validation losses continue to increase.  
+before the 150th epoch. It becomes clear that our model performs well till 147 epochs after which validation losses keeps increasing.  
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures/sanp2}
 	\caption{Training and Validation loss functions under Trial 2 (S\&P 500)}
 	\label{sanp2}
 \end{figure}
-\newline We perform the third trial with the required 124 epochs and the amount of neurons in the hidden layers is increased to 120. This model gives the lowest MSE and will be used for VaR estimation.\newline
+ We perform the third trial with the required 124 epochs and the amount of neurons in the hidden layers is increased to 120. This model gives the lowest MSE and will be used for VaR estimation.\newline
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures/sanp3}
@@ -826,21 +830,21 @@ As a nonparametric method, we use historical simulation with rolling window of 7
 
 \subsection{GARCH (1,1) model}
 
-For our daily VaR estimation, we use the conditional variance given by GARCH(1,1) model. We assume the random error to have a student’s t-distribution. Our Value at Risk is given by:
+For our daily VaR estimation, we use the conditional variance given by GARCH(1,1) model. We assume the random error to have a standardized student’s t-distribution with 4 degrees of freedom. Our Value at Risk is given by:
 \begin{center}
 $\text{VaR}_{t+1|t}$ = -$\mu_{t+1|t} - \sigma_{t+1|t} * q_{\alpha}$
 \end{center}
 where $\mu$ is the conditional mean, $\sigma$ is the conditional volatility, and $q_{\alpha}$ is the $\alpha$ quantile of the student's t-distribution.
 
 \subsection{The LSTM model}
-We determine our value at risk by calculating the 0.05 quantile (95\% Var) and 0.01 quantile (99\% Var) of our predicted values. Our LSTM model equation is assumed to be of the form:
+We determine our value at risk by calculating the 0.05 quantile (95\% Var) and 0.01 quantile (99\% Var) of our predicted values. The output generated by our LSTM model starts with the following form:
 \begin{center}
 	$y_1= tanh(\sum_{i=1}^{i=90}W_{i}u_{i}+\beta)+\varepsilon_t$
 \end{center} 
 
 where $u_{i}$ are the inputs, $W_i$ are the weights, $\beta$ is the bias and $\varepsilon_t$ = random error in the period $t$, which equals to the
 product of standard deviation $\sigma_t$ of the calibration set and  the
-standardized random error $\xi_t$ in the period $t$ ($\xi_t$ $\sim$ N(0,1)), tanh is the activation function. As the output from the network function serves as input for the next sequence element in the network function, the general equation would be of the form:
+standardized random error $\xi_t$ in the period $t$ ($\xi_t$ $\sim$ N(0,1)), tanh is the activation function. As the output from the network function serves as input for the next sequence element in the network function, the general equation of the output of the LSTM would be of the form:
 
 \begin{center}
 	$y_n= tanh(\sum_{i=1}^{i=90}W_{i}u_{i}+\sum_{i=1}^{n-1}y_{i}K_{i}+\beta)+\varepsilon_t$
@@ -863,7 +867,7 @@ predictions $p(1),p(2),...,p(1000)$.
 \item[$\bullet$] Compare the actual log return $r_{t+1}$ in the test data set with VaR95 and VaR99 and increase the number
 of breaches for VaR95 by 1 if you have VaR95 $<$ $r_{t+1}$ and do the same for VaR99.
 
-\item[$\bullet$] Then update your trained NN by moving one time step forward, i.e. by including the predicted $r_t+1$ as input.
+\item[$\bullet$] Then update your trained NN by moving one time step forward, i.e. by including the predicted $r_{t+1}$ as input.
 \item[$\bullet$] Go back to the first step where you replace $t$ by $t+1$. Repeat till you get to the end of the test data.
 
 \end{itemize}
@@ -876,7 +880,7 @@ Both methods give similar results  and we evaluate our value at risk based on th
 %\subsection{Binomial Test}
 One easy way to test the efficiency of a VaR model is to count the number of violation (number of days when portfolio returns are less than VaR model estimates). A VaR model performs overestimation of risk if the number of exceptions is less than the selected confidence level, and underestimation if there are too much violation. It is nearly impossible to have the exact amount of violation specified by the confidence level.\newline\newline
 
-Suppose we use a 99\% confidence for our VaR model, we have $K$ as the number of violations and N observations. The ratio $k$/$N$ gives the failure rate. Our null hypothesis is that the frequency of tail loss is $p$= 0.01. Assuming that the model is accurate, the observed failure rate $k$/$N$
+Suppose we use a 99\% confidence for our VaR model, we have $K$ as the number of violations and N observations. The ratio $k$/$N$ gives the failure rate. Our null hypothesis is that the frequency of tail loss is $p$= 0.01. As for the alternative hypothesis, we look at the two-sided case, i.e. we either reject the null hypothesis if we observe too few or too many breaches of the VaR. This will also be the case in the Kupiec test which is considered in the next section.  Assuming that the model is accurate, the observed failure rate $k$/$N$
 should act as an unbiased measure of p, and thus converge to 1\% as sample size is
 increased. (Jorion, 2007) \newline\newline
 It is based on the classic testing framework for a series of successes and failures, also known as Bernoulli tests. Under the null hypothesis, the number of violations(breaches) k follows a binomial probability distribution:
@@ -949,7 +953,7 @@ The results of our daily VaR estimation of 1386 days are discussed in this secti
 		\hline
 		Garch(1,1) model & (0.061) 85   & (0.020) 28 & 3.50 (acc)  & 11.25 (rej) \\
 		\hline
-		NN model  & (0.040) 56  & (0.022) 31  & 2.87 (acc)   &15.84 (rej)  \\
+		NN model  & (0.040) 56  & (0.023) 32  & 2.87 (acc)   &17.51 (rej)  \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -985,7 +989,7 @@ In the tables above where we reject our null hypothesis indicated by 'rej' and a
 
 Inituitively , we expect our VaR violations not to be more than the VaR significant level. This however not always the case, but having figures around these values is acceptable. The situation where our number of violations is far more than the significant level is called underestimation and overestimation is when the violation is the far less than the significant level.  In our case, for the 95\% Var and 99\% Var, we expect VaR our violations not to be more than 69 and 14 respectively (i.e 5\% and 1\% of our estimated daily VaR of 1386 days). \\\\
 
-Considering our Kupiec test results, the historical simulation outperforms the other models. The garch performs well with the 95\% confidence interval for all the three stock markets. The neural network performs well at the 95\% for the FTSE 100 and S\%P 500, but rejected by the test for the NIKKEI 225 perhaps due to overestimation. The neural network outperforms the Garch model at 99\% confidence level. Although, a 99\% VaR
+Considering our Kupiec test results, the historical simulation outperforms the other models. The garch performs well with the 95\% confidence interval for all the three stock markets. The neural network performs well at the 95\% for the FTSE 100 and S\&P 500, but rejected by the test for the NIKKEI 225 perhaps due to overestimation. The neural network outperforms the Garch model at 99\% confidence level. Although, a 99\% VaR
 is required by the Basel II regulation, a 95\% VaR is more admissible in our case,
 because models based on a 99\% level are more prone to a low power when
 applied on sample periods longer than a year. This implies that, with a 99\%
@@ -1014,7 +1018,121 @@ confidence level, the probability of rejecting an incorrect model is very low.
 
 
 \section{Graphs}
-In this section, graphical representation of our results are shown \newline\newline
+In this section, graphical representation of our daily VaR estimations are shown \newline\newline
+
+\textbf{Historical Simulation}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/HISTN}
+	\caption{Daily VaR estimation of NIKKEI 225}
+	\label{HistN}
+\end{figure}
+
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/HISTF}
+	\caption{Daily VaR estimation of FTSE 100}
+	\label{HistF}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/HISTS}
+	\caption{Daily VaR estimation of S\&P 500}
+	\label{HistS}
+\end{figure}
+\newpage
+	\textbf{Garch(1,1)}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/GARCHN}
+	\caption{Daily VaR estimation of NIKKEI 225}
+	\label{garchN}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/GARCHF}
+	\caption{Daily VaR estimation of FTSE 100}
+	\label{garchF}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/GARCHS}
+	\caption{Daily VaR estimation of S\&P 500}
+	\label{garchS}
+\end{figure}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+		
+		
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \textbf{NIKKEI 225}
 \begin{figure}[!h]
 	\centering
@@ -1063,7 +1181,6 @@ In this section, graphical representation of our results are shown \newline\newl
 \end{figure}
 
 
-\newpage
 \textbf{S\&P 500}
 
 \begin{figure}[!h]

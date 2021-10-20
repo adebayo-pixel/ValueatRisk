@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  21 SEP 2021 15:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  19 OCT 2021 14:18
 entering extended mode
 **./mainfiz.tex
 (mainfiz.tex
@@ -1105,13 +1105,22 @@ Package csquotes Info: Enabling multilingual quotes.
 Package csquotes Info: Redefining alias 'english' -> 'english/american'.
 )
 Package csquotes Info: Allocating character ".
-)
+
 ("C:\Users\Hafees Yusuff\AppData\Roaming\MiKTeX\2.9\tex/latex/multirow\multirow
 .sty"
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip64
 \multirow@cntb=\count323
 \multirow@dima=\skip65
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\dcolumn.sty"
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+))
+("C:\Users\Hafees Yusuff\AppData\Roaming\MiKTeX\2.9\tex/latex/makecell\makecell
+.sty"
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen263
+\c@nlinenum=\count324
+\TeXr@lab=\toks39
 ) (settings/page.tex
 ("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -1119,18 +1128,18 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 ("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count324
-\Gm@cntv=\count325
-\c@Gm@tempcnt=\count326
-\Gm@bindingoffset=\dimen263
-\Gm@wd@mp=\dimen264
-\Gm@odd@mp=\dimen265
-\Gm@even@mp=\dimen266
-\Gm@layoutwidth=\dimen267
-\Gm@layoutheight=\dimen268
-\Gm@layouthoffset=\dimen269
-\Gm@layoutvoffset=\dimen270
-\Gm@dimlist=\toks39
+\Gm@cnth=\count325
+\Gm@cntv=\count326
+\c@Gm@tempcnt=\count327
+\Gm@bindingoffset=\dimen264
+\Gm@wd@mp=\dimen265
+\Gm@odd@mp=\dimen266
+\Gm@even@mp=\dimen267
+\Gm@layoutwidth=\dimen268
+\Gm@layoutheight=\dimen269
+\Gm@layouthoffset=\dimen270
+\Gm@layoutvoffset=\dimen271
+\Gm@dimlist=\toks40
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg")))
 ("C:\Program Files\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.sty"
@@ -1152,7 +1161,7 @@ Package csquotes Info: ... found 'babel' package.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count327
+\l__kernel_color_stack_int=\count328
 \l__pdf_internal_box=\box64
 )
 (mainfiz.aux)
@@ -1194,7 +1203,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count328
+\c@section@level=\count329
 )
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
@@ -1207,17 +1216,17 @@ LaTeX Info: Redefining \nameref on input line 19.
 
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count329
-\scratchdimen=\dimen271
+\scratchcounter=\count330
+\scratchdimen=\dimen272
 \scratchbox=\box66
-\nofMPsegments=\count330
-\nofMParguments=\count331
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count332
-\MPscratchDim=\dimen272
-\MPnumerator=\count333
-\makeMPintoPDFobject=\count334
-\everyMPtoPDFconversion=\toks41
+\nofMPsegments=\count331
+\nofMParguments=\count332
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count333
+\MPscratchDim=\dimen273
+\MPnumerator=\count334
+\makeMPintoPDFobject=\count335
+\everyMPtoPDFconversion=\toks42
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1281,29 +1290,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <figures/download.png, id=158, 446.66875pt x 113.42375pt>
 File: figures/download.png Graphic file (type png)
 <use figures/download.png>
-Package pdftex.def Info: figures/download.png  used on input line 98.
+Package pdftex.def Info: figures/download.png  used on input line 102.
 (pdftex.def)             Requested size: 91.04742pt x 23.11874pt.
- [1
+) [1{C:/Users/Hafees Yusuff/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-
-{C:/Users/Hafees Yusuff/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./f
-igures/download.png>]pdfTeX warning (ext4): destination with the same identifie
-r (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.117 \end{titlepage}
-                      [1
-
-]) (mainfiz.toc)
+ <./figures/download.png>] (mainfiz.toc)
 \tf@toc=\write6
 \openout6 = `mainfiz.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.40 \chapter
-             {Basics} [1
+ [2
 
 ]
 Chapter 1.
@@ -1311,7 +1306,7 @@ Chapter 1.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 45.
 
-[2
+[3
 
 ]
 
@@ -1320,7 +1315,7 @@ Make it at least 13.59999pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[3]
+[4]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 8
 0.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
@@ -1328,49 +1323,49 @@ File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
- [4] [5]
+ [5] [6]
 Chapter 2.
-[6
+[7
 
 ]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 211
 .
  ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [7]
+) [8]
 Chapter 3.
-[8
+[9
 
 ]
 Chapter 4.
-<figures/cube.png, id=284, 287.57437pt x 296.60812pt>
+<figures/cube.png, id=281, 287.57437pt x 296.60812pt>
 File: figures/cube.png Graphic file (type png)
 <use figures/cube.png>
 Package pdftex.def Info: figures/cube.png  used on input line 276.
 (pdftex.def)             Requested size: 136.57462pt x 140.86769pt.
-[9
+[10
 
- <./figures/cube.png>] [10] [11]
+ <./figures/cube.png>] [11] [12]
 Chapter 5.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 449.
-[12
-
-]
-Appendix A.
 [13
 
 ]
-Appendix B.
-(mainfiz.bbl [14
+Appendix A.
+[14
 
-]) [15
+]
+Appendix B.
+(mainfiz.bbl [15
+
+]) [16
 
 ] (mainfiz.lof)
 \tf@lof=\write7
 \openout7 = `mainfiz.lof'.
 
- [16
+ [17
 
 ] (mainfiz.lot)
 \tf@lot=\write8
@@ -1378,7 +1373,7 @@ Appendix B.
 
 
 No file mainfiz.ind.
-[17
+[18
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 510.
@@ -1391,13 +1386,13 @@ Package rerunfilecheck Info: File `mainfiz.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 510.
  ) 
 Here is how much of TeX's memory you used:
- 21704 strings out of 480898
- 393071 string characters out of 2908343
- 658792 words of memory out of 3000000
- 36988 multiletter control sequences out of 15000+200000
- 552888 words of font info for 98 fonts, out of 3000000 for 9000
+ 21872 strings out of 480898
+ 394991 string characters out of 2908343
+ 663033 words of memory out of 3000000
+ 37147 multiletter control sequences out of 15000+200000
+ 553241 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,11n,85p,958b,947s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,11n,85p,958b,955s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKT
@@ -1420,9 +1415,9 @@ ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Program
  Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on mainfiz.pdf (19 pages, 349211 bytes).
+Output written on mainfiz.pdf (18 pages, 346360 bytes).
 PDF statistics:
- 442 PDF objects out of 1000 (max. 8388607)
- 74 named destinations out of 1000 (max. 500000)
+ 438 PDF objects out of 1000 (max. 8388607)
+ 75 named destinations out of 1000 (max. 500000)
  375 words of extra memory for PDF output out of 10000 (max. 10000000)
 
