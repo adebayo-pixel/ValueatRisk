@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  20 OCT 2021 20:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  26 OCT 2021 03:01
 entering extended mode
 **./main.tex
 (main.tex
@@ -1280,7 +1280,7 @@ Package csquotes Info: Making character " active on input line 21.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (content/title_page_1.tex
-<figures/download.png, id=186, 446.66875pt x 113.42375pt>
+<figures/download.png, id=182, 446.66875pt x 113.42375pt>
 File: figures/download.png Graphic file (type png)
 <use figures/download.png>
 Package pdftex.def Info: figures/download.png  used on input line 51.
@@ -1322,263 +1322,277 @@ been already used, duplicate ignored
 l.160 \end{titlepage}
                       [1
 
-]) (main.tocpdfTeX warning (ext4): destination with the same identifier (name{p
-age.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.43 ...chapter}{List of Figures}{37}{appendix*.8}
-                                                  % [1
-
-])
-\tf@toc=\write6
-\openout6 = `main.toc'.
-
- [2]
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
-
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.42 	\end{titlepage}
-                      [1
-
-]
-Chapter 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--67
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--67
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--98
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--98
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--98
-
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.98 
-      [1
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.111 \chapter
-              {Value-at-Risk: Concept,  properties and methods} [2]
+l.164 \newpage\null\thispagestyle{empty}\newpage
+                                                 [1]
+Underfull \hbox (badness 10000) in paragraph at lines 167--169
+
+ []
+
+
+Underfull \hbox (badness 1215) in paragraph at lines 167--169
+\OT1/cmr/m/n/10.95 Financial in-sti-tu-tions need to have enough ca-pac-ity to 
+meet their re-spon-si-bil-i-ties and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--169
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.171 \end{titlepage}
+                      [1
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.174 \newpage\null\thispagestyle{empty}\newpage
+                                                 [1]) (main.toc)
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+ [1
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 	\end{titlepage}
+                      [1
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.47 \newpage\null\thispagestyle{empty}\newpage
+                                                [1]
+Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--72
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--72
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--103
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.103 
+       [1
+
+
+] [2]
 Chapter 2.
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-25.
+30.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 125.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 130.
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--126
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--126
+Underfull \hbox (badness 10000) in paragraph at lines 122--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--142
+Underfull \hbox (badness 10000) in paragraph at lines 122--131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--147
 
  []
 
 [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 184--187
+Underfull \hbox (badness 10000) in paragraph at lines 189--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--187
+Underfull \hbox (badness 10000) in paragraph at lines 189--192
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 201--204
+Underfull \hbox (badness 10000) in paragraph at lines 206--209
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--210
+Underfull \hbox (badness 10000) in paragraph at lines 210--215
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--228
+Underfull \hbox (badness 10000) in paragraph at lines 222--233
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--251
+Underfull \hbox (badness 10000) in paragraph at lines 245--256
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 279--282
+Underfull \hbox (badness 10000) in paragraph at lines 284--287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--295
+Underfull \hbox (badness 10000) in paragraph at lines 292--300
 
  []
 
 [6] [7]
 Chapter 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
-
- []
-
-<figures/NN.png, id=301, 544.28343pt x 383.93437pt>
+<figures/NN.png, id=306, 544.28343pt x 383.93437pt>
 File: figures/NN.png Graphic file (type png)
 <use figures/NN.png>
-Package pdftex.def Info: figures/NN.png  used on input line 303.
+Package pdftex.def Info: figures/NN.png  used on input line 307.
 (pdftex.def)             Requested size: 318.66948pt x 224.78523pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--312
+Underfull \hbox (badness 10000) in paragraph at lines 303--316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--316
 
  []
 
 [8
 
  <./figures/NN.png>]
-<figures/neuron.png, id=309, 389.20406pt x 228.855pt>
+<figures/neuron.png, id=314, 389.20406pt x 228.855pt>
 File: figures/neuron.png Graphic file (type png)
 <use figures/neuron.png>
-Package pdftex.def Info: figures/neuron.png  used on input line 328.
+Package pdftex.def Info: figures/neuron.png  used on input line 332.
 (pdftex.def)             Requested size: 318.66948pt x 187.38643pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--337
+Underfull \hbox (badness 10000) in paragraph at lines 337--341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--337
+Underfull \hbox (badness 10000) in paragraph at lines 337--341
 
  []
 
-<figures/neuro.png, id=311, 250.68657pt x 246.9225pt>
+<figures/neuro.png, id=316, 250.68657pt x 246.9225pt>
 File: figures/neuro.png Graphic file (type png)
 <use figures/neuro.png>
-Package pdftex.def Info: figures/neuro.png  used on input line 345.
+Package pdftex.def Info: figures/neuro.png  used on input line 349.
 (pdftex.def)             Requested size: 182.09486pt x 179.37025pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--349
+Underfull \hbox (badness 10000) in paragraph at lines 342--353
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--349
+Underfull \hbox (badness 10000) in paragraph at lines 342--353
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--349
+Underfull \hbox (badness 10000) in paragraph at lines 342--353
 
  []
 
 [9 <./figures/neuron.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 350--358
+Underfull \hbox (badness 10000) in paragraph at lines 354--362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--358
+Underfull \hbox (badness 10000) in paragraph at lines 354--362
 
  []
 
-<figures/tanh.png, id=319, 404.26031pt x 299.61937pt>
+<figures/tanh.png, id=324, 404.26031pt x 299.61937pt>
 File: figures/tanh.png Graphic file (type png)
 <use figures/tanh.png>
-Package pdftex.def Info: figures/tanh.png  used on input line 361.
+Package pdftex.def Info: figures/tanh.png  used on input line 365.
 (pdftex.def)             Requested size: 182.09486pt x 134.96005pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 366--368
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 366--368
-
- []
-
-[10 <./figures/neuro.png> <./figures/tanh.png>]
-<figures/Relu.png, id=330, 136.25906pt x 121.20282pt>
+<figures/Relu.png, id=325, 136.25906pt x 121.20282pt>
 File: figures/Relu.png Graphic file (type png)
 <use figures/Relu.png>
-Package pdftex.def Info: figures/Relu.png  used on input line 374.
+Package pdftex.def Info: figures/Relu.png  used on input line 377.
 (pdftex.def)             Requested size: 182.09486pt x 161.9837pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--381
+Underfull \hbox (badness 10000) in paragraph at lines 370--384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--381
+Underfull \hbox (badness 10000) in paragraph at lines 370--384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--381
+Underfull \hbox (badness 10000) in paragraph at lines 370--384
 
  []
 
-[11 <./figures/Relu.png>]
-<figures/FFN.png, id=338, 472.01344pt x 511.15968pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--384
+
+ []
+
+[10 <./figures/neuro.png> <./figures/tanh.png>] [11 <./figures/Relu.png>]
+<figures/FFN.png, id=344, 472.01344pt x 511.15968pt>
 File: figures/FFN.png Graphic file (type png)
 <use figures/FFN.png>
-Package pdftex.def Info: figures/FFN.png  used on input line 394.
+Package pdftex.def Info: figures/FFN.png  used on input line 397.
 (pdftex.def)             Requested size: 182.09486pt x 197.19876pt.
-<figures/RNN.png, id=339, 657.2053pt x 342.5297pt>
+<figures/RNN.png, id=345, 657.2053pt x 342.5297pt>
 File: figures/RNN.png Graphic file (type png)
 <use figures/RNN.png>
-Package pdftex.def Info: figures/RNN.png  used on input line 430.
+Package pdftex.def Info: figures/RNN.png  used on input line 433.
 (pdftex.def)             Requested size: 182.09486pt x 94.90414pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--435
+Underfull \hbox (badness 10000) in paragraph at lines 423--438
 
  []
 
 [12 <./figures/FFN.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 448--449
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 448--449
+Underfull \hbox (badness 10000) in paragraph at lines 449--451
 
  []
 
@@ -1588,593 +1602,554 @@ Underfull \hbox (badness 10000) in paragraph at lines 453--455
  []
 
 [13 <./figures/RNN.png>]
-<figures/lstm.png, id=355, 757.32938pt x 503.63156pt>
+<figures/lstm.png, id=360, 757.32938pt x 503.63156pt>
 File: figures/lstm.png Graphic file (type png)
 <use figures/lstm.png>
 Package pdftex.def Info: figures/lstm.png  used on input line 458.
 (pdftex.def)             Requested size: 182.09486pt x 121.0969pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--465
+Underfull \hbox (badness 10000) in paragraph at lines 464--468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--465
+Underfull \hbox (badness 10000) in paragraph at lines 464--468
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 466--467
+Underfull \hbox (badness 10000) in paragraph at lines 464--468
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 466--467
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 468--469
+[14 <./figures/lstm.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 550--554
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 468--469
-
- []
-
-[14 <./figures/lstm.png>] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 553--556
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 553--556
-
- []
-
-[16]
+[15] [16]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 570--571
+Underfull \hbox (badness 10000) in paragraph at lines 565--566
 
  []
 
-<figures/logNikkei.png, id=370, 1172.38pt x 358.33875pt>
+<figures/logNikkei.png, id=376, 1172.38pt x 358.33875pt>
 File: figures/logNikkei.png Graphic file (type png)
 <use figures/logNikkei.png>
-Package pdftex.def Info: figures/logNikkei.png  used on input line 574.
+Package pdftex.def Info: figures/logNikkei.png  used on input line 569.
 (pdftex.def)             Requested size: 364.19667pt x 111.3135pt.
-<figures/logFTSE.png, id=371, 1172.38pt x 358.33875pt>
+<figures/logFTSE.png, id=377, 1172.38pt x 358.33875pt>
 File: figures/logFTSE.png Graphic file (type png)
 <use figures/logFTSE.png>
-Package pdftex.def Info: figures/logFTSE.png  used on input line 581.
+Package pdftex.def Info: figures/logFTSE.png  used on input line 576.
 (pdftex.def)             Requested size: 364.19667pt x 111.3135pt.
-<figures/logS&P500.png, id=372, 1172.38pt x 358.33875pt>
+<figures/logS&P500.png, id=378, 1172.38pt x 358.33875pt>
 File: figures/logS&P500.png Graphic file (type png)
 <use figures/logS&P500.png>
-Package pdftex.def Info: figures/logS&P500.png  used on input line 589.
+Package pdftex.def Info: figures/logS&P500.png  used on input line 584.
 (pdftex.def)             Requested size: 364.19667pt x 111.3135pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--598
+Underfull \hbox (badness 10000) in paragraph at lines 592--616
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--598
+Underfull \hbox (badness 10000) in paragraph at lines 592--616
 
  []
 
 [17
 
  <./figures/logNikkei.png> <./figures/logFTSE.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 599--622
+Underfull \hbox (badness 10000) in paragraph at lines 631--633
 
  []
 
 [18 <./figures/logS&P500.png>]
-<figures/Nik1.png, id=389, 1196.47pt x 388.45125pt>
+<figures/Nik1.png, id=395, 1196.47pt x 388.45125pt>
 File: figures/Nik1.png Graphic file (type png)
 <use figures/Nik1.png>
-Package pdftex.def Info: figures/Nik1.png  used on input line 662.
+Package pdftex.def Info: figures/Nik1.png  used on input line 656.
 (pdftex.def)             Requested size: 364.19667pt x 118.24332pt.
-<figures/Nik2.png, id=390, 1196.47pt x 388.45125pt>
+<figures/Nik2.png, id=396, 1196.47pt x 388.45125pt>
 File: figures/Nik2.png Graphic file (type png)
 <use figures/Nik2.png>
-Package pdftex.def Info: figures/Nik2.png  used on input line 672.
+Package pdftex.def Info: figures/Nik2.png  used on input line 666.
 (pdftex.def)             Requested size: 364.19667pt x 118.24332pt.
-<figures/Nik3.png, id=391, 1196.47pt x 388.45125pt>
+ [19 <./figures/Nik1.png> <./figures/Nik2.png>]
+<figures/Nik3.png, id=405, 1196.47pt x 388.45125pt>
 File: figures/Nik3.png Graphic file (type png)
 <use figures/Nik3.png>
-Package pdftex.def Info: figures/Nik3.png  used on input line 680.
+Package pdftex.def Info: figures/Nik3.png  used on input line 675.
 (pdftex.def)             Requested size: 364.19667pt x 118.24332pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 677--684
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 677--684
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 677--684
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 677--684
-
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/Nik4.png, id=392, 1196.47pt x 388.45125pt>
+<figures/Nik4.png, id=406, 1196.47pt x 388.45125pt>
 File: figures/Nik4.png Graphic file (type png)
 <use figures/Nik4.png>
-Package pdftex.def Info: figures/Nik4.png  used on input line 689.
+Package pdftex.def Info: figures/Nik4.png  used on input line 683.
 (pdftex.def)             Requested size: 364.19667pt x 118.24332pt.
-[19 <./figures/Nik1.png> <./figures/Nik2.png>]
-<figures/Nik5.png, id=402, 1196.47pt x 388.45125pt>
+<figures/Nik5.png, id=407, 1196.47pt x 388.45125pt>
 File: figures/Nik5.png Graphic file (type png)
 <use figures/Nik5.png>
-Package pdftex.def Info: figures/Nik5.png  used on input line 697.
+Package pdftex.def Info: figures/Nik5.png  used on input line 691.
 (pdftex.def)             Requested size: 364.19667pt x 118.24332pt.
- [20 <./figures/Nik3.png> <./figures/Nik4.png> <./figures/Nik5.png>]
-<figures/FTSE1.png, id=413, 1203.49625pt x 388.45125pt>
+<figures/FTSE1.png, id=408, 1203.49625pt x 388.45125pt>
 File: figures/FTSE1.png Graphic file (type png)
 <use figures/FTSE1.png>
-Package pdftex.def Info: figures/FTSE1.png  used on input line 726.
+Package pdftex.def Info: figures/FTSE1.png  used on input line 720.
 (pdftex.def)             Requested size: 364.19667pt x 117.54984pt.
-<figures/FTSE2.png, id=414, 1196.47pt x 388.45125pt>
+
+[20 <./figures/Nik3.png> <./figures/Nik4.png> <./figures/Nik5.png>]
+<figures/FTSE2.png, id=419, 1196.47pt x 388.45125pt>
 File: figures/FTSE2.png Graphic file (type png)
 <use figures/FTSE2.png>
-Package pdftex.def Info: figures/FTSE2.png  used on input line 733.
+Package pdftex.def Info: figures/FTSE2.png  used on input line 727.
 (pdftex.def)             Requested size: 364.19667pt x 118.24332pt.
-<figures/FTSE3.png, id=415, 1203.49625pt x 388.45125pt>
+<figures/FTSE3.png, id=420, 1203.49625pt x 388.45125pt>
 File: figures/FTSE3.png Graphic file (type png)
 <use figures/FTSE3.png>
-Package pdftex.def Info: figures/FTSE3.png  used on input line 742.
+Package pdftex.def Info: figures/FTSE3.png  used on input line 736.
 (pdftex.def)             Requested size: 364.19667pt x 117.54984pt.
  [21 <./figures/FTSE1.png> <./figures/FTSE2.png> <./figures/FTSE3.png>]
-<figures/FTSE4.png, id=426, 1203.49625pt x 388.45125pt>
+<figures/FTSE4.png, id=431, 1203.49625pt x 388.45125pt>
 File: figures/FTSE4.png Graphic file (type png)
 <use figures/FTSE4.png>
-Package pdftex.def Info: figures/FTSE4.png  used on input line 751.
+Package pdftex.def Info: figures/FTSE4.png  used on input line 745.
 (pdftex.def)             Requested size: 364.19667pt x 117.54984pt.
-<figures/FTSE5.png, id=427, 1196.47pt x 388.45125pt>
+<figures/FTSE5.png, id=432, 1196.47pt x 388.45125pt>
 File: figures/FTSE5.png Graphic file (type png)
 <use figures/FTSE5.png>
-Package pdftex.def Info: figures/FTSE5.png  used on input line 759.
+Package pdftex.def Info: figures/FTSE5.png  used on input line 753.
 (pdftex.def)             Requested size: 364.19667pt x 118.24332pt.
-<figures/sanp1.png, id=428, 1203.49625pt x 388.45125pt>
+<figures/sanp1.png, id=433, 1203.49625pt x 388.45125pt>
 File: figures/sanp1.png Graphic file (type png)
 <use figures/sanp1.png>
-Package pdftex.def Info: figures/sanp1.png  used on input line 789.
+Package pdftex.def Info: figures/sanp1.png  used on input line 783.
 (pdftex.def)             Requested size: 364.19667pt x 117.54984pt.
-<figures/sanp2.png, id=429, 1196.47pt x 388.45125pt>
+<figures/sanp2.png, id=434, 1196.47pt x 388.45125pt>
 File: figures/sanp2.png Graphic file (type png)
 <use figures/sanp2.png>
-Package pdftex.def Info: figures/sanp2.png  used on input line 797.
+Package pdftex.def Info: figures/sanp2.png  used on input line 791.
 (pdftex.def)             Requested size: 364.19667pt x 118.24332pt.
-<figures/sanp3.png, id=430, 1196.47pt x 388.45125pt>
+<figures/sanp3.png, id=435, 1196.47pt x 388.45125pt>
 File: figures/sanp3.png Graphic file (type png)
 <use figures/sanp3.png>
-Package pdftex.def Info: figures/sanp3.png  used on input line 804.
+Package pdftex.def Info: figures/sanp3.png  used on input line 798.
 (pdftex.def)             Requested size: 364.19667pt x 118.24332pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [22 <./figures/FTSE4.png> <./figures/FTSE5.png> <./figures/sanp1.png>]
-<figures/sanp4.png, id=441, 1196.47pt x 388.45125pt>
+<figures/sanp4.png, id=447, 1196.47pt x 388.45125pt>
 File: figures/sanp4.png Graphic file (type png)
 <use figures/sanp4.png>
-Package pdftex.def Info: figures/sanp4.png  used on input line 812.
+Package pdftex.def Info: figures/sanp4.png  used on input line 806.
 (pdftex.def)             Requested size: 364.19667pt x 118.24332pt.
-<figures/sanp5.png, id=442, 1196.47pt x 388.45125pt>
+<figures/sanp5.png, id=448, 1196.47pt x 388.45125pt>
 File: figures/sanp5.png Graphic file (type png)
 <use figures/sanp5.png>
-Package pdftex.def Info: figures/sanp5.png  used on input line 819.
+Package pdftex.def Info: figures/sanp5.png  used on input line 813.
 (pdftex.def)             Requested size: 364.19667pt x 118.24332pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 809--823
+Underfull \hbox (badness 10000) in paragraph at lines 803--817
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 809--823
+Underfull \hbox (badness 10000) in paragraph at lines 803--817
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 809--823
+Underfull \hbox (badness 10000) in paragraph at lines 803--817
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 809--823
+Underfull \hbox (badness 10000) in paragraph at lines 803--817
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 809--823
+Underfull \hbox (badness 10000) in paragraph at lines 803--817
 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23 <./figures/sanp2.png> <./figures/sanp3.png> <./figures/sanp4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 852--853
-
- []
-
-[24 <./figures/sanp5.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 875--876
+[23 <./figures/sanp2.png> <./figures/sanp3.png> <./figures/sanp4.png>] [24 <./f
+igures/sanp5.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 875--880
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 875--876
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 881--882
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 881--882
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 883--887
+Underfull \hbox (badness 10000) in paragraph at lines 875--880
 
  []
 
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 888.
+(amsmath)                 on input line 881.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 895--896
+Underfull \hbox (badness 10000) in paragraph at lines 899--901
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 906--908
+Underfull \hbox (badness 10000) in paragraph at lines 981--988
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 988--989
+Underfull \hbox (badness 10000) in paragraph at lines 981--988
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 988--989
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 990--991
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 990--991
+Underfull \hbox (badness 10000) in paragraph at lines 1013--1014
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1021--1022
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1021--1022
-
- []
-
-<figures/HISTN.png, id=472, 1198.4775pt x 374.39874pt>
+<figures/HISTN.png, id=478, 1171.37625pt x 358.33875pt>
 File: figures/HISTN.png Graphic file (type png)
 <use figures/HISTN.png>
-Package pdftex.def Info: figures/HISTN.png  used on input line 1026.
-(pdftex.def)             Requested size: 364.19667pt x 113.77155pt.
-<figures/HISTF.png, id=473, 1192.455pt x 374.39874pt>
+Package pdftex.def Info: figures/HISTN.png  used on input line 1018.
+(pdftex.def)             Requested size: 364.19667pt x 111.41193pt.
+<figures/HISTF.png, id=479, 1178.4025pt x 358.33875pt>
 File: figures/HISTF.png Graphic file (type png)
 <use figures/HISTF.png>
-Package pdftex.def Info: figures/HISTF.png  used on input line 1034.
-(pdftex.def)             Requested size: 364.19667pt x 114.34854pt.
-<figures/HISTS.png, id=474, 1192.455pt x 374.39874pt>
+Package pdftex.def Info: figures/HISTF.png  used on input line 1026.
+(pdftex.def)             Requested size: 364.19667pt x 110.75032pt.
+<figures/HISTS.png, id=480, 1171.37625pt x 361.35pt>
 File: figures/HISTS.png Graphic file (type png)
 <use figures/HISTS.png>
-Package pdftex.def Info: figures/HISTS.png  used on input line 1041.
-(pdftex.def)             Requested size: 364.19667pt x 114.34854pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[27 <./figures/HISTN.png> <./figures/HISTF.png>]
-<figures/GARCHN.png, id=483, 1185.42876pt x 374.39874pt>
+Package pdftex.def Info: figures/HISTS.png  used on input line 1033.
+(pdftex.def)             Requested size: 364.19667pt x 112.34816pt.
+ [27 <./figures/HISTN.png> <./figures/HISTF.png> <./figures/HISTS.png>]
+<figures/GARCHN.png, id=491, 1178.4025pt x 358.33875pt>
 File: figures/GARCHN.png Graphic file (type png)
 <use figures/GARCHN.png>
-Package pdftex.def Info: figures/GARCHN.png  used on input line 1049.
-(pdftex.def)             Requested size: 364.19667pt x 115.02266pt.
-<figures/GARCHF.png, id=484, 1185.42876pt x 374.39874pt>
+Package pdftex.def Info: figures/GARCHN.png  used on input line 1042.
+(pdftex.def)             Requested size: 364.19667pt x 110.75032pt.
+<figures/GARCHF.png, id=492, 1178.4025pt x 358.33875pt>
 File: figures/GARCHF.png Graphic file (type png)
 <use figures/GARCHF.png>
-Package pdftex.def Info: figures/GARCHF.png  used on input line 1056.
-(pdftex.def)             Requested size: 364.19667pt x 115.02266pt.
-<figures/GARCHS.png, id=485, 1186.4325pt x 374.39874pt>
+Package pdftex.def Info: figures/GARCHF.png  used on input line 1049.
+(pdftex.def)             Requested size: 364.19667pt x 110.75032pt.
+<figures/GARCHS.png, id=493, 1172.38pt x 359.3425pt>
 File: figures/GARCHS.png Graphic file (type png)
 <use figures/GARCHS.png>
-Package pdftex.def Info: figures/GARCHS.png  used on input line 1063.
-(pdftex.def)             Requested size: 364.19667pt x 114.92555pt.
-<figures/NIKKEITEST.png, id=486, 1172.38pt x 374.39874pt>
+Package pdftex.def Info: figures/GARCHS.png  used on input line 1056.
+(pdftex.def)             Requested size: 364.19667pt x 111.6253pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1060--1061
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1060--1061
+
+ []
+
+<figures/LSTMN.png, id=494, 1172.38pt x 358.33875pt>
+File: figures/LSTMN.png Graphic file (type png)
+<use figures/LSTMN.png>
+Package pdftex.def Info: figures/LSTMN.png  used on input line 1066.
+(pdftex.def)             Requested size: 364.19667pt x 111.3135pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1070
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1070
+
+ []
+
+<figures/LSTMF.png, id=495, 1178.4025pt x 358.33875pt>
+File: figures/LSTMF.png Graphic file (type png)
+<use figures/LSTMF.png>
+Package pdftex.def Info: figures/LSTMF.png  used on input line 1073.
+(pdftex.def)             Requested size: 364.19667pt x 110.75032pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/LSTMS.png, id=496, 1172.38pt x 361.35pt>
+File: figures/LSTMS.png Graphic file (type png)
+<use figures/LSTMS.png>
+Package pdftex.def Info: figures/LSTMS.png  used on input line 1080.
+(pdftex.def)             Requested size: 364.19667pt x 112.24892pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[28 <./figures/GARCHN.png> <./figures/GARCHF.png> <./figures/GARCHS.png> <./fig
+ures/LSTMN.png>]
+<figures/NIKKEITEST.png, id=510, 1172.38pt x 374.39874pt>
 File: figures/NIKKEITEST.png Graphic file (type png)
 <use figures/NIKKEITEST.png>
-Package pdftex.def Info: figures/NIKKEITEST.png  used on input line 1139.
+Package pdftex.def Info: figures/NIKKEITEST.png  used on input line 1093.
 (pdftex.def)             Requested size: 364.19667pt x 116.30234pt.
-<figures/NIKKEIPRED.png, id=487, 1178.4025pt x 374.39874pt>
+<figures/NIKKEIPRED.png, id=511, 1178.4025pt x 374.39874pt>
 File: figures/NIKKEIPRED.png Graphic file (type png)
 <use figures/NIKKEIPRED.png>
-Package pdftex.def Info: figures/NIKKEIPRED.png  used on input line 1145.
+Package pdftex.def Info: figures/NIKKEIPRED.png  used on input line 1099.
 (pdftex.def)             Requested size: 364.19667pt x 115.71391pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 1089--1103
+
+ []
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/NIKKEIERROR.png, id=488, 1172.38pt x 374.39874pt>
+<figures/NIKKEIERROR.png, id=512, 1172.38pt x 374.39874pt>
 File: figures/NIKKEIERROR.png Graphic file (type png)
 <use figures/NIKKEIERROR.png>
-Package pdftex.def Info: figures/NIKKEIERROR.png  used on input line 1152.
+Package pdftex.def Info: figures/NIKKEIERROR.png  used on input line 1106.
 (pdftex.def)             Requested size: 364.19667pt x 116.30234pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[28 <./figures/HISTS.png> <./figures/GARCHN.png> <./figures/GARCHF.png> <./figu
-res/GARCHS.png>]
-<figures/FTSETEST.png, id=501, 1178.4025pt x 374.39874pt>
+[29 <./figures/LSTMF.png> <./figures/LSTMS.png> <./figures/NIKKEITEST.png>]
+<figures/FTSETEST.png, id=523, 1178.4025pt x 374.39874pt>
 File: figures/FTSETEST.png Graphic file (type png)
 <use figures/FTSETEST.png>
-Package pdftex.def Info: figures/FTSETEST.png  used on input line 1163.
+Package pdftex.def Info: figures/FTSETEST.png  used on input line 1117.
 (pdftex.def)             Requested size: 364.19667pt x 115.71391pt.
-<figures/FTSEPRED.png, id=502, 1172.38pt x 374.39874pt>
+<figures/FTSEPRED.png, id=524, 1172.38pt x 374.39874pt>
 File: figures/FTSEPRED.png Graphic file (type png)
 <use figures/FTSEPRED.png>
-Package pdftex.def Info: figures/FTSEPRED.png  used on input line 1170.
+Package pdftex.def Info: figures/FTSEPRED.png  used on input line 1124.
 (pdftex.def)             Requested size: 364.19667pt x 116.30234pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/FTSEERROR.png, id=503, 1178.4025pt x 374.39874pt>
+<figures/FTSEERROR.png, id=525, 1178.4025pt x 374.39874pt>
 File: figures/FTSEERROR.png Graphic file (type png)
 <use figures/FTSEERROR.png>
-Package pdftex.def Info: figures/FTSEERROR.png  used on input line 1178.
+Package pdftex.def Info: figures/FTSEERROR.png  used on input line 1132.
 (pdftex.def)             Requested size: 364.19667pt x 115.71391pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/sanptest.png, id=504, 1172.38pt x 374.39874pt>
+[30 <./figures/NIKKEIPRED.png> <./figures/NIKKEIERROR.png> <./figures/FTSETEST.
+png> <./figures/FTSEPRED.png>]
+<figures/sanptest.png, id=538, 1172.38pt x 374.39874pt>
 File: figures/sanptest.png Graphic file (type png)
 <use figures/sanptest.png>
-Package pdftex.def Info: figures/sanptest.png  used on input line 1188.
+Package pdftex.def Info: figures/sanptest.png  used on input line 1142.
 (pdftex.def)             Requested size: 364.19667pt x 116.30234pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/sanppred.png, id=505, 1172.38pt x 374.39874pt>
+<figures/sanppred.png, id=539, 1172.38pt x 374.39874pt>
 File: figures/sanppred.png Graphic file (type png)
 <use figures/sanppred.png>
-Package pdftex.def Info: figures/sanppred.png  used on input line 1195.
+Package pdftex.def Info: figures/sanppred.png  used on input line 1149.
 (pdftex.def)             Requested size: 364.19667pt x 116.30234pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/sanperror.png, id=506, 1172.38pt x 374.39874pt>
+<figures/sanperror.png, id=540, 1172.38pt x 374.39874pt>
 File: figures/sanperror.png Graphic file (type png)
 <use figures/sanperror.png>
-Package pdftex.def Info: figures/sanperror.png  used on input line 1203.
+Package pdftex.def Info: figures/sanperror.png  used on input line 1157.
 (pdftex.def)             Requested size: 364.19667pt x 116.30234pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[29 <./figures/NIKKEITEST.png> <./figures/NIKKEIPRED.png> <./figures/NIKKEIERRO
-R.png> <./figures/FTSETEST.png>] [30 <./figures/FTSEPRED.png> <./figures/FTSEER
-ROR.png> <./figures/sanptest.png> <./figures/sanppred.png>] [31 <./figures/sanp
-error.png>]
-Appendix A.
-[32
-
-]
-Appendix B.
-[33
-
-]
-Appendix C.
-(main.bbl [34
+ [31 <./figures/FTSEERROR.png> <./figures/sanptest.png> <./figures/sanppred.png
+> <./figures/sanperror.png>]
+Chapter 5.
+(main.bbl [32
 
 ]
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Overfull \hbox (36.30884pt too wide) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
+
+ []
+
+
+Overfull \hbox (36.30884pt too wide) in paragraph at lines 1215--1264
 \OT1/cmr/m/n/10.95 IBM (2020). Re-cur-rent Neu-ral Net-works, https://www.ibm.c
 om/cloud/learn/recurrent-neural-networks 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1318
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
 
  []
 
-[35
 
-] [36] (main.lof)
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
+
+ []
+
+
+Underfull \hbox (badness 1067) in paragraph at lines 1215--1264
+\OT1/cmr/m/n/10.95 Tenti, P. (1996). Fore-cast-ing for-eign ex-change rates us-
+ing re-cur-rent neu-ral net-works.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1264
+
+ []
+
+[33
+
+] [34] (main.lof [35
+
+])
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [37
-
-] (main.lot)
+ [36] (main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- [38
+ [37
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1331.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1331.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1275.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1275.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1331.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1331.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1275.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1275.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 831967F600E4E588000E7A5AD3D90F2C;2547.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1331.
+(rerunfilecheck)             Checksum: 3594B228728231C135FE60053A086746;2558.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1275.
  ) 
 Here is how much of TeX's memory you used:
- 22128 strings out of 480898
- 398907 string characters out of 2908343
- 666394 words of memory out of 3000000
- 37334 multiletter control sequences out of 15000+200000
+ 22155 strings out of 480898
+ 399366 string characters out of 2908343
+ 667761 words of memory out of 3000000
+ 37356 multiletter control sequences out of 15000+200000
  542614 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,17n,85p,1059b,496s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,17n,85p,1632b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKT
@@ -2193,9 +2168,9 @@ e1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti
 12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (44 pages, 2292695 bytes).
+Output written on main.pdf (46 pages, 2730279 bytes).
 PDF statistics:
- 706 PDF objects out of 1000 (max. 8388607)
- 136 named destinations out of 1000 (max. 500000)
- 631 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 720 PDF objects out of 1000 (max. 8388607)
+ 138 named destinations out of 1000 (max. 500000)
+ 638 words of extra memory for PDF output out of 10000 (max. 10000000)
 

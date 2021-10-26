@@ -30,10 +30,9 @@
 \BOOKMARK [2][-]{subsection.4.3.1}{Kupiec POF-Test}{section.4.3}% 30
 \BOOKMARK [2][-]{subsection.4.3.2}{Results}{section.4.3}% 31
 \BOOKMARK [1][-]{section.4.4}{Graphs}{chapter.4}% 32
-\BOOKMARK [0][-]{appendix.A}{}{}% 33
-\BOOKMARK [0][-]{appendix.B}{}{}% 34
-\BOOKMARK [0][-]{appendix.C}{Another example}{}% 35
-\BOOKMARK [1][-]{section.C.1}{More stuff}{appendix.C}% 36
-\BOOKMARK [0][-]{appendix*.7}{Bibliography}{}% 37
-\BOOKMARK [0][-]{appendix*.8}{List of Figures}{}% 38
-\BOOKMARK [0][-]{appendix*.9}{List of Tables}{}% 39
+\BOOKMARK [2][-]{subsection.4.4.1}{Daily VaR estimation}{section.4.4}% 33
+\BOOKMARK [2][-]{subsection.4.4.2}{LSTM Volatility forecast}{section.4.4}% 34
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 35
+\BOOKMARK [0][-]{chapter*.7}{Bibliography}{}% 36
+\BOOKMARK [0][-]{chapter*.8}{List of Figures}{}% 37
+\BOOKMARK [0][-]{chapter*.9}{List of Tables}{}% 38

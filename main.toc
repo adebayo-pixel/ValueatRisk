@@ -32,13 +32,12 @@
 \contentsline {subsection}{\numberline {4.2.3}The LSTM model}{24}{subsection.4.2.3}%
 \contentsline {subsubsection}{How we estimate our value at risk from our LSTM model}{24}{section*.6}%
 \contentsline {section}{\numberline {4.3}VAR Backtesting}{25}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Kupiec POF-Test}{26}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.1}Kupiec POF-Test}{25}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Results}{26}{subsection.4.3.2}%
 \contentsline {section}{\numberline {4.4}Graphs}{27}{section.4.4}%
-\contentsline {chapter}{\numberline {A}}{32}{appendix.A}%
-\contentsline {chapter}{\numberline {B}}{33}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Another example}{34}{appendix.C}%
-\contentsline {section}{\numberline {C.1}More stuff}{34}{section.C.1}%
-\contentsline {chapter}{Bibliography}{35}{appendix*.7}%
-\contentsline {chapter}{List of Figures}{37}{appendix*.8}%
-\contentsline {chapter}{List of Tables}{38}{appendix*.9}%
+\contentsline {subsection}{\numberline {4.4.1}Daily VaR estimation}{27}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}LSTM Volatility forecast}{29}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{32}{chapter.5}%
+\contentsline {chapter}{Bibliography}{33}{chapter*.7}%
+\contentsline {chapter}{List of Figures}{35}{chapter*.8}%
+\contentsline {chapter}{List of Tables}{37}{chapter*.9}%

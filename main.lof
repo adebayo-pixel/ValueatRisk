@@ -29,21 +29,22 @@
 \contentsline {figure}{\numberline {4.16}{\ignorespaces Training and Validation loss functions under Trial 3 (S\&P 500)}}{23}{figure.4.16}%
 \contentsline {figure}{\numberline {4.17}{\ignorespaces Training and Validation loss functions under Trial 4 (S\&P 500)}}{23}{figure.4.17}%
 \contentsline {figure}{\numberline {4.18}{\ignorespaces Training and Validation loss functions under Trial 5 (S\&P 500)}}{24}{figure.4.18}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Daily VaR estimation of NIKKEI 225}}{27}{figure.4.19}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Daily VaR estimation of FTSE 100}}{27}{figure.4.20}%
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Daily VaR estimation of S\&P 500}}{28}{figure.4.21}%
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Daily VaR estimation of NIKKEI 225}}{28}{figure.4.22}%
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Daily VaR estimation of FTSE 100}}{28}{figure.4.23}%
-\contentsline {figure}{\numberline {4.24}{\ignorespaces Daily VaR estimation of S\&P 500}}{28}{figure.4.24}%
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Graphical display of NIKKEI 225 test data}}{29}{figure.4.25}%
-\contentsline {figure}{\numberline {4.26}{\ignorespaces Graphical display of NIKKEI 225 out-of sample prediction}}{29}{figure.4.26}%
-\contentsline {figure}{\numberline {4.27}{\ignorespaces Graphical display of NIKKEI 225 out-of-sample prediction+Error term}}{29}{figure.4.27}%
-\contentsline {figure}{\numberline {4.28}{\ignorespaces Graphical display of FTSE 100 test data}}{29}{figure.4.28}%
-\contentsline {figure}{\numberline {4.29}{\ignorespaces Graphical display of FTSE 100 out-of sample prediction}}{30}{figure.4.29}%
-\contentsline {figure}{\numberline {4.30}{\ignorespaces Graphical display of FTSE 100 out-of-sample prediction+Error term}}{30}{figure.4.30}%
-\contentsline {figure}{\numberline {4.31}{\ignorespaces Graphical display of S\&P 500 test data}}{30}{figure.4.31}%
-\contentsline {figure}{\numberline {4.32}{\ignorespaces Graphical display of S\&P 500 out-of sample prediction}}{30}{figure.4.32}%
-\contentsline {figure}{\numberline {4.33}{\ignorespaces Graphical display of S\&P 500 out-of-sample prediction+Error term}}{31}{figure.4.33}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Daily log-returns and daily VaR estimation of NIKKEI 225}}{27}{figure.4.19}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Daily log-returns and daily VaR estimation of FTSE 100}}{27}{figure.4.20}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Daily log-returns and daily VaR estimation of S\&P 500}}{27}{figure.4.21}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Daily log-returns and daily VaR estimation of NIKKEI 225}}{28}{figure.4.22}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Daily log-returns and daily VaR estimation of FTSE 100}}{28}{figure.4.23}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Daily log-returns and daily VaR estimation of S\&P 500}}{28}{figure.4.24}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Daily log-returns and daily VaR estimation of NIKKEI 225}}{28}{figure.4.25}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Daily log-returns and daily VaR estimation of FTSE 100}}{29}{figure.4.26}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Daily VaR estimation of S\&P 500}}{29}{figure.4.27}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Graphical display of NIKKEI 225 daily log-returns}}{29}{figure.4.28}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces Graphical display of NIKKEI 225 predicted log-returns}}{30}{figure.4.29}%
+\contentsline {figure}{\numberline {4.30}{\ignorespaces Graphical display of NIKKEI 225 predicted log-returns+Error term}}{30}{figure.4.30}%
+\contentsline {figure}{\numberline {4.31}{\ignorespaces Graphical display of FTSE 100 daily log-returns}}{30}{figure.4.31}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces Graphical display of FTSE 100 predicted log-returns}}{30}{figure.4.32}%
+\contentsline {figure}{\numberline {4.33}{\ignorespaces Graphical display of FTSE 100 predicted log-returns+Error term}}{31}{figure.4.33}%
+\contentsline {figure}{\numberline {4.34}{\ignorespaces Graphical display of S\&P 500 daily log-returns}}{31}{figure.4.34}%
+\contentsline {figure}{\numberline {4.35}{\ignorespaces Graphical display of S\&P 500 predicted log-returns}}{31}{figure.4.35}%
+\contentsline {figure}{\numberline {4.36}{\ignorespaces Graphical display of S\&P 500 predicted log-returns+Error term}}{31}{figure.4.36}%
 \addvspace {10\p@ }

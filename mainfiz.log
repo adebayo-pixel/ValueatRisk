@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  19 OCT 2021 14:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  25 OCT 2021 09:16
 entering extended mode
 **./mainfiz.tex
 (mainfiz.tex
@@ -1114,18 +1114,23 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@dima=\skip65
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\dcolumn.sty"
 Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
-))
+)
 ("C:\Users\Hafees Yusuff\AppData\Roaming\MiKTeX\2.9\tex/latex/makecell\makecell
 .sty"
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen263
 \c@nlinenum=\count324
 \TeXr@lab=\toks39
-) (settings/page.tex
-("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\afterpage.sty"
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks40
+\AP@partial=\box64
+\AP@footins=\box65
+)
+(settings/page.tex ("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.st
+y"
 Package: geometry 2020/01/02 v5.9 Page Geometry
-
-("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count325
@@ -1139,7 +1144,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen269
 \Gm@layouthoffset=\dimen270
 \Gm@layoutvoffset=\dimen271
-\Gm@dimlist=\toks40
+\Gm@dimlist=\toks41
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg")))
 ("C:\Program Files\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.sty"
@@ -1162,7 +1167,7 @@ Package csquotes Info: ... found 'babel' package.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count328
-\l__pdf_internal_box=\box64
+\l__pdf_internal_box=\box66
 )
 (mainfiz.aux)
 \openout1 = `mainfiz.aux'.
@@ -1192,7 +1197,7 @@ LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 1
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 )
 LaTeX Font Info:    ... okay on input line 19.
-\AtBeginShipoutBox=\box65
+\AtBeginShipoutBox=\box67
 Package hyperref Info: Link coloring ON on input line 19.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1218,15 +1223,15 @@ LaTeX Info: Redefining \nameref on input line 19.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count330
 \scratchdimen=\dimen272
-\scratchbox=\box66
+\scratchbox=\box68
 \nofMPsegments=\count331
 \nofMParguments=\count332
-\everyMPshowfont=\toks41
+\everyMPshowfont=\toks42
 \MPscratchCnt=\count333
 \MPscratchDim=\dimen273
 \MPnumerator=\count334
 \makeMPintoPDFobject=\count335
-\everyMPtoPDFconversion=\toks42
+\everyMPtoPDFconversion=\toks43
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1275,30 +1280,75 @@ Package csquotes Info: Making character " active on input line 19.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (content/title_page_1.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
+<figures/download.png, id=158, 446.66875pt x 113.42375pt>
+File: figures/download.png Graphic file (type png)
+<use figures/download.png>
+Package pdftex.def Info: figures/download.png  used on input line 51.
+(pdftex.def)             Requested size: 91.04742pt x 23.11874pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 82.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 82.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<figures/download.png, id=158, 446.66875pt x 113.42375pt>
-File: figures/download.png Graphic file (type png)
-<use figures/download.png>
-Package pdftex.def Info: figures/download.png  used on input line 102.
-(pdftex.def)             Requested size: 91.04742pt x 23.11874pt.
-) [1{C:/Users/Hafees Yusuff/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+) [1
 
- <./figures/download.png>] (mainfiz.toc)
+
+{C:/Users/Hafees Yusuff/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./f
+igures/download.png>]pdfTeX warning (ext4): destination with the same identifie
+r (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.127 \newpage\null\thispagestyle{empty}\newpage
+                                                 [1]
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.160 \end{titlepage}
+                      [1
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.164 \newpage\null\thispagestyle{empty}\newpage
+                                                 [1]
+Underfull \hbox (badness 10000) in paragraph at lines 167--169
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.172 \end{titlepage}
+                      [1
+
+]) (mainfiz.toc)
 \tf@toc=\write6
 \openout6 = `mainfiz.toc'.
 
- [2
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.40 \chapter
+             {Basics} [1
 
 ]
 Chapter 1.
@@ -1306,7 +1356,7 @@ Chapter 1.
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 45.
 
-[3
+[2
 
 ]
 
@@ -1315,7 +1365,7 @@ Make it at least 13.59999pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-[4]
+[3]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 8
 0.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
@@ -1323,49 +1373,49 @@ File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
- [5] [6]
+ [4] [5]
 Chapter 2.
-[7
+[6
 
 ]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 211
 .
  ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [8]
+) [7]
 Chapter 3.
-[9
+[8
 
 ]
 Chapter 4.
-<figures/cube.png, id=281, 287.57437pt x 296.60812pt>
+<figures/cube.png, id=294, 287.57437pt x 296.60812pt>
 File: figures/cube.png Graphic file (type png)
 <use figures/cube.png>
 Package pdftex.def Info: figures/cube.png  used on input line 276.
 (pdftex.def)             Requested size: 136.57462pt x 140.86769pt.
-[10
+[9
 
- <./figures/cube.png>] [11] [12]
+ <./figures/cube.png>] [10] [11]
 Chapter 5.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 449.
-[13
+[12
 
 ]
 Appendix A.
-[14
+[13
 
 ]
 Appendix B.
-(mainfiz.bbl [15
+(mainfiz.bbl [14
 
-]) [16
+]) [15
 
 ] (mainfiz.lof)
 \tf@lof=\write7
 \openout7 = `mainfiz.lof'.
 
- [17
+ [16
 
 ] (mainfiz.lot)
 \tf@lot=\write8
@@ -1373,7 +1423,7 @@ Appendix B.
 
 
 No file mainfiz.ind.
-[18
+[17
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 510.
@@ -1386,13 +1436,13 @@ Package rerunfilecheck Info: File `mainfiz.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 510.
  ) 
 Here is how much of TeX's memory you used:
- 21872 strings out of 480898
- 394991 string characters out of 2908343
- 663033 words of memory out of 3000000
- 37147 multiletter control sequences out of 15000+200000
- 553241 words of font info for 99 fonts, out of 3000000 for 9000
+ 21889 strings out of 480898
+ 395270 string characters out of 2908343
+ 662596 words of memory out of 3000000
+ 37163 multiletter control sequences out of 15000+200000
+ 553195 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,11n,85p,958b,955s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,11n,85p,958b,947s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKT
@@ -1415,9 +1465,9 @@ ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Program
  Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on mainfiz.pdf (18 pages, 346360 bytes).
+Output written on mainfiz.pdf (22 pages, 352357 bytes).
 PDF statistics:
- 438 PDF objects out of 1000 (max. 8388607)
- 75 named destinations out of 1000 (max. 500000)
+ 451 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
  375 words of extra memory for PDF output out of 10000 (max. 10000000)
 
