@@ -48,3 +48,8 @@
 \contentsline {figure}{\numberline {4.35}{\ignorespaces Graphical display of S\&P 500 predicted log-returns}}{31}{figure.4.35}%
 \contentsline {figure}{\numberline {4.36}{\ignorespaces Graphical display of S\&P 500 predicted log-returns+Error term}}{31}{figure.4.36}%
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Python codes for Historical simulation}}{38}{figure.A.1}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Python codes for Garch (1,1)}}{38}{figure.A.2}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Python codes for LSTM architecture}}{39}{figure.A.3}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Python codes for LSTM VaR model}}{39}{figure.A.4}%

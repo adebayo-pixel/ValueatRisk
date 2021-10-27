@@ -41,3 +41,4 @@
 \contentsline {chapter}{Bibliography}{33}{chapter*.7}%
 \contentsline {chapter}{List of Figures}{35}{chapter*.8}%
 \contentsline {chapter}{List of Tables}{37}{chapter*.9}%
+\contentsline {chapter}{\numberline {A}}{38}{appendix.A}%
