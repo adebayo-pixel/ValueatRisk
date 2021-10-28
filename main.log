@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  27 OCT 2021 17:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  28 OCT 2021 01:50
 entering extended mode
 **./main.tex
 (main.tex
@@ -1875,19 +1875,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 1065--1073
 
  []
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 <figures/LSTMF.png, id=506, 1178.4025pt x 358.33875pt>
 File: figures/LSTMF.png Graphic file (type png)
 <use figures/LSTMF.png>
 Package pdftex.def Info: figures/LSTMF.png  used on input line 1076.
 (pdftex.def)             Requested size: 364.19667pt x 110.75032pt.
-[28 <./figures/GARCHN.png> <./figures/GARCHF.png> <./figures/GARCHS.png> <./fig
-ures/LSTMN.png>]
-<figures/LSTMS.png, id=519, 1172.38pt x 361.35pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/LSTMS.png, id=507, 1172.38pt x 361.35pt>
 File: figures/LSTMS.png Graphic file (type png)
 <use figures/LSTMS.png>
 Package pdftex.def Info: figures/LSTMS.png  used on input line 1083.
 (pdftex.def)             Requested size: 364.19667pt x 112.24892pt.
-<figures/NIKKEITEST.png, id=520, 1172.38pt x 374.39874pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/NIKKEITEST.png, id=508, 1172.38pt x 374.39874pt>
 File: figures/NIKKEITEST.png Graphic file (type png)
 <use figures/NIKKEITEST.png>
 Package pdftex.def Info: figures/NIKKEITEST.png  used on input line 1096.
@@ -1897,7 +1904,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 1092--1102
 
  []
 
-[29 <./figures/LSTMF.png> <./figures/LSTMS.png> <./figures/NIKKEITEST.png>]
+[28 <./figures/GARCHN.png> <./figures/GARCHF.png> <./figures/GARCHS.png>]
+[29 <./figures/LSTMN.png> <./figures/LSTMF.png> <./figures/LSTMS.png> <./figure
+s/NIKKEITEST.png>]
 <figures/NIKKEIPRED.png, id=531, 1178.4025pt x 374.39874pt>
 File: figures/NIKKEIPRED.png Graphic file (type png)
 <use figures/NIKKEIPRED.png>
@@ -2166,11 +2175,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1338.
 Here is how much of TeX's memory you used:
  22197 strings out of 480898
  400032 string characters out of 2908343
- 667762 words of memory out of 3000000
+ 667761 words of memory out of 3000000
  37386 multiletter control sequences out of 15000+200000
  542614 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,17n,85p,1647b,496s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,17n,85p,2329b,496s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKT
@@ -2189,7 +2198,7 @@ e1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti
 12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (49 pages, 2978131 bytes).
+Output written on main.pdf (49 pages, 2979358 bytes).
 PDF statistics:
  759 PDF objects out of 1000 (max. 8388607)
  146 named destinations out of 1000 (max. 500000)

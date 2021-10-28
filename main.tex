@@ -985,7 +985,7 @@ The results of our daily VaR estimation of 1386 days are discussed in this secti
 
 In the tables above where we reject our null hypothesis indicated by 'rej' and acceptance is indicated by 'acc'\\\\
 For the 95\% Var and 99\% Var, we expect VaR our violations not to be more than 69 and 14 respectively (i.e 5\% and 1\% of our estimated daily VaR of 1386 days). see \autoref{vio}  \\\\
-Considering our Kupiec test results, the historical simulation outperforms the other models. The garch performs well with the 95\% confidence interval for all the three stock markets, but the test rejects it for the 99\% confidence interval for all the stock markets. The neural network performs well at the 95\% confidence level for the FTSE 100 and S\&P 500, and not for NIKKEI 225 perhaps due to overestimation. The Kupiec test rejects the LSTM VaR model for the 99\% confidence level. Although, a 99\% VaR
+Considering our Kupiec test results, the historical simulation outperforms the other models. The Garch performs well with the 95\% confidence interval for all the three stock markets, but the test rejects it for the 99\% confidence interval for all the stock markets. The neural network performs well at the 95\% confidence level for the FTSE 100 and S\&P 500, and not for NIKKEI 225 perhaps due to overestimation. The Kupiec test rejects the LSTM VaR model for the 99\% confidence level. Although, a 99\% VaR
 is required by the Basel II regulation, a 95\% VaR is more admissible in our case,
 because models based on a 99\% level are more prone to a low power when
 applied on sample periods longer than a year. This implies that, with a 99\%
@@ -1039,7 +1039,7 @@ In this section, graphical representation of our daily VaR estimations are shown
 	\caption{Daily log-returns and daily VaR estimation of S\&P 500}
 	\label{HistS}
 \end{figure}
-All the graphs (Fig 4.19 to Fig 4.21) clearly display presence of VaR violations. It can be observed that the Historical simulation reacts poorly to market changes as the movement of the plot seems to be constant.
+All the graphs (Fig 4.19 to Fig 4.21) clearly display presence of VaR violations. It can be observed that the historical simulation reacts poorly to market changes as the movement of the plot seems to be constant.
 \newpage
 	\textbf{Garch(1,1)}
 \begin{figure}[!h]
@@ -1062,7 +1062,7 @@ All the graphs (Fig 4.19 to Fig 4.21) clearly display presence of VaR violations
 	\caption{Daily log-returns and daily VaR estimation of S\&P 500}
 	\label{garchS}
 \end{figure}
-All the graphs (Fig 4.22 to Fig 4.24) clearly display presence of VaR violations. The Garch (1,1) model seems to overreact when at the very extreme. When there is a very large loss, then there is a downward movement by the Garch model and then recovers quickly. Hence, it is not as stable as the Historical simulation as it seems to forget what has happened in the past.\\\\
+All the graphs (Fig 4.22 to Fig 4.24) clearly display presence of VaR violations. The Garch (1,1) model seems to overreact when at the very extreme. When there is a very large loss, then there is a downward movement of the VaR-estimators by the Garch model and they recover quickly. Hence, it is not as stable as the historical simulation as it seems to forget what has happened in the past.\\\\
 \textbf{LSTM}	
 \begin{figure}[!h]
 	\centering
@@ -1085,7 +1085,7 @@ All the graphs (Fig 4.22 to Fig 4.24) clearly display presence of VaR violations
 	\label{LSTMS}
 \end{figure}	
 
-All the graphs (Fig 4.25 to Fig 4.27) clearly display presence of VaR violations. The LSTM is more or less a mixture of Historical simulation and Garch (1,1) model. It is quite stable, but has some tiny movements which may be to the thousand simulation made for each individual day introduce some random errors, perhaps if we made a million simulation for each day the lstm model would be also be more flat or could maybe improve. Doing this requires huge computation time, which we are incapacitated to spend. The LSTM model is similar to Garch(1,1) as it reacts well to market movements.
+All the graphs (Fig 4.25 to Fig 4.27) clearly display presence of VaR violations. The LSTM is more or less a mixture of Historical simulation and Garch (1,1) model. It is quite stable, but has some tiny movements even in times of not so volatile market movements which may be due to just only the thousand simulations made for each individual day, which introduces some random local errors. Perhaps, if we made a million simulations for each day the lstm model would also be more flat or could maybe improve. Doing this requires huge computation time, which we are incapacitated to spend. The LSTM model is similar to Garch(1,1) as it reacts well to market movements.
 
 	
 \subsection{LSTM Volatility forecast}
@@ -1173,7 +1173,7 @@ Graphical representation of actual log-returns, LSTM predictions of the (mean) s
 
 \chapter{Conclusion}
 
-From our Kupiec test, the Historical simulation performs best, followed by the Garch(1,1) and then, the LSTM model.\\\\  The historical simulation is stable, which is good in stable periods, but in periods when there is a lot of movements in the markets, its reaction is quite poor. It seems to have that as an advantage in this study, as our markets are quite stable over time, and they are quite traumatic at the final days, and in this period (final days) we have more VaR breaches.  Garch(1,1) and LSTM model react well to changes in market movement, particularly the Garch (1,1) model as it seems to be overoptimistic and overpessimistic sometimes. The LSTM model seems stable at stable periods and also react well to changes in market movement, so it may be seen as a more sensitive version of Historical simulation. All in all, we could say the performance of the models depend on the eventual movement of the markets.
+The main aim of this thesis was to present different popular methods for estimating the Value-at-Risk of stock indices and to compare their performance to a neural network based estimator. In particular, we picked historical simulation and also the Garch(1,1)-model as benchmarks that are well-known and that are applied in the financial industry. On the neural network side, we implemented an LSTM-network that takes the history of the log-price returns into account, implemented it and compared the performance of the three methods on time series of the Nikkei, the  FTSE 100 and the S\&P 500 stock indices. To judge the performance of the different methods, we used the first 7090 days of each time series as our rolling window for the historical simulation and Garch (1,1) model, and for the LSTM model, we used 90 days as the timesteps and trained them on the first 7000 observations of each time series and then considered the number of VaR breaches on the test set for the 95\%- and the 99\% VaR-level. Besides only counting those breaches, we also performed an appropriate statistical test, the so-called Kupiec test. From our Kupiec test, the historical simulation performs best, followed by the Garch(1,1) and then, the LSTM model.\\\\  The historical simulation is stable, which is good in stable periods, but in periods when there are lots of movements in the markets, its reaction is quite poor. It seems to have that as an advantage in this study, as our markets are quite stable over time, and they are quite traumatic around the final days, and in this period (final days) we have more VaR breaches.  Garch(1,1) and LSTM model react well to changes in market movement, particularly the Garch (1,1) model as it seems to be overoptimistic and overpessimistic sometimes. The LSTM model seems stable at stable market periods and also react well to changes in market movement, so it may be seen as a more sensitive version of historical simulation. All in all, we could say the performance of the models depend on the eventual movement of the markets. While the LSTM model did not outperform the other two approaches, it shows potential for future research. We already indicated this and suggested a higher number of the simulations for the daily log-returns which is the basis for the update of the VaR.
 
 
 
