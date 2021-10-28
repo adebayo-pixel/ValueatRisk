@@ -38,18 +38,18 @@
 \contentsline {figure}{\numberline {4.25}{\ignorespaces Daily log-returns and daily VaR estimation of NIKKEI 225}}{29}{figure.4.25}%
 \contentsline {figure}{\numberline {4.26}{\ignorespaces Daily log-returns and daily VaR estimation of FTSE 100}}{29}{figure.4.26}%
 \contentsline {figure}{\numberline {4.27}{\ignorespaces Daily VaR estimation of S\&P 500}}{29}{figure.4.27}%
-\contentsline {figure}{\numberline {4.28}{\ignorespaces Graphical display of NIKKEI 225 daily log-returns}}{29}{figure.4.28}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Graphical display of NIKKEI 225 daily log-returns}}{30}{figure.4.28}%
 \contentsline {figure}{\numberline {4.29}{\ignorespaces Graphical display of NIKKEI 225 predicted log-returns}}{30}{figure.4.29}%
 \contentsline {figure}{\numberline {4.30}{\ignorespaces Graphical display of NIKKEI 225 predicted log-returns+Error term}}{30}{figure.4.30}%
 \contentsline {figure}{\numberline {4.31}{\ignorespaces Graphical display of FTSE 100 daily log-returns}}{30}{figure.4.31}%
-\contentsline {figure}{\numberline {4.32}{\ignorespaces Graphical display of FTSE 100 predicted log-returns}}{30}{figure.4.32}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces Graphical display of FTSE 100 predicted log-returns}}{31}{figure.4.32}%
 \contentsline {figure}{\numberline {4.33}{\ignorespaces Graphical display of FTSE 100 predicted log-returns+Error term}}{31}{figure.4.33}%
 \contentsline {figure}{\numberline {4.34}{\ignorespaces Graphical display of S\&P 500 daily log-returns}}{31}{figure.4.34}%
 \contentsline {figure}{\numberline {4.35}{\ignorespaces Graphical display of S\&P 500 predicted log-returns}}{31}{figure.4.35}%
-\contentsline {figure}{\numberline {4.36}{\ignorespaces Graphical display of S\&P 500 predicted log-returns+Error term}}{31}{figure.4.36}%
+\contentsline {figure}{\numberline {4.36}{\ignorespaces Graphical display of S\&P 500 predicted log-returns+Error term}}{32}{figure.4.36}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Python codes for Historical simulation}}{38}{figure.A.1}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Python codes for Garch (1,1)}}{38}{figure.A.2}%
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Python codes for LSTM architecture}}{39}{figure.A.3}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Python codes for LSTM VaR model}}{39}{figure.A.4}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Python codes for Historical simulation}}{39}{figure.1.A.1}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Python codes for Garch (1,1)}}{39}{figure.1.A.2}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Python codes for LSTM architecture}}{40}{figure.1.A.3}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Python codes for LSTM VaR model}}{40}{figure.1.A.4}%

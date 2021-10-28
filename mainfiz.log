@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  28 OCT 2021 01:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2021.4.1)  28 OCT 2021 08:29
 entering extended mode
 **./mainfiz.tex
 (mainfiz.tex
@@ -1449,7 +1449,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 510.
 Here is how much of TeX's memory you used:
  21890 strings out of 480898
  395277 string characters out of 2908343
- 662597 words of memory out of 3000000
+ 662598 words of memory out of 3000000
  37163 multiletter control sequences out of 15000+200000
  553195 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191

@@ -37,8 +37,8 @@
 \contentsline {section}{\numberline {4.4}Graphs}{27}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Daily VaR estimation}{27}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}LSTM Volatility forecast}{29}{subsection.4.4.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{32}{chapter.5}%
-\contentsline {chapter}{Bibliography}{33}{chapter*.7}%
-\contentsline {chapter}{List of Figures}{35}{chapter*.8}%
-\contentsline {chapter}{List of Tables}{37}{chapter*.9}%
-\contentsline {chapter}{\numberline {A}}{38}{appendix.A}%
+\contentsline {chapter}{\numberline {5}Conclusion}{33}{chapter.5}%
+\contentsline {chapter}{Bibliography}{34}{chapter*.7}%
+\contentsline {chapter}{List of Figures}{36}{chapter*.8}%
+\contentsline {chapter}{List of Tables}{38}{chapter*.9}%
+\contentsline {chapter}{Appendix \numberline {A}}{39}{appendix.1.A}%
