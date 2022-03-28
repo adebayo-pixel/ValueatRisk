@@ -121,7 +121,7 @@ The next chapter discusses the properties and basic methods to estimate VaR. Thi
 \section{Concept}
 Increasing volatility in exchange markets, increased credit defaults, even putting countries' financial security at risk, and calls for more regulation drastically changed the circumstances in which banks operate. These situations of uncertainty are called risks and managing them is of great importance to financial institutions (e.g Banks) in order to keep them afloat (see Kremer, 2013). Value at risk measures the losses which may be incurred when the price of the portfolio falls. Hence it is an important measure of risk to financial institutions.
 \newline\newline
-According to Jorion (2007), "VaR measure is defined as the worst loss over a target horizon such that there is a low prespecified probability that the actual loss will be larger". For example, if a financial institutions says that
+According to Jorion (2007), "VaR is the worst loss over a target horizon such that there is a low prespecified probability that the actual loss will be larger". For example, if a financial institutions says that
 the daily VaR of its trading portfolio is \$2 million at the 99\%
 confidence level, this simply means that under normal market conditions,
 only 1\% of the time, the daily loss will be more than \$2 million (99\% of the time, its loss will not be more than \$2 million). As in the mathematical representation below, it can also be stated as the least expected return of a portfolio at time $t$ and at a certain level of significance, $\alpha$.
@@ -849,7 +849,7 @@ where $K_i$ are weights, $y_i$ are initial outputs.
 
 \subsubsection{How we estimate our value at risk from our LSTM model}
 
-Here we discuss the two approaches we use in estimating our VAR with LSTM model. 
+Here we discuss the approach we use in estimating our VAR with LSTM model. 
 \begin{itemize}
 	
 \item[$\bullet$]   We are at time $t$ and have given a trained NN that uses the (log-)returns of the last 90 days (up to
@@ -861,7 +861,7 @@ predictions $p(1),p(2),...,p(1000)$.
 
 
 \item[$\bullet$] Compare the actual log return $r_{t+1}$ in the test data set with VaR95 and VaR99 and increase the number
-of breaches for VaR95 by 1 if you have VaR95 $<$ $r_{t+1}$ and do the same for VaR99.
+of breaches for VaR95 by 1 if you have VaR95 $>$ $r_{t+1}$ and do the same for VaR99.
 
 \item[$\bullet$] Then update your trained NN by moving one time step forward, i.e. by including the predicted $r_{t+1}$ as input.
 \item[$\bullet$] Go back to the first step where you replace $t$ by $t+1$. Repeat till you get to the end of the test data.
